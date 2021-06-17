@@ -1,2 +1,2 @@
-# brain_data_standards_queries
+# Brain Data Standards Queries
 A repository for the Brain Data Standards Ontology cypher queries.
