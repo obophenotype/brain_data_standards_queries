@@ -9,11 +9,12 @@ def individuals_metadata_dump():
     for individual in all_individuals:
         individual_details_query = IndividualDetailsQuery()
         result = individual_details_query.execute_query({"accession": individual.replace("AllenDend:", "")})
+        result["node"] = individual
         all_metadata.append(result)
 
     print(len(all_metadata))
 
-    dump_to_file(all_metadata, '../dumps/individuals_metadata.json')
+    dump_to_file(all_metadata, '../../dumps/individuals_metadata.json')
 
 
 def dump_to_file(data, path):
