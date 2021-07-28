@@ -57,17 +57,19 @@ class IndividualDetailsQuery(BDSQuery):
         MATCH (i:Individual)-[:exemplar_of]->(c:Class) 
         WHERE i.curie = 'AllenDend:' + $accession 
         OPTIONAL MATCH (c)-[scr:SUBCLASSOF]->(parent) 
-        OPTIONAL MATCH (c)-[er:expresses]->(marker) 
+        OPTIONAL MATCH (c)-[er:expresses]->(marker)
+        OPTIONAL MATCH (c)-[src:source]->(reference) 
         RETURN apoc.map.mergeList([properties(c), {tags: labels(c)}]) AS class_metadata, 
-        collect({relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
-        collect({ relation: properties(er), class_metadata: properties(marker)}) AS markers 
+        collect(distinct {relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
+        collect(distinct { relation: properties(er), class_metadata: properties(marker)}) AS markers,
+        collect(distinct { relation: properties(src), class_metadata: properties(reference)}) AS references 
         """
 
     def parse_response(self, response):
         node = {}
         for record in response:
             node = {"class_metadata": record["class_metadata"], "parents": record["parents"],
-                    "markers": record["markers"]}
+                    "markers": record["markers"], "references": record["references"]}
 
         return node
 

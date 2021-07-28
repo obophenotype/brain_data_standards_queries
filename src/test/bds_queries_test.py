@@ -12,9 +12,11 @@ class TemplateUtilsTest(unittest.TestCase):
 
         self.assertTrue(result["class_metadata"])
         self.assertTrue(result["parents"])
-        self.assertEqual(2, len(result["parents"]))
+        self.assertEqual(1, len(result["parents"]))
         self.assertTrue(result["markers"])
         self.assertEqual(2, len(result["markers"]))
+        self.assertTrue(result["references"])
+        self.assertEqual(2, len(result["references"]))
 
     def test_list_all_indv_query(self):
         result = ListAllAllenIndividuals().execute_query()

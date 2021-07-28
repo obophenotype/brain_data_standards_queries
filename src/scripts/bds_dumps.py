@@ -1,8 +1,13 @@
 import json
 import requests
+from datetime import datetime
 from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals
 
-SOLR_JSON_PATH = '../../dumps/individuals_metadata_solr.json'
+today = datetime.today().strftime('%Y%m%d')
+
+DUMP_PATH = '../../dumps/individuals_metadata_{}.json'.format(today)
+
+SOLR_JSON_PATH = '../../dumps/individuals_metadata_solr_{}.json'.format(today)
 
 
 def individuals_metadata_dump():
@@ -16,7 +21,7 @@ def individuals_metadata_dump():
 
     print(len(all_metadata))
 
-    dump_to_file(all_metadata, '../../dumps/individuals_metadata.json')
+    dump_to_file(all_metadata, DUMP_PATH)
 
 
 def individuals_metadata_solr_dump():
@@ -36,6 +41,7 @@ def individuals_metadata_solr_dump():
 
         extract_parent_data(all_data, result, solr_doc)
         extract_marker_data(all_data, result, solr_doc)
+        extract_reference_data(all_data, result, solr_doc)
 
         all_data[solr_doc["iri"]] = solr_doc
         count += 1
@@ -83,6 +89,18 @@ def extract_marker_data(all_data, result, solr_doc):
     solr_doc["marker_labels"] = marker_labels
 
 
+def extract_reference_data(all_data, result, solr_doc):
+    references = list()
+    for reference in result["references"]:
+        if reference["class_metadata"] is not None:
+            reference_iri = reference["class_metadata"]["iri"]
+            if reference_iri not in references:
+                references.append(reference_iri)
+            if reference_iri not in all_data:
+                all_data[reference_iri] = extract_reference_class_metadata(reference["class_metadata"])
+    solr_doc["references"] = references
+
+
 def extract_class_metadata(node_meta_data):
     print("Processing: " + node_meta_data["iri"])
     solr_doc = dict()
@@ -112,6 +130,32 @@ def extract_class_metadata(node_meta_data):
     return solr_doc
 
 
+def extract_reference_class_metadata(node_meta_data):
+    print("Processing: " + node_meta_data["iri"])
+    solr_doc = dict()
+    solr_doc["id"] = node_meta_data["iri"]
+    solr_doc["iri"] = node_meta_data["iri"]
+    solr_doc["curie"] = node_meta_data["curie"]
+    solr_doc["label"] = node_meta_data["label"]
+    if "creator" in node_meta_data:
+        solr_doc["creator"] = node_meta_data["creator"]
+    if "exactMatch" in node_meta_data:
+        solr_doc["exactMatch"] = next(filter(None, node_meta_data["exactMatch"]))
+    if "description" in node_meta_data:
+        solr_doc["description"] = node_meta_data["description"]
+    if "abstract" in node_meta_data:
+        solr_doc["abstract"] = next(filter(None, node_meta_data["abstract"]))
+    if "label_rdfs" in node_meta_data:
+        solr_doc["label_rdfs"] = node_meta_data["label_rdfs"]
+    if "bibliographicCitation" in node_meta_data:
+        solr_doc["bibliographicCitation"] = next(filter(None, node_meta_data["bibliographicCitation"]))
+    if "identifier" in node_meta_data:
+        solr_doc["identifier"] = node_meta_data["identifier"]
+    if "date" in node_meta_data:
+        solr_doc["date"] = next(filter(None, node_meta_data["date"]))
+    return solr_doc
+
+
 def dump_to_file(data, path):
     print("Writing data to file. Object count is : " + str(len(data)))
     with open(path, 'w', encoding='utf-8') as f:
@@ -135,5 +179,6 @@ def update_solr():
 
 
 if __name__ == "__main__":
-    individuals_metadata_solr_dump()
-    # update_solr()
+    # individuals_metadata_dump()
+    # individuals_metadata_solr_dump()
+    update_solr()
