@@ -90,3 +90,20 @@ class ListAllAllenIndividuals(BDSQuery):
             nodes.append(record[0])
 
         return nodes
+
+
+class GetOntologyMetadata(BDSQuery):
+
+    def get_query(self):
+        log.info("Executing: GetOntologyMetadata")
+        return """
+        MATCH (ontology:Ontology) 
+        RETURN properties(ontology) AS ont_metadata
+        LIMIT 1
+        """
+
+    def parse_response(self, response):
+        for record in response:
+            return {"name": record["ont_metadata"]["label"], "version": record["ont_metadata"]["versionInfo"]}
+        return None
+
