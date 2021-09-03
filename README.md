@@ -14,3 +14,8 @@ Solr can be used to search BDS entities by label (or by any other field):
 Or directly access to entity metadata by IRI. This approach can also be used to traverse through related entities (parents, markers, references etc.): 
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=id:%22http://www.semanticweb.org/brain_data_standards/AllenDendClass_CS202002013_189%22
+
+Version of the indexed ontology can be queried by:
+
+    http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=id:%22ontology%22
+

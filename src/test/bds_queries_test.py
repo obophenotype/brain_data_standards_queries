@@ -1,6 +1,6 @@
 import unittest
 import json
-from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals
+from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata
 
 
 class TemplateUtilsTest(unittest.TestCase):
@@ -25,6 +25,15 @@ class TemplateUtilsTest(unittest.TestCase):
         self.assertEqual(134, len(result))
         self.assertTrue("AllenDend:CS202002013_128" in result)
         self.assertTrue("AllenDend:CS202002013_188" in result)
+
+    def test_get_ontology_metadata(self):
+        result = GetOntologyMetadata().execute_query()
+
+        print(json.dumps(result))
+
+        self.assertEqual(2, len(result))
+        self.assertEqual("Brain Data Standards Cell Ontology", result["name"])
+        self.assertTrue("version" in result)
 
 
 if __name__ == '__main__':

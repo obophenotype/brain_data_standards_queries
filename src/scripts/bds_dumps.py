@@ -1,7 +1,7 @@
 import json
 import requests
 from datetime import datetime
-from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals
+from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata
 
 today = datetime.today().strftime('%Y%m%d')
 
@@ -21,7 +21,13 @@ def individuals_metadata_dump():
 
     print(len(all_metadata))
 
-    dump_to_file(all_metadata, DUMP_PATH)
+    ont_metadata = GetOntologyMetadata().execute_query()
+
+    result = dict()
+    result["ontology"] = ont_metadata
+    result["entities"] = all_metadata
+
+    dump_to_file(result, DUMP_PATH)
 
 
 def individuals_metadata_solr_dump():
@@ -47,6 +53,8 @@ def individuals_metadata_solr_dump():
         count += 1
 
     print("Found Allen individual count is: " + str(count))
+
+    all_data["ontology"] = get_version_metadata(all_data)
 
     dump_map_to_file(all_data, SOLR_JSON_PATH)
 
@@ -127,6 +135,8 @@ def extract_class_metadata(node_meta_data):
         solr_doc["hasOBONamespace"] = node_meta_data["hasOBONamespace"]
     if "definition" in node_meta_data:
         solr_doc["definition"] = str(node_meta_data["definition"][0]).split("\"value\":\"")[1].replace("\"}", "")
+    if "versionInfo" in node_meta_data:
+        solr_doc["versionInfo"] = node_meta_data["versionInfo"]
     return solr_doc
 
 
@@ -153,6 +163,18 @@ def extract_reference_class_metadata(node_meta_data):
         solr_doc["identifier"] = node_meta_data["identifier"]
     if "date" in node_meta_data:
         solr_doc["date"] = next(filter(None, node_meta_data["date"]))
+    return solr_doc
+
+
+def get_version_metadata(all_data):
+    ont_metadata = GetOntologyMetadata().execute_query()
+
+    solr_doc = dict()
+    solr_doc["id"] = "ontology"
+    solr_doc["iri"] = "ontology"
+    solr_doc["label"] = ont_metadata["name"]
+    solr_doc["version"] = ont_metadata["version"]
+
     return solr_doc
 
 
