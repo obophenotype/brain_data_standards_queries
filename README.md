@@ -1,7 +1,5 @@
 # Brain Data Standards Queries
-A repository for the Brain Data Standards Ontology cypher queries and dumps.
-
-These queries are utilized to build dumps of the BDS ontology in json format. Related dumps can be found in the [dumps](dumps) folder.
+A repository for the Brain Data Standards Ontology cypher queries and dumps. These queries are utilized to build dumps of the BDS ontology in json format. Related dumps can be found in the [dumps](dumps) folder.
 
 ## Solr
 
