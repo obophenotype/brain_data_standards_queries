@@ -3,7 +3,7 @@ import json
 from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata
 
 
-class TemplateUtilsTest(unittest.TestCase):
+class QueriesTest(unittest.TestCase):
 
     def test_individual_details_query(self):
         individual_details_query = IndividualDetailsQuery()
@@ -22,7 +22,7 @@ class TemplateUtilsTest(unittest.TestCase):
         result = ListAllAllenIndividuals().execute_query()
         print(json.dumps(result))
 
-        self.assertEqual(134, len(result))
+        self.assertEqual(144, len(result))
         self.assertTrue("AllenDend:CS202002013_128" in result)
         self.assertTrue("AllenDend:CS202002013_188" in result)
 

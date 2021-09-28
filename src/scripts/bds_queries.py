@@ -54,7 +54,7 @@ class IndividualDetailsQuery(BDSQuery):
     def get_query(self):
         log.info("Executing: IndividualDetailsQuery")
         return """
-        MATCH (i:Individual)-[:exemplar_of]->(c:Class) 
+        MATCH (i:Individual)-[:exemplar_data_of]->(c:Class) 
         WHERE i.curie = 'AllenDend:' + $accession 
         OPTIONAL MATCH (c)-[scr:SUBCLASSOF]->(parent) 
         OPTIONAL MATCH (c)-[er:expresses]->(marker)
@@ -79,7 +79,7 @@ class ListAllAllenIndividuals(BDSQuery):
     def get_query(self):
         log.info("Executing: ListAllAllenIndividuals")
         return """
-        MATCH (i:Individual)-[:exemplar_of]->(c:Class)
+        MATCH (i:Individual)-[:exemplar_data_of]->(c:Class)
         WHERE c.curie STARTS WITH 'AllenDendClass:'
         RETURN DISTINCT i.curie 
         """
