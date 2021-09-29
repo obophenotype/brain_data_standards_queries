@@ -41,15 +41,18 @@ def generate_request(config):
         query = request.args['query']
     else:
         raise QueryTermException("Error: query string is empty. Please specify a search term.")
-    request_url = "http://{host}:{port}/solr/{collection}/query?defType=dismax".format(host=config["solr_host"],
+    request_url = "http://{host}:{port}/solr/{collection}/query?defType=edismax".format(host=config["solr_host"],
                                                                                        port=config["solr_port"],
                                                                                        collection=config[
                                                                                            "solr_collection"])
-    request_url += "&q=%22*" + escape_solr_arg(query) + "*%22"
+    request_url += "&q=(" + create_intersection_string(query) + ")"
     request_url += "&fl=" + ",".join(get_list_value(config, "response_fields"))
-    request_url += "&qf=%22" + " ".join(get_list_value(config, "field_weights")) + " %22"
+    request_url += "&qf=" + " ".join(get_list_value(config, "field_weights")) + " "
     for domain_boosting in get_list_value(config, "domain_boosting"):
         request_url += "&bq=iri:" + escape_solr_arg(domain_boosting)
+    request_url += "&hl=true"
+    request_url += "&hl.simple.pre=<b>"
+    request_url += "&hl.fl=" + ",".join(get_list_value(config, "highlight_fields"))
     return request_url
 
 
