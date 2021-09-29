@@ -16,16 +16,24 @@ solr_escape_rules = {'+':r'\+','-':r'\-','&':r'\&','|':r'\|','!':r'\!','(':r'\('
 def search():
     request_url = generate_request(search_config)
     print(request_url)
-    response = requests.get(request_url)
-    return response.json()
+    solr_response = requests.get(request_url)
+    response = flask.jsonify(solr_response.json())
+    # handle CORS
+    headers = response.headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 
 @app.route('/bds/api/autocomplete', methods=['GET'])
 def autocomplete():
     request_url = generate_request(autocomplete_config)
     print(request_url)
-    response = requests.get(request_url)
-    return response.json()
+    solr_response = requests.get(request_url)
+    response = flask.jsonify(solr_response.json())
+    # handle CORS
+    headers = response.headers
+    headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 
 def generate_request(config):
