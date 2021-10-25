@@ -1,5 +1,9 @@
 FROM python:3.6.2
 
+ENV SOLR_HOST=ec2-3-143-113-50.us-east-2.compute.amazonaws.com
+ENV SOLR_PORT=8993
+ENV SOLR_COLLECTION=bdsdump
+
 RUN mkdir /code /code/src /code/vfb_connect_api
 ADD requirements.txt /code/
 

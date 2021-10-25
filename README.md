@@ -30,3 +30,15 @@ This project also provides restful services for full-text search and autocomplet
 ### Full-text search:
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds/api/search?query=L5/6%20NP
+
+### Build:
+
+To build the service, please run the following commands in the project root folder. 
+
+```
+docker build -t bds/search-service .
+
+docker run -p 8484:8080 -e SOLR_HOST=my_host -e SOLR_PORT=my_port SOLR_COLLECTION=bdsdump -it bds/search-service 
+```
+
+If environment variables are not given to the run command, default values will be first read from the Dockerfile then from the [configuration](src/config/search_config.ini) file.
