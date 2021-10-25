@@ -54,22 +54,30 @@ class IndividualDetailsQuery(BDSQuery):
     def get_query(self):
         log.info("Executing: IndividualDetailsQuery")
         return """
-        MATCH (i:Individual)-[:exemplar_data_of]->(c:Class) 
+        MATCH (i:Individual)-[:exemplar_of]->(c:Class) 
         WHERE i.curie = 'AllenDend:' + $accession 
         OPTIONAL MATCH (c)-[scr:SUBCLASSOF]->(parent) 
         OPTIONAL MATCH (c)-[er:expresses]->(marker)
         OPTIONAL MATCH (c)-[src:source]->(reference) 
+        OPTIONAL MATCH (c)-[:in_taxon]->(in_taxon) 
+        OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:in_taxon]->(in_taxon_parent)
+        OPTIONAL MATCH (c)-[:has_soma_location]->(soma_location) 
+        OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:has_soma_location]->(parent_soma_location)
         RETURN apoc.map.mergeList([properties(c), {tags: labels(c)}]) AS class_metadata, 
+        properties(i) AS indv_metadata,
         collect(distinct {relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
         collect(distinct { relation: properties(er), class_metadata: properties(marker)}) AS markers,
-        collect(distinct { relation: properties(src), class_metadata: properties(reference)}) AS references 
+        collect(distinct { relation: properties(src), class_metadata: properties(reference)}) AS references,
+        collect(distinct { taxon: properties(in_taxon), parent_taxon: properties(in_taxon_parent)}) AS taxonomy, 
+        collect(distinct { soma_location: properties(soma_location), parent_soma_location: properties(parent_soma_location)}) AS region
         """
 
     def parse_response(self, response):
         node = {}
         for record in response:
-            node = {"class_metadata": record["class_metadata"], "parents": record["parents"],
-                    "markers": record["markers"], "references": record["references"]}
+            node = {"class_metadata": record["class_metadata"], "indv_metadata": record["indv_metadata"],
+                    "parents": record["parents"], "markers": record["markers"], "references": record["references"],
+                    "taxonomy": record["taxonomy"], "region": record["region"]}
 
         return node
 
@@ -79,7 +87,7 @@ class ListAllAllenIndividuals(BDSQuery):
     def get_query(self):
         log.info("Executing: ListAllAllenIndividuals")
         return """
-        MATCH (i:Individual)-[:exemplar_data_of]->(c:Class)
+        MATCH (i:Individual)-[:exemplar_of]->(c:Class)
         WHERE c.curie STARTS WITH 'AllenDendClass:'
         RETURN DISTINCT i.curie 
         """

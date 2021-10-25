@@ -45,9 +45,12 @@ def individuals_metadata_solr_dump():
         solr_doc = extract_class_metadata(result["class_metadata"])
         solr_doc["individual"] = individual
 
+        extract_individual_data(all_data, result, solr_doc)
         extract_parent_data(all_data, result, solr_doc)
         extract_marker_data(all_data, result, solr_doc)
         extract_reference_data(all_data, result, solr_doc)
+        extract_taxonomy_data(all_data, result, solr_doc)
+        extract_brain_region_data(all_data, result, solr_doc)
 
         all_data[solr_doc["iri"]] = solr_doc
         count += 1
@@ -57,6 +60,24 @@ def individuals_metadata_solr_dump():
     all_data["ontology"] = get_version_metadata(all_data)
 
     dump_map_to_file(all_data, SOLR_JSON_PATH)
+
+
+def extract_individual_data(all_data, result, solr_doc):
+    indv_metadata = result["indv_metadata"]
+
+    if "comment" in indv_metadata:
+        solr_doc["comment_allen"] = indv_metadata["comment"]
+
+    if "cell_type_rank" in indv_metadata:
+        solr_doc["rank"] = indv_metadata["cell_type_rank"]
+
+    if "has_exact_synonym" in indv_metadata:
+        exact_synonyms = solr_doc["has_exact_synonym"]
+        for synonym in indv_metadata["has_exact_synonym"]:
+            synonym = str(synonym).split("\"value\":\"")[1].replace("\"}", "")
+            if synonym not in exact_synonyms:
+                exact_synonyms.append(synonym)
+        solr_doc["has_exact_synonym"] = exact_synonyms
 
 
 def extract_parent_data(all_data, result, solr_doc):
@@ -107,6 +128,35 @@ def extract_reference_data(all_data, result, solr_doc):
             if reference_iri not in all_data:
                 all_data[reference_iri] = extract_reference_class_metadata(reference["class_metadata"])
     solr_doc["references"] = references
+
+
+def extract_taxonomy_data(all_data, result, solr_doc):
+    base_taxonomy = ""
+    parent_taxonomies = set()
+    for taxon in result["taxonomy"]:
+        if "taxon" in taxon and taxon["taxon"]:
+            base_taxonomy = taxon["taxon"]["iri"]
+        elif "parent_taxon" in taxon and taxon["parent_taxon"]:
+            parent_taxonomies.add(taxon["parent_taxon"]["iri"])
+
+    if base_taxonomy:
+        solr_doc["species"] = base_taxonomy
+    elif len(parent_taxonomies) > 0:
+        for parent_taxon in list(parent_taxonomies):
+            if "314146" not in parent_taxon:
+                solr_doc["species"] = parent_taxon
+                break
+
+
+def extract_brain_region_data(all_data, result, solr_doc):
+    brain_regions = set()
+    for region in result["region"]:
+        if "soma_location" in region and region["soma_location"]:
+            brain_regions.add(region["soma_location"]["label"])
+        if "parent_soma_location" in region and region["parent_soma_location"]:
+            brain_regions.add(region["parent_soma_location"]["label"])
+
+    solr_doc["region"] = list(brain_regions)
 
 
 def extract_class_metadata(node_meta_data):
@@ -201,6 +251,6 @@ def update_solr():
 
 
 if __name__ == "__main__":
-    # individuals_metadata_dump()
+    individuals_metadata_dump()
     # individuals_metadata_solr_dump()
-    update_solr()
+    # update_solr()
