@@ -31,6 +31,44 @@ This project also provides restful services for full-text search and autocomplet
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds/api/search?query=L5/6%20NP
 
+### Filtering search results:
+
+Filtering search/autocomplete results by species and rank are supported.
+
+#### Filter by Species
+
+Species can be specified by their simple name or by their NCBITaxon ID. When more than one species are provided, results that meet any of the species (OR the given species) are returned. Supported species are:
+
+```
+["mouse", "human", "marmoset", "euarchontoglires"]
+
+or
+
+["http://purl.obolibrary.org/obo/NCBITaxon_10090",
+"http://purl.obolibrary.org/obo/NCBITaxon_9606",
+"http://purl.obolibrary.org/obo/NCBITaxon_9483",
+"http://purl.obolibrary.org/obo/NCBITaxon_314146"]
+```
+
+Sample queries are:
+
+    bds/api/search?query=L5/6%20NP&species=mouse
+
+    bds/api/search?query=L5/6%20NP&species=mouse,human
+
+    bds/api/search?query=L5/6%20NP&species="http://purl.obolibrary.org/obo/NCBITaxon_10090"
+
+    bds/api/search?query=L5/6%20NP&species="http://purl.obolibrary.org/obo/NCBITaxon_10090","http://purl.obolibrary.org/obo/NCBITaxon_9483"
+
+#### Filter by Rank
+
+Supported ranks are: Cell Type, Subclass, Class and None
+
+Sample queries are:
+
+    bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type
+    bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type,Class
+
 ### Build:
 
 To build the service, please run the following commands in the project root folder. 

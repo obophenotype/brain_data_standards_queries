@@ -3,6 +3,8 @@ import requests
 from datetime import datetime
 from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata
 
+CROSS_SPECIES = "314146"
+
 today = datetime.today().strftime('%Y%m%d')
 
 DUMP_PATH = '../../dumps/individuals_metadata_{}.json'.format(today)
@@ -141,9 +143,11 @@ def extract_taxonomy_data(all_data, result, solr_doc):
 
     if base_taxonomy:
         solr_doc["species"] = base_taxonomy
-    elif len(parent_taxonomies) > 0:
+    elif len(parent_taxonomies) == 1 and CROSS_SPECIES in next(iter(parent_taxonomies)):
+        solr_doc["species"] = next(iter(parent_taxonomies))
+    else:
         for parent_taxon in list(parent_taxonomies):
-            if "314146" not in parent_taxon:
+            if CROSS_SPECIES not in parent_taxon:
                 solr_doc["species"] = parent_taxon
                 break
 
@@ -187,6 +191,8 @@ def extract_class_metadata(node_meta_data):
         solr_doc["definition"] = str(node_meta_data["definition"][0]).split("\"value\":\"")[1].replace("\"}", "")
     if "versionInfo" in node_meta_data:
         solr_doc["versionInfo"] = node_meta_data["versionInfo"]
+    if "symbol" in node_meta_data:
+        solr_doc["symbol"] = next(filter(None, node_meta_data["symbol"]))
     return solr_doc
 
 
@@ -251,6 +257,6 @@ def update_solr():
 
 
 if __name__ == "__main__":
-    individuals_metadata_dump()
-    # individuals_metadata_solr_dump()
+    # individuals_metadata_dump()
+    individuals_metadata_solr_dump()
     # update_solr()
