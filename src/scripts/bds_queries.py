@@ -100,6 +100,24 @@ class ListAllAllenIndividuals(BDSQuery):
         return nodes
 
 
+class ListAllTaxonomies(BDSQuery):
+
+    def get_query(self):
+        log.info("Executing: ListAllTaxonomies")
+        return """
+        MATCH (i:Individual)-[]->(c:Class) 
+        WHERE c.curie = 'BDSHELP:Taxonomy' 
+        RETURN i 
+        """
+
+    def parse_response(self, response):
+        taxonomies = dict()
+        for record in response:
+            taxonomies[record[0]["label"]] = record[0]
+
+        return taxonomies
+
+
 class GetOntologyMetadata(BDSQuery):
 
     def get_query(self):

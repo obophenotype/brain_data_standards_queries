@@ -1,7 +1,9 @@
 import json
 import requests
 from datetime import datetime
-from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata
+from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
+
+CROSS_SPECIES = "Euarchontoglires"
 
 today = datetime.today().strftime('%Y%m%d')
 
@@ -37,6 +39,9 @@ def individuals_metadata_solr_dump():
     """
     all_data = dict()
     all_individuals = ListAllAllenIndividuals().execute_query()
+    all_datasets = ListAllTaxonomies().execute_query()
+
+    extract_dataset_metadata(all_data, all_datasets)
 
     count = 0
     for individual in all_individuals:
@@ -50,7 +55,7 @@ def individuals_metadata_solr_dump():
         extract_marker_data(all_data, result, solr_doc)
         extract_reference_data(all_data, result, solr_doc)
         extract_taxonomy_data(all_data, result, solr_doc)
-        extract_brain_region_data(all_data, result, solr_doc)
+        extract_brain_region_data(all_data, result, solr_doc, all_datasets)
 
         all_data[solr_doc["iri"]] = solr_doc
         count += 1
@@ -135,28 +140,41 @@ def extract_taxonomy_data(all_data, result, solr_doc):
     parent_taxonomies = set()
     for taxon in result["taxonomy"]:
         if "taxon" in taxon and taxon["taxon"]:
-            base_taxonomy = taxon["taxon"]["iri"]
+            base_taxonomy = taxon["taxon"]["label"]
         elif "parent_taxon" in taxon and taxon["parent_taxon"]:
-            parent_taxonomies.add(taxon["parent_taxon"]["iri"])
+            parent_taxonomies.add(taxon["parent_taxon"]["label"])
 
     if base_taxonomy:
         solr_doc["species"] = base_taxonomy
-    elif len(parent_taxonomies) > 0:
+    elif len(parent_taxonomies) == 1 and CROSS_SPECIES in next(iter(parent_taxonomies)):
+        solr_doc["species"] = next(iter(parent_taxonomies))
+    else:
         for parent_taxon in list(parent_taxonomies):
-            if "314146" not in parent_taxon:
+            if CROSS_SPECIES not in parent_taxon:
                 solr_doc["species"] = parent_taxon
                 break
 
 
-def extract_brain_region_data(all_data, result, solr_doc):
-    brain_regions = set()
+def extract_brain_region_data(all_data, result, solr_doc, all_datasets):
+    indv_curie = solr_doc["curie"]
+    taxonomy_name = indv_curie.replace("AllenDendClass:CS", "CCN").split("_")[0]
+
+    brain_regions = dict()
     for region in result["region"]:
         if "soma_location" in region and region["soma_location"]:
-            brain_regions.add(region["soma_location"]["label"])
+            brain_regions[region["soma_location"]["curie"]] = region["soma_location"]["label"]
         if "parent_soma_location" in region and region["parent_soma_location"]:
-            brain_regions.add(region["parent_soma_location"]["label"])
+            brain_regions[region["parent_soma_location"]["curie"]] = region["parent_soma_location"]["label"]
 
-    solr_doc["region"] = list(brain_regions)
+    if taxonomy_name in all_datasets:
+        taxon = all_datasets[taxonomy_name]
+        # if "prefLabel" in taxon:
+        #     solr_doc["species"] = next(filter(None, taxon["prefLabel"]))
+        if brain_regions and "has_brain_region" in taxon:
+            brain_regions_set = set()
+            for taxon_region in taxon["has_brain_region"]:
+                brain_regions_set.add(brain_regions[taxon_region])
+            solr_doc["anatomic_region"] = list(brain_regions_set)
 
 
 def extract_class_metadata(node_meta_data):
@@ -187,6 +205,8 @@ def extract_class_metadata(node_meta_data):
         solr_doc["definition"] = str(node_meta_data["definition"][0]).split("\"value\":\"")[1].replace("\"}", "")
     if "versionInfo" in node_meta_data:
         solr_doc["versionInfo"] = node_meta_data["versionInfo"]
+    if "symbol" in node_meta_data:
+        solr_doc["symbol"] = next(filter(None, node_meta_data["symbol"]))
     return solr_doc
 
 
@@ -214,6 +234,38 @@ def extract_reference_class_metadata(node_meta_data):
     if "date" in node_meta_data:
         solr_doc["date"] = next(filter(None, node_meta_data["date"]))
     return solr_doc
+
+
+def extract_dataset_metadata(all_data, all_taxonomies):
+    for taxonomy in all_taxonomies:
+        taxon = all_taxonomies[taxonomy]
+        print("Processing taxonomy: " + taxon["iri"])
+        solr_doc = dict()
+        solr_doc["id"] = taxon["iri"]
+        solr_doc["iri"] = taxon["iri"]
+        solr_doc["curie"] = taxon["curie"]
+        solr_doc["accession_id"] = taxon["label"]
+        solr_doc["label"] = taxon["label"]
+        solr_doc["type"] = "taxonomy"
+
+        if "cell_types_count" in taxon:
+            solr_doc["cell_types_count"] = next(filter(None, taxon["cell_types_count"]))
+        if "cell_subclasses_count" in taxon:
+            solr_doc["cell_subclasses_count"] = next(filter(None, taxon["cell_subclasses_count"]))
+        if "cell_classes_count" in taxon:
+            solr_doc["cell_classes_count"] = next(filter(None, taxon["cell_classes_count"]))
+        if "prefLabel" in taxon:
+            solr_doc["species"] = next(filter(None, taxon["prefLabel"]))
+        if "has_brain_region" in taxon:
+            solr_doc["anatomic_region"] = next(filter(None, taxon["has_brain_region"]))
+        if "has_sex" in taxon:
+            solr_doc["sex"] = next(filter(None, taxon["has_sex"]))
+        if "has_age" in taxon:
+            solr_doc["age"] = next(filter(None, taxon["has_age"]))
+        if "database_cross_reference" in taxon:
+            solr_doc["primary_citation"] = next(filter(None, taxon["database_cross_reference"]))
+
+        all_data[solr_doc["iri"]] = solr_doc
 
 
 def get_version_metadata(all_data):
@@ -251,6 +303,6 @@ def update_solr():
 
 
 if __name__ == "__main__":
-    individuals_metadata_dump()
+    # individuals_metadata_dump()
     # individuals_metadata_solr_dump()
-    # update_solr()
+    update_solr()

@@ -9,6 +9,10 @@ Solr is used as a document database to directly access entity metadata by IRI. T
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=id:%22http://www.semanticweb.org/brain_data_standards/AllenDendClass_CS202002013_189%22
 
+Metadata of all taxonomies can be queried by:
+
+    http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=type:%22taxonomy%22
+
 Version of the indexed ontology can be queried by:
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=id:%22ontology%22
@@ -30,6 +34,41 @@ This project also provides restful services for full-text search and autocomplet
 ### Full-text search:
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds/api/search?query=L5/6%20NP
+
+### Filtering search results:
+
+Filtering search/autocomplete results by species and rank are supported.
+
+#### Filter by Species
+
+Species can be specified by their simple name or by their NCBITaxon ID. When more than one species are provided, results that meet any of the species (OR the given species) are returned. Supported species are:
+
+```
+["mouse", "human", "marmoset", "euarchontoglires"]
+
+or
+
+["Mus musculus", "Homo sapiens", "Callithrix jacchus", "Euarchontoglires"]
+```
+
+Sample queries are:
+
+    bds/api/search?query=L5/6%20NP&species=mouse
+
+    bds/api/search?query=L5/6%20NP&species=mouse,human
+
+    bds/api/search?query=L5/6%20NP&species="Callithrix jacchus"
+
+    bds/api/search?query=L5/6%20NP&species="Mus musculus","Homo sapiens"
+
+#### Filter by Rank
+
+Supported ranks are: Cell Type, Subclass, Class and None
+
+Sample queries are:
+
+    bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type
+    bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type,Class
 
 ### Build:
 
