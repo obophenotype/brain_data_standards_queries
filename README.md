@@ -9,6 +9,10 @@ Solr is used as a document database to directly access entity metadata by IRI. T
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=id:%22http://www.semanticweb.org/brain_data_standards/AllenDendClass_CS202002013_189%22
 
+Metadata of all taxonomies can be queried by:
+
+    http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=type:%22taxonomy%22
+
 Version of the indexed ontology can be queried by:
 
     http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8993/solr/bdsdump/query?q=id:%22ontology%22
