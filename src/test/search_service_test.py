@@ -19,7 +19,7 @@ class SearchTest(unittest.TestCase):
         self.assertEqual(4, len(results))
         self.assertEqual(["AllenDendClass:CS202002013_8"], results[0]["curie"])
         self.assertEqual(["Lamp5 Lhx6 MOp (Mouse)"], results[0]["symbol"])
-        self.assertEqual(["http://purl.obolibrary.org/obo/NCBITaxon_10090"], results[0]["species"])
+        self.assertEqual(["Mus musculus"], results[0]["species"])
 
     def test_search_species_filter(self):
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6""")
@@ -30,10 +30,10 @@ class SearchTest(unittest.TestCase):
         species = set()
         for result in results:
             species.update(result["species"])
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_10090" in species)
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_9483" in species)
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_314146" in species)
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_9606" in species)
+        self.assertTrue("Mus musculus" in species)
+        self.assertTrue("Homo sapiens" in species)
+        self.assertTrue("Callithrix jacchus" in species)
+        self.assertTrue("Euarchontoglires" in species)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=Mouse""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -41,15 +41,15 @@ class SearchTest(unittest.TestCase):
         species = set()
         for result in results:
             species.update(result["species"])
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_10090" in species)
+        self.assertTrue("Mus musculus" in species)
 
-        response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=\"http://purl.obolibrary.org/obo/NCBITaxon_9483\"""")
+        response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=\"Callithrix jacchus\"""")
         results = json.loads(response.get_data())["response"]["docs"]
         self.assertEqual(1, len(results))
         species = set()
         for result in results:
             species.update(result["species"])
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_9483" in species)
+        self.assertTrue("Callithrix jacchus" in species)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=mouse,human""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -57,8 +57,8 @@ class SearchTest(unittest.TestCase):
         species = set()
         for result in results:
             species.update(result["species"])
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_10090" in species)
-        self.assertTrue("http://purl.obolibrary.org/obo/NCBITaxon_9606" in species)
+        self.assertTrue("Mus musculus" in species)
+        self.assertTrue("Homo sapiens" in species)
 
     def test_search_species_filter_error(self):
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=mousexx""")

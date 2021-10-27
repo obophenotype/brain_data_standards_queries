@@ -48,10 +48,7 @@ Species can be specified by their simple name or by their NCBITaxon ID. When mor
 
 or
 
-["http://purl.obolibrary.org/obo/NCBITaxon_10090",
-"http://purl.obolibrary.org/obo/NCBITaxon_9606",
-"http://purl.obolibrary.org/obo/NCBITaxon_9483",
-"http://purl.obolibrary.org/obo/NCBITaxon_314146"]
+["Mus musculus", "Homo sapiens", "Callithrix jacchus", "Euarchontoglires"]
 ```
 
 Sample queries are:
@@ -60,9 +57,9 @@ Sample queries are:
 
     bds/api/search?query=L5/6%20NP&species=mouse,human
 
-    bds/api/search?query=L5/6%20NP&species="http://purl.obolibrary.org/obo/NCBITaxon_10090"
+    bds/api/search?query=L5/6%20NP&species="Callithrix jacchus"
 
-    bds/api/search?query=L5/6%20NP&species="http://purl.obolibrary.org/obo/NCBITaxon_10090","http://purl.obolibrary.org/obo/NCBITaxon_9483"
+    bds/api/search?query=L5/6%20NP&species="Mus musculus","Homo sapiens"
 
 #### Filter by Rank
 

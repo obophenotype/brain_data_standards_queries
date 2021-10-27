@@ -1,6 +1,6 @@
 import unittest
 import json
-from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata
+from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
 
 
 class QueriesTest(unittest.TestCase):
@@ -12,7 +12,7 @@ class QueriesTest(unittest.TestCase):
 
         self.assertTrue(result["class_metadata"])
         self.assertTrue(result["parents"])
-        self.assertEqual(1, len(result["parents"]))
+        self.assertEqual(2, len(result["parents"]))
         self.assertTrue(result["markers"])
         self.assertEqual(2, len(result["markers"]))
         self.assertTrue(result["references"])
@@ -22,9 +22,24 @@ class QueriesTest(unittest.TestCase):
         result = ListAllAllenIndividuals().execute_query()
         print(json.dumps(result))
 
-        self.assertEqual(144, len(result))
+        self.assertEqual(515, len(result))
         self.assertTrue("AllenDend:CS202002013_128" in result)
         self.assertTrue("AllenDend:CS202002013_188" in result)
+
+    def test_list_all_taxonomies_query(self):
+        result = ListAllTaxonomies().execute_query()
+        print(result)
+
+        self.assertEqual(4, len(result))
+        self.assertTrue('CCN202002013' in result)
+        self.assertEqual(["UBERON:0001384"], result['CCN202002013']["has_brain_region"])
+
+        for key in result['CCN202002013']:
+            print(key + " : " + str(result['CCN202002013'][key]))
+
+        self.assertTrue('CCN201912131' in result)
+        self.assertTrue('CCN201912132' in result)
+        self.assertTrue('CCN202002270' in result)
 
     def test_get_ontology_metadata(self):
         result = GetOntologyMetadata().execute_query()

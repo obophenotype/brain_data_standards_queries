@@ -14,10 +14,10 @@ log = logging.getLogger(__name__)
 solr_escape_rules = {'+':r'\+','-':r'\-','&':r'\&','|':r'\|','!':r'\!','(':r'\(',')':r'\)','{':r'\{','}':r'\}',
                      '[':r'\[',']':r'\]','~':r'\~','*':r'\*','?':r'\?',':':r'\:','"':r'\"',';':r'\;','/':r'\/'}
 
-species_mapping = {"mouse": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-                   "human": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
-                   "marmoset": "http://purl.obolibrary.org/obo/NCBITaxon_9483",
-                   "euarchontoglires": "http://purl.obolibrary.org/obo/NCBITaxon_314146"}
+species_mapping = {"mouse": "Mus musculus",
+                   "human": "Homo sapiens",
+                   "marmoset": "Callithrix jacchus",
+                   "euarchontoglires": "Euarchontoglires"}
 ranks = ["Cell Type", "Subclass", "Class", "None"]
 
 
