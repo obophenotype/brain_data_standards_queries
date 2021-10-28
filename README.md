@@ -2,7 +2,7 @@
 A repository for the Brain Data Standards Ontology services, queries and dumps. These queries are utilized to build dumps of the BDS ontology in json format. Provided dumps are indexed to the Solr and can be queried by the provided RESTful services.
 
 * Dumps can be found in the [dumps](dumps) folder.
-* Service details can be found in the [Swagger](ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds)
+* Service details can be found in the [Swagger](http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds)
 
 ## Solr
 
@@ -18,7 +18,7 @@ Version of the indexed ontology can be queried by:
 
 ## API
 
-Search and query services are documented in [Swagger](ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds)
+Search and query services are documented in [Swagger](http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds)
 
 Full-text search and autocomplete services are optimized query wrappers for Solr. Through [configuration](src/config/search_config.ini) given parameters can be optimized:
 
