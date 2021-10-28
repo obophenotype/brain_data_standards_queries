@@ -20,7 +20,7 @@ Version of the indexed ontology can be queried by:
 
 Search and query services are documented in [Swagger](http://ec2-3-143-113-50.us-east-2.compute.amazonaws.com:8484/bds)
 
-Full-text search and autocomplete services are optimized query wrappers for Solr. Through [configuration](src/config/search_config.ini) given parameters can be optimized:
+Full-text search and autocomplete services are optimized query wrappers for Solr. Through [configuration](src/bds_api/config/search_config.ini) given parameters can be optimized:
 
 * Which fields to return as response (_see `response_fields` parameter_):
   * For full-text search all fields and the lucene scores are returned
