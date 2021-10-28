@@ -7,9 +7,9 @@ CROSS_SPECIES = "Euarchontoglires"
 
 today = datetime.today().strftime('%Y%m%d')
 
-DUMP_PATH = '../../dumps/individuals_metadata_{}.json'.format(today)
+DUMP_PATH = '../../../dumps/individuals_metadata_{}.json'.format(today)
 
-SOLR_JSON_PATH = '../../dumps/individuals_metadata_solr_{}.json'.format(today)
+SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format(today)
 
 
 def individuals_metadata_dump():
@@ -183,6 +183,9 @@ def extract_class_metadata(node_meta_data):
     solr_doc["id"] = node_meta_data["iri"]
     solr_doc["iri"] = node_meta_data["iri"]
     solr_doc["curie"] = node_meta_data["curie"]
+    if ":" in node_meta_data["curie"]:
+        solr_doc["accession_id"] = str(node_meta_data["curie"]).split(":")[1].strip()
+
     solr_doc["label"] = node_meta_data["label"]
     if "short_form" in node_meta_data:
         solr_doc["short_form"] = node_meta_data["short_form"]

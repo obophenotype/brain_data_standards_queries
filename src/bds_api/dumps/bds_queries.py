@@ -1,7 +1,7 @@
 import logging
 from neo4j import GraphDatabase
 from abc import ABC, abstractmethod
-from neo4j_config import neo4j_config
+from bds_api.dumps.neo4j_config import neo4j_config
 
 
 log = logging.getLogger(__name__)

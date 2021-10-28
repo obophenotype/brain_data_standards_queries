@@ -1,7 +1,7 @@
 from http import HTTPStatus
 
 
-class QueryTermException(Exception):
+class BDSApiException(Exception):
     default_status_code = HTTPStatus.BAD_REQUEST
 
     def __init__(self, message, status_code=None, payload=None):
@@ -10,7 +10,7 @@ class QueryTermException(Exception):
         if status_code is not None:
             self.status_code = status_code
         else:
-            self.status_code = QueryTermException.default_status_code
+            self.status_code = BDSApiException.default_status_code
         self.payload = payload
 
     def to_dict(self):
