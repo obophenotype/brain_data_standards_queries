@@ -1,7 +1,7 @@
 import os
 import configparser
 
-SEARCH_CONF_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../../config/search_config.ini")
+SEARCH_CONF_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../config/search_config.ini")
 
 
 def get_config():

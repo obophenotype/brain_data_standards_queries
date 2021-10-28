@@ -1,7 +1,18 @@
 import unittest
 import json
-from search.search_service import app
-from search.search_config import search_config
+from flask import Flask, Blueprint
+from bds_api.restplus import api
+from bds_api.app import app
+from bds_api.endpoints.search_service import ns as api_namespace
+from bds_api.endpoints.search_config import search_config
+
+app = Flask(__name__)
+
+# config should be same with app.py
+blueprint = Blueprint('bds', __name__, url_prefix='/bds')
+api.init_app(blueprint)
+api.add_namespace(api_namespace)
+app.register_blueprint(blueprint)
 
 
 class SearchTest(unittest.TestCase):
@@ -161,6 +172,61 @@ class SearchTest(unittest.TestCase):
         self.assertEqual("ec2-3-143-113-50.us-east-2.compute.amazonaws.com", search_config["solr_host"])
         self.assertEqual("bdsdump", search_config["solr_collection"])
         self.assertEqual("[\"*\", \"score\"]", search_config["response_fields"])
+
+
+class TaxonomiesTest(unittest.TestCase):
+
+    def setUp(self):
+        self.app = app.test_client()
+
+    def test_list_taxonomies(self):
+        response = self.app.get("""/bds/api/taxonomies""")
+        self.assertEqual(200, response.status_code)
+
+        response_data = json.loads(response.get_data())
+        print(response_data)
+        results = response_data["response"]["docs"]
+        self.assertEqual(4, len(results))
+        self.assertEqual(["AllenDend:CCN202002013"], results[0]["curie"])
+        self.assertEqual(["CCN202002013"], results[0]["accession_id"])
+        self.assertEqual([116], results[0]["cell_types_count"])
+
+
+class GetServiceTest(unittest.TestCase):
+
+    def setUp(self):
+        self.app = app.test_client()
+
+    def test_get_by_id(self):
+        response = self.app.get("""/bds/api/get?identifier=\"http://www.semanticweb.org/brain_data_standards/AllenDendClass_CS202002013_189\"""")
+        self.assertEqual(200, response.status_code)
+
+        response_data = json.loads(response.get_data())
+        print(response_data)
+        results = response_data["response"]["docs"]
+        self.assertEqual(1, len(results))
+        self.assertEqual(["AllenDendClass:CS202002013_189"], results[0]["curie"])
+
+    def test_get_by_curie(self):
+        response = self.app.get("""/bds/api/get?identifier=\"AllenDendClass:CS202002013_189\"""")
+        self.assertEqual(200, response.status_code)
+
+        response_data = json.loads(response.get_data())
+        print(response_data)
+        results = response_data["response"]["docs"]
+        self.assertEqual(1, len(results))
+        self.assertEqual(["AllenDendClass:CS202002013_189"], results[0]["curie"])
+
+    def test_get_by_accession_id(self):
+        response = self.app.get("""/bds/api/get?identifier=CS202002013_189""")
+        self.assertEqual(200, response.status_code)
+
+        response_data = json.loads(response.get_data())
+        print(response_data)
+        results = response_data["response"]["docs"]
+        self.assertEqual(1, len(results))
+        self.assertEqual(["AllenDendClass:CS202002013_189"], results[0]["curie"])
+
 
 
 if __name__ == '__main__':

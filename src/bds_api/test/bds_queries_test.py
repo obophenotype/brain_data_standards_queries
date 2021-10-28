@@ -1,6 +1,6 @@
 import unittest
 import json
-from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
+from bds_api.dumps.bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
 
 
 class QueriesTest(unittest.TestCase):
