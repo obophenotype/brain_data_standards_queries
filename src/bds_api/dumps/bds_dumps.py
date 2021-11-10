@@ -45,10 +45,15 @@ def individuals_metadata_solr_dump():
 
     count = 0
     for individual in all_individuals:
+        print("Processing individual: " + individual)
         result = IndividualDetailsQuery().execute_query({"accession": individual.replace("AllenDend:", "")})
 
-        solr_doc = extract_class_metadata(result["class_metadata"])
-        solr_doc["individual"] = individual
+        solr_doc = extract_class_metadata(result["class_metadata"][0]["class_metadata"])
+        if solr_doc:
+            solr_doc["tags"] = result["class_metadata"][0]["tags"]
+        else:
+            # some individuals don't have class, extract from individual itself
+            solr_doc = extract_class_metadata(result["indv_metadata"])
 
         extract_individual_data(all_data, result, solr_doc)
         extract_parent_data(all_data, result, solr_doc)
@@ -56,6 +61,7 @@ def individuals_metadata_solr_dump():
         extract_reference_data(all_data, result, solr_doc)
         extract_taxonomy_data(all_data, result, solr_doc)
         extract_brain_region_data(all_data, result, solr_doc, all_datasets)
+        solr_doc["individual"] = individual
 
         all_data[solr_doc["iri"]] = solr_doc
         count += 1
@@ -76,6 +82,9 @@ def extract_individual_data(all_data, result, solr_doc):
     if "cell_type_rank" in indv_metadata:
         solr_doc["rank"] = indv_metadata["cell_type_rank"]
 
+    if "cell_set_color" in indv_metadata:
+        solr_doc["cell_set_color"] = indv_metadata["cell_set_color"]
+
     if "has_exact_synonym" in indv_metadata:
         exact_synonyms = solr_doc["has_exact_synonym"]
         for synonym in indv_metadata["has_exact_synonym"]:
@@ -84,17 +93,26 @@ def extract_individual_data(all_data, result, solr_doc):
                 exact_synonyms.append(synonym)
         solr_doc["has_exact_synonym"] = exact_synonyms
 
+    if "has_related_synonym" in indv_metadata:
+        related_synonym = list()
+        for synonym in indv_metadata["has_related_synonym"]:
+            synonym = str(synonym).split("\"value\":\"")[1].replace("\"}", "")
+            if synonym not in related_synonym:
+                related_synonym.append(synonym)
+        solr_doc["aliases"] = related_synonym
+
 
 def extract_parent_data(all_data, result, solr_doc):
     parents = list()
     parent_labels = list()
     for parent in result["parents"]:
-        parent_iri = parent["class_metadata"]["iri"]
-        if parent_iri not in parents:
-            parents.append(parent_iri)
-            parent_labels.append(parent["class_metadata"]["label"])
-        if parent_iri not in all_data:
-            all_data[parent_iri] = extract_class_metadata(parent["class_metadata"])
+        if parent["class_metadata"] is not None:
+            parent_iri = parent["class_metadata"]["iri"]
+            if parent_iri not in parents:
+                parents.append(parent_iri)
+                parent_labels.append(parent["class_metadata"]["label"])
+            if parent_iri not in all_data:
+                all_data[parent_iri] = extract_class_metadata(parent["class_metadata"])
     solr_doc["parents"] = parents
     solr_doc["parent_labels"] = parent_labels
 
@@ -178,38 +196,41 @@ def extract_brain_region_data(all_data, result, solr_doc, all_datasets):
 
 
 def extract_class_metadata(node_meta_data):
-    print("Processing: " + node_meta_data["iri"])
-    solr_doc = dict()
-    solr_doc["id"] = node_meta_data["iri"]
-    solr_doc["iri"] = node_meta_data["iri"]
-    solr_doc["curie"] = node_meta_data["curie"]
-    if ":" in node_meta_data["curie"]:
-        solr_doc["accession_id"] = str(node_meta_data["curie"]).split(":")[1].strip()
+    if node_meta_data is not None:
+        print("Processing: " + node_meta_data["iri"])
+        solr_doc = dict()
+        solr_doc["id"] = node_meta_data["iri"]
+        solr_doc["iri"] = node_meta_data["iri"]
+        solr_doc["curie"] = node_meta_data["curie"]
+        if ":" in node_meta_data["curie"]:
+            solr_doc["accession_id"] = str(node_meta_data["curie"]).split(":")[1].strip()
 
-    solr_doc["label"] = node_meta_data["label"]
-    if "short_form" in node_meta_data:
-        solr_doc["short_form"] = node_meta_data["short_form"]
-    if "comment" in node_meta_data:
-        solr_doc["comment"] = node_meta_data["comment"]
-    if "tags" in node_meta_data:
-        solr_doc["tags"] = node_meta_data["tags"]
-    if "prefLabel" in node_meta_data:
-        solr_doc["prefLabel"] = node_meta_data["prefLabel"]
-    if "label_rdfs" in node_meta_data:
-        solr_doc["label_rdfs"] = node_meta_data["label_rdfs"]
-    if "has_exact_synonym" in node_meta_data:
-        exact_synonyms = list()
-        for synonym in node_meta_data["has_exact_synonym"]:
-            exact_synonyms.append(str(synonym).split("\"value\":\"")[1].replace("\"}", ""))
-        solr_doc["has_exact_synonym"] = exact_synonyms
-    if "hasOBONamespace" in node_meta_data:
-        solr_doc["hasOBONamespace"] = node_meta_data["hasOBONamespace"]
-    if "definition" in node_meta_data:
-        solr_doc["definition"] = str(node_meta_data["definition"][0]).split("\"value\":\"")[1].replace("\"}", "")
-    if "versionInfo" in node_meta_data:
-        solr_doc["versionInfo"] = node_meta_data["versionInfo"]
-    if "symbol" in node_meta_data:
-        solr_doc["symbol"] = next(filter(None, node_meta_data["symbol"]))
+        solr_doc["label"] = node_meta_data["label"]
+        if "short_form" in node_meta_data:
+            solr_doc["short_form"] = node_meta_data["short_form"]
+        if "comment" in node_meta_data:
+            solr_doc["comment"] = node_meta_data["comment"]
+        if "tags" in node_meta_data:
+            solr_doc["tags"] = node_meta_data["tags"]
+        if "prefLabel" in node_meta_data:
+            solr_doc["prefLabel"] = node_meta_data["prefLabel"]
+        if "label_rdfs" in node_meta_data:
+            solr_doc["label_rdfs"] = node_meta_data["label_rdfs"]
+        if "has_exact_synonym" in node_meta_data:
+            exact_synonyms = list()
+            for synonym in node_meta_data["has_exact_synonym"]:
+                exact_synonyms.append(str(synonym).split("\"value\":\"")[1].replace("\"}", ""))
+            solr_doc["has_exact_synonym"] = exact_synonyms
+        if "hasOBONamespace" in node_meta_data:
+            solr_doc["hasOBONamespace"] = node_meta_data["hasOBONamespace"]
+        if "definition" in node_meta_data:
+            solr_doc["definition"] = str(node_meta_data["definition"][0]).split("\"value\":\"")[1].replace("\"}", "")
+        if "versionInfo" in node_meta_data:
+            solr_doc["versionInfo"] = node_meta_data["versionInfo"]
+        if "symbol" in node_meta_data:
+            solr_doc["symbol"] = next(filter(None, node_meta_data["symbol"]))
+    else:
+        solr_doc = None
     return solr_doc
 
 

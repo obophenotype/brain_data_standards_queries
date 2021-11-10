@@ -54,8 +54,9 @@ class IndividualDetailsQuery(BDSQuery):
     def get_query(self):
         log.info("Executing: IndividualDetailsQuery")
         return """
-        MATCH (i:Individual)-[:exemplar_of]->(c:Class) 
+        MATCH (i:Individual) 
         WHERE i.curie = 'AllenDend:' + $accession 
+        OPTIONAL MATCH (i:Individual)-[:exemplar_data_of]->(c:Class)
         OPTIONAL MATCH (c)-[scr:SUBCLASSOF]->(parent) 
         OPTIONAL MATCH (c)-[er:expresses]->(marker)
         OPTIONAL MATCH (c)-[src:source]->(reference) 
@@ -63,9 +64,9 @@ class IndividualDetailsQuery(BDSQuery):
         OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:in_taxon]->(in_taxon_parent)
         OPTIONAL MATCH (c)-[:has_soma_location]->(soma_location) 
         OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:has_soma_location]->(parent_soma_location)
-        RETURN apoc.map.mergeList([properties(c), {tags: labels(c)}]) AS class_metadata, 
-        properties(i) AS indv_metadata,
-        collect(distinct {relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
+        RETURN apoc.map.mergeList([properties(i), {tags: labels(i)}]) AS indv_metadata,
+        collect(distinct { tags: labels(c), class_metadata: properties(c)}) AS class_metadata,
+        collect(distinct { relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
         collect(distinct { relation: properties(er), class_metadata: properties(marker)}) AS markers,
         collect(distinct { relation: properties(src), class_metadata: properties(reference)}) AS references,
         collect(distinct { taxon: properties(in_taxon), parent_taxon: properties(in_taxon_parent)}) AS taxonomy, 
@@ -87,8 +88,8 @@ class ListAllAllenIndividuals(BDSQuery):
     def get_query(self):
         log.info("Executing: ListAllAllenIndividuals")
         return """
-        MATCH (i:Individual)-[:exemplar_of]->(c:Class)
-        WHERE c.curie STARTS WITH 'AllenDendClass:'
+        MATCH (i:Individual)
+        WHERE EXISTS(i.cell_type_rank)
         RETURN DISTINCT i.curie 
         """
 
