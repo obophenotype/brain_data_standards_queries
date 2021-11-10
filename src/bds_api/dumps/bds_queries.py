@@ -56,7 +56,7 @@ class IndividualDetailsQuery(BDSQuery):
         return """
         MATCH (i:Individual) 
         WHERE i.curie = 'AllenDend:' + $accession 
-        OPTIONAL MATCH (i:Individual)-[:exemplar_of]->(c:Class)
+        OPTIONAL MATCH (i:Individual)-[:exemplar_data_of]->(c:Class)
         OPTIONAL MATCH (c)-[scr:SUBCLASSOF]->(parent) 
         OPTIONAL MATCH (c)-[er:expresses]->(marker)
         OPTIONAL MATCH (c)-[src:source]->(reference) 

@@ -82,6 +82,9 @@ def extract_individual_data(all_data, result, solr_doc):
     if "cell_type_rank" in indv_metadata:
         solr_doc["rank"] = indv_metadata["cell_type_rank"]
 
+    if "cell_set_color" in indv_metadata:
+        solr_doc["cell_set_color"] = indv_metadata["cell_set_color"]
+
     if "has_exact_synonym" in indv_metadata:
         exact_synonyms = solr_doc["has_exact_synonym"]
         for synonym in indv_metadata["has_exact_synonym"]:
@@ -89,6 +92,14 @@ def extract_individual_data(all_data, result, solr_doc):
             if synonym not in exact_synonyms:
                 exact_synonyms.append(synonym)
         solr_doc["has_exact_synonym"] = exact_synonyms
+
+    if "has_related_synonym" in indv_metadata:
+        related_synonym = list()
+        for synonym in indv_metadata["has_related_synonym"]:
+            synonym = str(synonym).split("\"value\":\"")[1].replace("\"}", "")
+            if synonym not in related_synonym:
+                related_synonym.append(synonym)
+        solr_doc["aliases"] = related_synonym
 
 
 def extract_parent_data(all_data, result, solr_doc):
@@ -317,5 +328,5 @@ def update_solr():
 
 if __name__ == "__main__":
     # individuals_metadata_dump()
-    individuals_metadata_solr_dump()
-    # update_solr()
+    # individuals_metadata_solr_dump()
+    update_solr()
