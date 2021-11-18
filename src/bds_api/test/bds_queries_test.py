@@ -12,7 +12,7 @@ class QueriesTest(unittest.TestCase):
 
         self.assertTrue(result["class_metadata"])
         self.assertTrue(result["parents"])
-        self.assertEqual(2, len(result["parents"]))
+        self.assertEqual(1, len(result["parents"]))
         self.assertTrue(result["markers"])
         self.assertEqual(2, len(result["markers"]))
         self.assertTrue(result["references"])
@@ -22,7 +22,7 @@ class QueriesTest(unittest.TestCase):
         result = ListAllAllenIndividuals().execute_query()
         print(json.dumps(result))
 
-        self.assertEqual(515, len(result))
+        self.assertTrue(len(result) >= 515)
         self.assertTrue("AllenDend:CS202002013_128" in result)
         self.assertTrue("AllenDend:CS202002013_188" in result)
 
