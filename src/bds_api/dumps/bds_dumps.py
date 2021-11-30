@@ -17,7 +17,7 @@ def individuals_metadata_dump():
     all_individuals = ListAllAllenIndividuals().execute_query()
 
     for individual in all_individuals:
-        result = IndividualDetailsQuery().execute_query({"accession": individual.replace("AllenDend:", "")})
+        result = IndividualDetailsQuery().execute_query({"accession": individual.replace("PCL:", "")})
         result["node"] = individual
         all_metadata.append(result)
 
@@ -46,7 +46,7 @@ def individuals_metadata_solr_dump():
     count = 0
     for individual in all_individuals:
         print("Processing individual: " + individual)
-        result = IndividualDetailsQuery().execute_query({"accession": individual.replace("AllenDend:", "")})
+        result = IndividualDetailsQuery().execute_query({"accession": individual.replace("PCL:", "")})
 
         solr_doc = extract_class_metadata(result["class_metadata"][0]["class_metadata"])
         if solr_doc:
@@ -61,6 +61,7 @@ def individuals_metadata_solr_dump():
         extract_reference_data(all_data, result, solr_doc)
         extract_taxonomy_data(all_data, result, solr_doc)
         extract_brain_region_data(all_data, result, solr_doc, all_datasets)
+        extract_homologous_data(all_data, result, solr_doc)
         solr_doc["individual"] = individual
 
         all_data[solr_doc["iri"]] = solr_doc
@@ -75,6 +76,8 @@ def individuals_metadata_solr_dump():
 
 def extract_individual_data(all_data, result, solr_doc):
     indv_metadata = result["indv_metadata"]
+
+    solr_doc["accession_id"] = indv_metadata["cluster_id"][0]
 
     if "comment" in indv_metadata:
         solr_doc["comment_allen"] = indv_metadata["comment"]
@@ -120,6 +123,7 @@ def extract_parent_data(all_data, result, solr_doc):
 def extract_marker_data(all_data, result, solr_doc):
     markers = list()
     marker_labels = list()
+    marker_names = dict()
     relations = dict()
     for marker in result["markers"]:
         if marker["class_metadata"] is not None:
@@ -127,6 +131,7 @@ def extract_marker_data(all_data, result, solr_doc):
             if marker_iri not in markers:
                 markers.append(marker_iri)
                 marker_labels.append(marker["class_metadata"]["label"])
+                marker_names[marker["class_metadata"]["label"]] = marker_iri
             if marker_iri not in all_data:
                 all_data[marker_iri] = extract_class_metadata(marker["class_metadata"])
             relation = marker["relation"]
@@ -139,6 +144,26 @@ def extract_marker_data(all_data, result, solr_doc):
         solr_doc[relation_type] = list(relations[relation_type])
     solr_doc["markers"] = markers
     solr_doc["marker_labels"] = marker_labels
+
+    extract_nsforest_markers_data(result, solr_doc, marker_names)
+
+
+def extract_nsforest_markers_data(result, solr_doc, marker_names):
+    # extend names with parent marker names due to inheritance
+    for parent_marker in result["parent_markers"]:
+        if parent_marker["class_metadata"] is not None:
+            marker_names[parent_marker["class_metadata"]["label"]] = parent_marker["class_metadata"]["iri"]
+
+    nsforest_markers = list()
+    nsforest_marker_labels = list()
+    class_metadata = result["class_metadata"][0]["class_metadata"]
+    if class_metadata is not None:
+        if "has_nsforest_marker" in class_metadata:
+            nsforest_marker_labels = class_metadata["has_nsforest_marker"]
+            for marker_name in nsforest_marker_labels:
+                nsforest_markers.append(marker_names[marker_name])
+    solr_doc["nsforest_markers"] = nsforest_markers
+    solr_doc["nsforest_marker_labels"] = nsforest_marker_labels
 
 
 def extract_reference_data(all_data, result, solr_doc):
@@ -173,9 +198,19 @@ def extract_taxonomy_data(all_data, result, solr_doc):
                 break
 
 
+def extract_homologous_data(all_data, result, solr_doc):
+    homologous_ids = list()
+    homologous_names = list()
+    for homologous_to in result["homologous_to"]:
+        if homologous_to["class_metadata"] is not None:
+            homologous_ids.append(homologous_to["class_metadata"]["iri"])
+            homologous_names.append(homologous_to["class_metadata"]["label"])
+    solr_doc["homologous_to"] = homologous_ids
+    solr_doc["homologous_to_names"] = homologous_names
+
+
 def extract_brain_region_data(all_data, result, solr_doc, all_datasets):
-    indv_curie = solr_doc["curie"]
-    taxonomy_name = indv_curie.replace("AllenDendClass:CS", "CCN").split("_")[0]
+    taxonomy_name = solr_doc["accession_id"].replace("CS", "CCN").split("_")[0]
 
     brain_regions = dict()
     for region in result["region"]:
@@ -202,9 +237,6 @@ def extract_class_metadata(node_meta_data):
         solr_doc["id"] = node_meta_data["iri"]
         solr_doc["iri"] = node_meta_data["iri"]
         solr_doc["curie"] = node_meta_data["curie"]
-        if ":" in node_meta_data["curie"]:
-            solr_doc["accession_id"] = str(node_meta_data["curie"]).split(":")[1].strip()
-
         solr_doc["label"] = node_meta_data["label"]
         if "short_form" in node_meta_data:
             solr_doc["short_form"] = node_meta_data["short_form"]

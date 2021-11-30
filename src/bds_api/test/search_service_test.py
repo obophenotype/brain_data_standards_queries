@@ -28,7 +28,7 @@ class SearchTest(unittest.TestCase):
         print(response_data)
         results = response_data["response"]["docs"]
         self.assertTrue(len(results) >= 3)
-        self.assertEqual(["AllenDendClass:CS202002013_8"], results[0]["curie"])
+        self.assertEqual(["PCL:0011008"], results[0]["curie"])
         self.assertEqual(["Lamp5 Lhx6 MOp (Mouse)"], results[0]["symbol"])
         self.assertEqual(["Mus musculus"], results[0]["species"])
 
@@ -84,9 +84,9 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
-        self.assertTrue("AllenDendClass:CS201912131_153" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0012153" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -94,8 +94,8 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -103,8 +103,8 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type, None""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -112,9 +112,9 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
-        self.assertTrue("AllenDendClass:CS201912131_153" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0012153" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Class""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -129,9 +129,9 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
-        self.assertTrue("AllenDendClass:CS201912131_153" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0012153" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -139,8 +139,8 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type&species=mouse,human""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -148,7 +148,7 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
+        self.assertTrue("PCL:0011008" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type&species=mouse,marmoset""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -156,8 +156,8 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["curie"])
-        self.assertTrue("AllenDendClass:CS202002013_8" in curies)
-        self.assertTrue("AllenDendClass:CS201912132_4" in curies)
+        self.assertTrue("PCL:0011008" in curies)
+        self.assertTrue("PCL:0013004" in curies)
 
     def test_search_rank_filter_error(self):
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Not Exists""")
@@ -187,9 +187,9 @@ class TaxonomiesTest(unittest.TestCase):
         curies = list()
         for result in results:
             curies.append(result["curie"][0])
-        self.assertTrue("AllenDend:CCN202002013" in curies)
+        self.assertTrue("PCL:0011000" in curies)
 
-        mouse_taxon = results[curies.index("AllenDend:CCN202002013")]
+        mouse_taxon = results[curies.index("PCL:0011000")]
         self.assertEqual(["CCN202002013"], mouse_taxon["accession_id"])
         self.assertEqual([116], mouse_taxon["cell_types_count"])
 
@@ -200,24 +200,24 @@ class GetServiceTest(unittest.TestCase):
         self.app = app.test_client()
 
     def test_get_by_id(self):
-        response = self.app.get("""/bds/api/get?identifier=\"http://www.semanticweb.org/brain_data_standards/AllenDendClass_CS202002013_189\"""")
+        response = self.app.get("""/bds/api/get?identifier=\"http://purl.obolibrary.org/obo/PCL_0011189\"""")
         self.assertEqual(200, response.status_code)
 
         response_data = json.loads(response.get_data())
         print(response_data)
         results = response_data["response"]["docs"]
         self.assertEqual(1, len(results))
-        self.assertEqual(["AllenDendClass:CS202002013_189"], results[0]["curie"])
+        self.assertEqual(["PCL:0011189"], results[0]["curie"])
 
     def test_get_by_curie(self):
-        response = self.app.get("""/bds/api/get?identifier=\"AllenDendClass:CS202002013_189\"""")
+        response = self.app.get("""/bds/api/get?identifier=\"PCL:0011189\"""")
         self.assertEqual(200, response.status_code)
 
         response_data = json.loads(response.get_data())
         print(response_data)
         results = response_data["response"]["docs"]
         self.assertEqual(1, len(results))
-        self.assertEqual(["AllenDendClass:CS202002013_189"], results[0]["curie"])
+        self.assertEqual(["PCL:0011189"], results[0]["curie"])
 
     def test_get_by_accession_id(self):
         response = self.app.get("""/bds/api/get?identifier=CS202002013_189""")
@@ -227,8 +227,7 @@ class GetServiceTest(unittest.TestCase):
         print(response_data)
         results = response_data["response"]["docs"]
         self.assertEqual(1, len(results))
-        self.assertEqual(["AllenDendClass:CS202002013_189"], results[0]["curie"])
-
+        self.assertEqual(["PCL:0011189"], results[0]["curie"])
 
 
 if __name__ == '__main__':

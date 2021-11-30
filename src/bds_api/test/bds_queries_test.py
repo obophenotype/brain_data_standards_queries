@@ -7,7 +7,7 @@ class QueriesTest(unittest.TestCase):
 
     def test_individual_details_query(self):
         individual_details_query = IndividualDetailsQuery()
-        result = individual_details_query.execute_query({"accession": "CS202002013_128"})
+        result = individual_details_query.execute_query({"accession": "0011528"})
         print(json.dumps(result))
 
         self.assertTrue(result["class_metadata"])
@@ -23,8 +23,8 @@ class QueriesTest(unittest.TestCase):
         print(json.dumps(result))
 
         self.assertTrue(len(result) >= 515)
-        self.assertTrue("AllenDend:CS202002013_128" in result)
-        self.assertTrue("AllenDend:CS202002013_188" in result)
+        self.assertTrue("PCL:0011528" in result)
+        self.assertTrue("PCL:0011588" in result)
 
     def test_list_all_taxonomies_query(self):
         result = ListAllTaxonomies().execute_query()
@@ -39,7 +39,7 @@ class QueriesTest(unittest.TestCase):
 
         self.assertTrue('CCN201912131' in result)
         self.assertTrue('CCN201912132' in result)
-        self.assertTrue('CCN202002270' in result)
+        self.assertTrue('CS1908210' in result)
 
     def test_get_ontology_metadata(self):
         result = GetOntologyMetadata().execute_query()
