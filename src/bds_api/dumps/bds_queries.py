@@ -55,30 +55,36 @@ class IndividualDetailsQuery(BDSQuery):
         log.info("Executing: IndividualDetailsQuery")
         return """
         MATCH (i:Individual) 
-        WHERE i.curie = 'AllenDend:' + $accession 
+        WHERE i.curie = 'PCL:' + $accession  
         OPTIONAL MATCH (i:Individual)-[:exemplar_data_of]->(c:Class)
         OPTIONAL MATCH (c)-[scr:SUBCLASSOF]->(parent) 
         OPTIONAL MATCH (c)-[er:expresses]->(marker)
+        OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[erp:expresses]->(parent_marker)
         OPTIONAL MATCH (c)-[src:source]->(reference) 
         OPTIONAL MATCH (c)-[:in_taxon]->(in_taxon) 
         OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:in_taxon]->(in_taxon_parent)
         OPTIONAL MATCH (c)-[:has_soma_location]->(soma_location) 
         OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:has_soma_location]->(parent_soma_location)
+        OPTIONAL MATCH (c)-[:in_historical_homology_relationship_with]->(homologous_to)
         RETURN apoc.map.mergeList([properties(i), {tags: labels(i)}]) AS indv_metadata,
         collect(distinct { tags: labels(c), class_metadata: properties(c)}) AS class_metadata,
         collect(distinct { relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
         collect(distinct { relation: properties(er), class_metadata: properties(marker)}) AS markers,
+        collect(distinct { relation: properties(erp), class_metadata: properties(parent_marker)}) AS parent_markers,
         collect(distinct { relation: properties(src), class_metadata: properties(reference)}) AS references,
         collect(distinct { taxon: properties(in_taxon), parent_taxon: properties(in_taxon_parent)}) AS taxonomy, 
-        collect(distinct { soma_location: properties(soma_location), parent_soma_location: properties(parent_soma_location)}) AS region
+        collect(distinct { soma_location: properties(soma_location), parent_soma_location: properties(parent_soma_location)}) AS region,
+        collect(distinct { class_metadata: properties(homologous_to)}) AS homologous_to
         """
 
     def parse_response(self, response):
         node = {}
         for record in response:
             node = {"class_metadata": record["class_metadata"], "indv_metadata": record["indv_metadata"],
-                    "parents": record["parents"], "markers": record["markers"], "references": record["references"],
-                    "taxonomy": record["taxonomy"], "region": record["region"]}
+                    "parents": record["parents"], "markers": record["markers"],
+                    "parent_markers": record["parent_markers"], "references": record["references"],
+                    "taxonomy": record["taxonomy"], "region": record["region"], "homologous_to": record["homologous_to"]
+                    }
 
         return node
 
@@ -107,7 +113,7 @@ class ListAllTaxonomies(BDSQuery):
         log.info("Executing: ListAllTaxonomies")
         return """
         MATCH (i:Individual)-[]->(c:Class) 
-        WHERE c.curie = 'BDSHELP:Taxonomy' 
+        WHERE c.curie = 'PCL:0010002' 
         RETURN i 
         """
 

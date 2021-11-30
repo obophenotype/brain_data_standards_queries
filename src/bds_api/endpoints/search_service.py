@@ -18,8 +18,7 @@ solr_escape_rules = {'+':r'\+','-':r'\-','&':r'\&','|':r'\|','!':r'\!','(':r'\('
 
 species_mapping = {"mouse": "Mus musculus",
                    "human": "Homo sapiens",
-                   "marmoset": "Callithrix jacchus",
-                   "euarchontoglires": "Euarchontoglires"}
+                   "marmoset": "Callithrix jacchus"}
 ranks = ["Cell Type", "Subclass", "Class", "None"]
 
 
@@ -41,7 +40,7 @@ class SearchEndpoint(Resource):
 
         * species (optional): Filters documents for the given species. Species can be specified by their simple name or by their NCBITaxon label. When more than one species are provided, results that meet any of the species (OR the given species) are returned.
         Supported species are:
-        ["mouse", "human", "marmoset", "euarchontoglires"] or ["Mus musculus", "Homo sapiens", "Callithrix jacchus", "Euarchontoglires"]
+        ["mouse", "human", "marmoset"] or ["Mus musculus", "Homo sapiens", "Callithrix jacchus"]
 
         ```
         ?query=L5/6%20NP&species=mouse
@@ -87,7 +86,7 @@ class AutocompleteEndpoint(Resource):
 
         * species (optional): Filters documents for the given species. Species can be specified by their simple name or by their NCBITaxon label. When more than one species are provided, results that meet any of the species (OR the given species) are returned.
         Supported species are:
-        ["mouse", "human", "marmoset", "euarchontoglires"] or ["Mus musculus", "Homo sapiens", "Callithrix jacchus", "Euarchontoglires"]
+        ["mouse", "human", "marmoset"] or ["Mus musculus", "Homo sapiens", "Callithrix jacchus"]
 
         ```
         ?query=L5/6%20NP&species=mouse
@@ -147,8 +146,8 @@ class GetEndpoint(Resource):
         * identifier (mandatory): Document identifier. Identifier can be 'id' or 'curie' or 'accession_id' of the solr document.
 
         ```
-        ?identifier="http://www.semanticweb.org/brain_data_standards/AllenDendClass_CS202002013_189"
-        ?identifier="AllenDendClass:CS202002013_189"
+        ?identifier="http://purl.obolibrary.org/obo/PCL_0011189"
+        ?identifier="PCL:0011189"
         ?identifier=CS202002013_189
         ```
         """
