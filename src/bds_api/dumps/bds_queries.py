@@ -114,13 +114,14 @@ class ListAllTaxonomies(BDSQuery):
         return """
         MATCH (i:Individual)-[]->(c:Class) 
         WHERE c.curie = 'PCL:0010002' 
-        RETURN i 
+        OPTIONAL MATCH (d)-[r:includedInDataCatalog]->(i)
+        RETURN i as taxonomy, collect(distinct { dataset_metadata: properties(d)}) AS datasets
         """
 
     def parse_response(self, response):
         taxonomies = dict()
         for record in response:
-            taxonomies[record[0]["label"]] = record[0]
+            taxonomies[record['taxonomy']["label"]] = {'taxonomy': record['taxonomy'], 'datasets': record['datasets']}
 
         return taxonomies
 
