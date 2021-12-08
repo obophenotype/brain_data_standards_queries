@@ -28,18 +28,27 @@ class QueriesTest(unittest.TestCase):
 
     def test_list_all_taxonomies_query(self):
         result = ListAllTaxonomies().execute_query()
-        print(result)
 
         self.assertEqual(4, len(result))
         self.assertTrue('CCN202002013' in result)
-        self.assertEqual(["UBERON:0001384"], result['CCN202002013']["has_brain_region"])
+        self.assertEqual(["UBERON:0001384"], result['CCN202002013']["taxonomy"]["has_brain_region"])
 
-        for key in result['CCN202002013']:
-            print(key + " : " + str(result['CCN202002013'][key]))
+        for key in result['CCN202002013']["taxonomy"]:
+            print(key + " : " + str(result['CCN202002013']["taxonomy"][key]))
+
+        self.assertTrue('cell_classes_count' in result['CCN202002013']["taxonomy"])
+        self.assertTrue(result['CCN202002013']["taxonomy"]['cell_classes_count'])
 
         self.assertTrue('CCN201912131' in result)
         self.assertTrue('CCN201912132' in result)
         self.assertTrue('CS1908210' in result)
+
+        datasets = result['CCN202002013']["datasets"]
+        self.assertEqual(8, len(datasets))
+
+        first_mouse_dataset = result['CCN202002013']["datasets"][0]["dataset_metadata"]
+        self.assertTrue('comment' in first_mouse_dataset)
+        self.assertTrue(first_mouse_dataset['comment'])
 
     def test_get_ontology_metadata(self):
         result = GetOntologyMetadata().execute_query()

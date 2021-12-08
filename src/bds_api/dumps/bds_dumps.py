@@ -3,6 +3,8 @@ import requests
 from datetime import datetime
 from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
 
+ALL_CELLS = "All cells"
+
 CROSS_SPECIES = "Euarchontoglires"
 
 today = datetime.today().strftime('%Y%m%d')
@@ -10,6 +12,9 @@ today = datetime.today().strftime('%Y%m%d')
 DUMP_PATH = '../../../dumps/individuals_metadata_{}.json'.format(today)
 
 SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format(today)
+
+root_nodes = list()
+all_cells = list()
 
 
 def individuals_metadata_dump():
@@ -62,16 +67,39 @@ def individuals_metadata_solr_dump():
         extract_taxonomy_data(all_data, result, solr_doc)
         extract_brain_region_data(all_data, result, solr_doc, all_datasets)
         extract_homologous_data(all_data, result, solr_doc)
+        check_root_nodes(solr_doc)
+
         solr_doc["individual"] = individual
 
         all_data[solr_doc["iri"]] = solr_doc
         count += 1
 
     print("Found Allen individual count is: " + str(count))
-
+    manage_root_node_parents()
     all_data["ontology"] = get_version_metadata(all_data)
 
     dump_map_to_file(all_data, SOLR_JSON_PATH)
+
+
+def manage_root_node_parents():
+    for root_node in root_nodes:
+        root_node_iri = str(root_node["iri"])
+        taxon_beginning = root_node_iri[0:len(root_node_iri) - 3]
+
+        for all_cell in all_cells:
+            if taxon_beginning in all_cell:
+                root_node["parents"] = [all_cell]
+                root_node["parent_labels"] = [ALL_CELLS]
+
+
+def check_root_nodes(solr_doc):
+    # identify all cells
+    if "prefLabel" in solr_doc and ALL_CELLS in solr_doc["prefLabel"]:
+        all_cells.append(solr_doc["iri"])
+
+    # identify root nodes
+    if "rank" in solr_doc and "Class" in solr_doc["rank"]:
+        root_nodes.append(solr_doc)
 
 
 def extract_individual_data(all_data, result, solr_doc):
@@ -294,7 +322,7 @@ def extract_reference_class_metadata(node_meta_data):
 
 def extract_dataset_metadata(all_data, all_taxonomies):
     for taxonomy in all_taxonomies:
-        taxon = all_taxonomies[taxonomy]
+        taxon = all_taxonomies[taxonomy]["taxonomy"]
         print("Processing taxonomy: " + taxon["iri"])
         solr_doc = dict()
         solr_doc["id"] = taxon["iri"]
@@ -321,7 +349,38 @@ def extract_dataset_metadata(all_data, all_taxonomies):
         if "database_cross_reference" in taxon:
             solr_doc["primary_citation"] = next(filter(None, taxon["database_cross_reference"]))
 
+        datasets = all_taxonomies[taxonomy]["datasets"]
+        dataset_ids = extract_taxonomy_dataset_metadata(all_data, datasets, solr_doc["label"])
+
+        solr_doc["datasets"] = dataset_ids
         all_data[solr_doc["iri"]] = solr_doc
+
+
+def extract_taxonomy_dataset_metadata(all_data, datasets, taxonomy_name):
+    dataset_ids = list()
+    for dataset in datasets:
+        dataset_metadata = dataset['dataset_metadata']
+        if dataset_metadata:
+            ds_solr_doc = dict()
+            ds_solr_doc["id"] = dataset_metadata["iri"]
+            ds_solr_doc["iri"] = dataset_metadata["iri"]
+            ds_solr_doc["curie"] = dataset_metadata["curie"]
+            ds_solr_doc["label"] = dataset_metadata["label"]
+            ds_solr_doc["comment"] = dataset_metadata["comment"]
+            ds_solr_doc["taxonomy"] = taxonomy_name
+            ds_solr_doc["type"] = "dataset"
+            if "nuclei_count" in dataset_metadata:
+                ds_solr_doc["nuclei_count"] = next(filter(None, dataset_metadata["nuclei_count"]))
+            if "cell_count" in dataset_metadata:
+                ds_solr_doc["cell_count"] = next(filter(None, dataset_metadata["cell_count"]))
+            if "archivedAt" in dataset_metadata:
+                ds_solr_doc["download_link"] = next(filter(None, dataset_metadata["archivedAt"]))
+            if "discussionUrl" in dataset_metadata:
+                ds_solr_doc["explore_link"] = next(filter(None, dataset_metadata["discussionUrl"]))
+
+            all_data[ds_solr_doc["iri"]] = ds_solr_doc
+            dataset_ids.append(dataset_metadata["iri"])
+    return dataset_ids
 
 
 def get_version_metadata(all_data):
