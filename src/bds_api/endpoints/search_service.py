@@ -126,6 +126,8 @@ class TaxonomiesEndpoint(Resource):
         request_url = "http://{host}:{port}/solr/{collection}/query?q=type:\"taxonomy\""\
             .format(host=search_config["solr_host"], port=search_config["solr_port"],
                     collection=search_config["solr_collection"])
+        request_url += "&rows=" + search_config["result_limit"].strip()
+
         log.info("Request: Listing all taxonomies.")
         solr_response = requests.get(request_url)
         response = flask.jsonify(solr_response.json())
@@ -167,6 +169,7 @@ class GetEndpoint(Resource):
             .format(host=search_config["solr_host"], port=search_config["solr_port"],
                     collection=search_config["solr_collection"])
         request_url += search_field + ":\"" + identifier + "\""
+        request_url += "&rows=" + search_config["result_limit"].strip()
 
         log.info("Request: " + request_url)
         solr_response = requests.get(request_url)
