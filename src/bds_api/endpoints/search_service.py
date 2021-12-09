@@ -200,6 +200,7 @@ def generate_request(config):
     request_url += "&hl=true"
     request_url += "&hl.simple.pre=<b>"
     request_url += "&hl.fl=" + ",".join(get_list_value(config, "highlight_fields"))
+    request_url += "&rows=" + config["result_limit"].strip()
 
     if 'species' in request.args and request.args['species']:
         request_url += "&fq=species: (" + " OR ".join(list(parse_species_filter())) + ")"
