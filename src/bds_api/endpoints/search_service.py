@@ -8,6 +8,7 @@ from bds_api.restplus import api
 from bds_api.endpoints.search_config import search_config, autocomplete_config
 from bds_api.exception.api_exception import BDSApiException
 from bds_api.endpoints.parser import search_arguments, get_arguments
+from bds_api.utils.taxonomy_config_utils import species_mapping
 
 ns = api.namespace('api', description='Brain Data Standards Ontologies API')
 
@@ -16,9 +17,6 @@ log = logging.getLogger(__name__)
 solr_escape_rules = {'+':r'\+','-':r'\-','&':r'\&','|':r'\|','!':r'\!','(':r'\(',')':r'\)','{':r'\{','}':r'\}',
                      '[':r'\[',']':r'\]','~':r'\~','*':r'\*','?':r'\?',':':r'\:','"':r'\"',';':r'\;','/':r'\/'}
 
-species_mapping = {"mouse": "Mus musculus",
-                   "human": "Homo sapiens",
-                   "marmoset": "Callithrix jacchus"}
 ranks = ["Cell Type", "Subclass", "Class", "None"]
 
 

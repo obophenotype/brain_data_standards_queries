@@ -2,6 +2,7 @@ import json
 import requests
 from datetime import datetime
 from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
+from bds_api.utils.taxonomy_config_utils import *
 
 ALL_CELLS = "All cells"
 
@@ -15,6 +16,7 @@ SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format(today
 
 root_nodes = list()
 all_cells = list()
+species_mapping = get_species_mapping()
 
 
 def individuals_metadata_dump():
@@ -214,6 +216,10 @@ def extract_taxonomy_data(all_data, result, solr_doc):
             base_taxonomy = taxon["taxon"]["label"]
         elif "parent_taxon" in taxon and taxon["parent_taxon"]:
             parent_taxonomies.add(taxon["parent_taxon"]["label"])
+        else:
+            # all null (individual without class)
+            taxonomy_name = solr_doc["accession_id"].replace("CS", "").replace("CCN", "").split("_")[0]
+            base_taxonomy = species_mapping[taxonomy_name]
 
     if base_taxonomy:
         solr_doc["species"] = base_taxonomy
@@ -419,5 +425,5 @@ def update_solr():
 
 if __name__ == "__main__":
     # individuals_metadata_dump()
-    # individuals_metadata_solr_dump()
-    update_solr()
+    individuals_metadata_solr_dump()
+    # update_solr()
