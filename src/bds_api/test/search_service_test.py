@@ -169,6 +169,17 @@ class SearchTest(unittest.TestCase):
         self.assertEqual("bdsdump", search_config["solr_collection"])
         self.assertEqual("[\"*\", \"score\"]", search_config["response_fields"])
 
+    def test_search_limit(self):
+        response = self.app.get("""/bds/api/search?query=*""")
+        self.assertEqual(200, response.status_code)
+        results = json.loads(response.get_data())["response"]["docs"]
+        self.assertTrue(len(results) >= 100)
+
+        response = self.app.get("""/bds/api/search?query=*&limit=4""")
+        self.assertEqual(200, response.status_code)
+        results = json.loads(response.get_data())["response"]["docs"]
+        self.assertEqual(4, len(results))
+
 
 class TaxonomiesTest(unittest.TestCase):
 

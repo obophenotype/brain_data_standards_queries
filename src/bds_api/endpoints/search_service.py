@@ -54,6 +54,8 @@ class SearchEndpoint(Resource):
         ?query=Lamp5%20Lhx6&rank=Cell Type,Class
         ```
 
+        * limit (optional): Max query results limit. If not specified default value (300) defined in the
+        search_config.ini is applied.
 
         Return: list of related Solr documents
 
@@ -100,6 +102,8 @@ class AutocompleteEndpoint(Resource):
         ?query=Lamp5%20Lhx6&rank=Cell Type,Class
         ```
 
+        * limit (optional): Max query results limit. If not specified default value (300) defined in the
+        search_config.ini is applied.
 
         Return: list of related Solr documents
 
@@ -201,12 +205,15 @@ def generate_request(config):
     request_url += "&hl=true"
     request_url += "&hl.simple.pre=<b>"
     request_url += "&hl.fl=" + ",".join(get_list_value(config, "highlight_fields"))
-    request_url += "&rows=" + config["result_limit"].strip()
 
     if 'species' in request.args and request.args['species']:
         request_url += "&fq=species: (" + " OR ".join(list(parse_species_filter())) + ")"
     if 'rank' in request.args and request.args['rank']:
         request_url += "&fq=rank: (" + " OR ".join(list(parse_rank_filter())) + ")"
+    if 'limit' in request.args and request.args['limit']:
+        request_url += "&rows=" + request.args['limit']
+    else:
+        request_url += "&rows=" + config["result_limit"].strip()
 
     print(request_url)
     return request_url
