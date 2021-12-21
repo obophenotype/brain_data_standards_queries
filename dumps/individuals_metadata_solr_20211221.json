@@ -6,6 +6,7 @@
         "accession_id": "CS1908210",
         "label": "CS1908210",
         "type": "taxonomy",
+        "species_label": "Homo sapiens",
         "anatomic_region": "UBERON:0002771",
         "primary_citation": "PMID:31435019",
         "datasets": []
@@ -17,6 +18,7 @@
         "accession_id": "CCN201912132",
         "label": "CCN201912132",
         "type": "taxonomy",
+        "species_label": "Callithrix jacchus",
         "anatomic_region": "UBERON:0001384",
         "primary_citation": "PMID:34616062",
         "datasets": []
@@ -140,6 +142,7 @@
         "accession_id": "CCN202002013",
         "label": "CCN202002013",
         "type": "taxonomy",
+        "species_label": "Mus musculus",
         "cell_types_count": "116",
         "cell_subclasses_count": "24",
         "cell_classes_count": "4",
@@ -166,6 +169,7 @@
         "accession_id": "CCN201912131",
         "label": "CCN201912131",
         "type": "taxonomy",
+        "species_label": "Homo sapiens",
         "anatomic_region": "UBERON:0001384",
         "primary_citation": "PMID:34616062",
         "datasets": []
@@ -432,10 +436,10 @@
             "Astro_C1 primary motor cortex astrocyte (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000030495",
-            "http://identifiers.org/ensembl/ENSMUSG00000025537",
             "http://identifiers.org/ensembl/ENSMUSG00000030235",
-            "http://identifiers.org/ensembl/ENSMUSG00000024411"
+            "http://identifiers.org/ensembl/ENSMUSG00000024411",
+            "http://identifiers.org/ensembl/ENSMUSG00000025537",
+            "http://identifiers.org/ensembl/ENSMUSG00000030495"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000030235",
@@ -531,8 +535,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000020932",
-            "http://identifiers.org/ensembl/ENSMUSG00000026697",
-            "http://identifiers.org/ensembl/ENSMUSG00000024411"
+            "http://identifiers.org/ensembl/ENSMUSG00000024411",
+            "http://identifiers.org/ensembl/ENSMUSG00000026697"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000026697",
@@ -966,10 +970,10 @@
             "Astro_C2 primary motor cortex astrocyte (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100413173",
-            "https://identifiers.org/ncbigene/100399267",
-            "https://identifiers.org/ncbigene/100415632",
             "https://identifiers.org/ncbigene/100395775",
+            "https://identifiers.org/ncbigene/100413173",
+            "https://identifiers.org/ncbigene/100415632",
+            "https://identifiers.org/ncbigene/100399267",
             "https://identifiers.org/ncbigene/100409938"
         ],
         "markers": [
@@ -1093,12 +1097,12 @@
             "Astro_C2 primary motor cortex astrocyte (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/108587679",
-            "https://identifiers.org/ncbigene/100386317",
             "https://identifiers.org/ncbigene/100391501",
-            "https://identifiers.org/ncbigene/100409938",
+            "https://identifiers.org/ncbigene/100386317",
+            "https://identifiers.org/ncbigene/100895459",
             "https://identifiers.org/ncbigene/100406856",
-            "https://identifiers.org/ncbigene/100895459"
+            "https://identifiers.org/ncbigene/100409938",
+            "https://identifiers.org/ncbigene/108587679"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100409938",
@@ -1207,12 +1211,12 @@
             "Astro_C2 primary motor cortex astrocyte (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100413173",
-            "https://identifiers.org/ncbigene/100406707",
             "https://identifiers.org/ncbigene/100386317",
+            "https://identifiers.org/ncbigene/100406707",
             "https://identifiers.org/ncbigene/100392165",
-            "https://identifiers.org/ncbigene/100409938",
-            "https://identifiers.org/ncbigene/100397724"
+            "https://identifiers.org/ncbigene/100413173",
+            "https://identifiers.org/ncbigene/100397724",
+            "https://identifiers.org/ncbigene/100409938"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100392165",
@@ -1300,8 +1304,8 @@
             "astrocyte of the cerebral cortex"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100393644",
-            "https://identifiers.org/ncbigene/100409938"
+            "https://identifiers.org/ncbigene/100409938",
+            "https://identifiers.org/ncbigene/100393644"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100409938",
@@ -1575,8 +1579,8 @@
             "Sst-like primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000028971",
-            "http://identifiers.org/ensembl/ENSMUSG00000000214"
+            "http://identifiers.org/ensembl/ENSMUSG00000000214",
+            "http://identifiers.org/ensembl/ENSMUSG00000028971"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000028971",
@@ -1951,8 +1955,8 @@
             "Pvalb-like primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000020099",
-            "http://identifiers.org/ensembl/ENSMUSG00000067028"
+            "http://identifiers.org/ensembl/ENSMUSG00000067028",
+            "http://identifiers.org/ensembl/ENSMUSG00000020099"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000020099",
@@ -2288,8 +2292,8 @@
             "IT projecting primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000028222",
-            "http://identifiers.org/ensembl/ENSMUSG00000021708"
+            "http://identifiers.org/ensembl/ENSMUSG00000021708",
+            "http://identifiers.org/ensembl/ENSMUSG00000028222"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000021708",
@@ -2824,8 +2828,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000034402",
-            "http://identifiers.org/ensembl/ENSMUSG00000036192",
-            "http://identifiers.org/ensembl/ENSMUSG00000084890"
+            "http://identifiers.org/ensembl/ENSMUSG00000084890",
+            "http://identifiers.org/ensembl/ENSMUSG00000036192"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000036192",
@@ -2916,8 +2920,8 @@
             "Non-IT projecting primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000098760",
-            "http://identifiers.org/ensembl/ENSMUSG00000022206"
+            "http://identifiers.org/ensembl/ENSMUSG00000022206",
+            "http://identifiers.org/ensembl/ENSMUSG00000098760"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000098760",
@@ -3113,8 +3117,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000090125",
-            "http://identifiers.org/ensembl/ENSMUSG00000021541",
-            "http://identifiers.org/ensembl/ENSMUSG00000068196"
+            "http://identifiers.org/ensembl/ENSMUSG00000068196",
+            "http://identifiers.org/ensembl/ENSMUSG00000021541"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000068196",
@@ -3337,9 +3341,9 @@
             "IT projecting primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000052430",
             "http://identifiers.org/ensembl/ENSMUSG00000059203",
-            "http://identifiers.org/ensembl/ENSMUSG00000016918"
+            "http://identifiers.org/ensembl/ENSMUSG00000016918",
+            "http://identifiers.org/ensembl/ENSMUSG00000052430"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000016918",
@@ -3536,8 +3540,8 @@
             "corticothalamic VAL/VM projecting glutamatergic neuron of the primary motor cortex"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000078591",
-            "http://identifiers.org/ensembl/ENSMUSG00000029563"
+            "http://identifiers.org/ensembl/ENSMUSG00000029563",
+            "http://identifiers.org/ensembl/ENSMUSG00000078591"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000078591",
@@ -4202,8 +4206,8 @@
             "CGE/PoA primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000044288",
-            "http://identifiers.org/ensembl/ENSMUSG00000058897"
+            "http://identifiers.org/ensembl/ENSMUSG00000058897",
+            "http://identifiers.org/ensembl/ENSMUSG00000044288"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000058897",
@@ -4419,9 +4423,9 @@
             "Vip-like primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000038718",
             "http://identifiers.org/ensembl/ENSMUSG00000022425",
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
+            "http://identifiers.org/ensembl/ENSMUSG00000038718",
             "http://identifiers.org/ensembl/ENSMUSG00000000753",
             "http://identifiers.org/ensembl/ENSMUSG00000022371"
         ],
@@ -4593,9 +4597,9 @@
             "L5 Vip cortical GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000019772",
             "http://identifiers.org/ensembl/ENSMUSG00000049796",
-            "http://identifiers.org/ensembl/ENSMUSG00000000805",
-            "http://identifiers.org/ensembl/ENSMUSG00000019772"
+            "http://identifiers.org/ensembl/ENSMUSG00000000805"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000049796",
@@ -4860,8 +4864,8 @@
             "Vip-like primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000019772",
-            "http://identifiers.org/ensembl/ENSMUSG00000030170"
+            "http://identifiers.org/ensembl/ENSMUSG00000030170",
+            "http://identifiers.org/ensembl/ENSMUSG00000019772"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000019772",
@@ -5129,8 +5133,8 @@
             "medial ganglionic eminence derived GABAergic cortical interneuron"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000046178",
-            "http://identifiers.org/ensembl/ENSMUSG00000094083"
+            "http://identifiers.org/ensembl/ENSMUSG00000094083",
+            "http://identifiers.org/ensembl/ENSMUSG00000046178"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000094083",
@@ -5608,8 +5612,8 @@
             "L5 non-Martinotti Sst GABAergic cortical interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000031997",
             "http://identifiers.org/ensembl/ENSMUSG00000068220",
+            "http://identifiers.org/ensembl/ENSMUSG00000031997",
             "http://identifiers.org/ensembl/ENSMUSG00000024990"
         ],
         "markers": [
@@ -5755,9 +5759,9 @@
             "L5/6 non-Martinotti morphology sst expressing GABAergic cortical internueron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000036019",
             "http://identifiers.org/ensembl/ENSMUSG00000049796",
-            "http://identifiers.org/ensembl/ENSMUSG00000031841",
-            "http://identifiers.org/ensembl/ENSMUSG00000036019"
+            "http://identifiers.org/ensembl/ENSMUSG00000031841"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000049796",
@@ -6402,9 +6406,9 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000030616",
-            "http://identifiers.org/ensembl/ENSMUSG00000032702",
             "http://identifiers.org/ensembl/ENSMUSG00000050121",
-            "http://identifiers.org/ensembl/ENSMUSG00000029086"
+            "http://identifiers.org/ensembl/ENSMUSG00000029086",
+            "http://identifiers.org/ensembl/ENSMUSG00000032702"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000029086",
@@ -6508,10 +6512,10 @@
             "Oligo_C2 primary motor cortex oligodendrocyte (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000032517",
             "http://identifiers.org/ensembl/ENSMUSG00000041460",
-            "http://identifiers.org/ensembl/ENSMUSG00000050121",
             "http://identifiers.org/ensembl/ENSMUSG00000049690",
-            "http://identifiers.org/ensembl/ENSMUSG00000032517"
+            "http://identifiers.org/ensembl/ENSMUSG00000050121"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000032517",
@@ -6605,9 +6609,9 @@
             "Oligo_C2 primary motor cortex oligodendrocyte (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000024810",
             "http://identifiers.org/ensembl/ENSMUSG00000032841",
-            "http://identifiers.org/ensembl/ENSMUSG00000050121"
+            "http://identifiers.org/ensembl/ENSMUSG00000050121",
+            "http://identifiers.org/ensembl/ENSMUSG00000024810"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000032841",
@@ -6915,8 +6919,8 @@
             "VLMC(i) primary motor cortex vascular leptomeningeal cell (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000064294",
-            "http://identifiers.org/ensembl/ENSMUSG00000032796"
+            "http://identifiers.org/ensembl/ENSMUSG00000032796",
+            "http://identifiers.org/ensembl/ENSMUSG00000064294"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000064294",
@@ -7018,8 +7022,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000112430",
-            "http://identifiers.org/ensembl/ENSMUSG00000025780",
-            "http://identifiers.org/ensembl/ENSMUSG00000031273"
+            "http://identifiers.org/ensembl/ENSMUSG00000031273",
+            "http://identifiers.org/ensembl/ENSMUSG00000025780"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000031273",
@@ -7115,8 +7119,8 @@
             "VLMC(i) primary motor cortex vascular leptomeningeal cell (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000026989",
-            "http://identifiers.org/ensembl/ENSMUSG00000034127"
+            "http://identifiers.org/ensembl/ENSMUSG00000034127",
+            "http://identifiers.org/ensembl/ENSMUSG00000026989"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000034127",
@@ -7758,8 +7762,8 @@
             "perivascular macrophage"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000030187",
-            "http://identifiers.org/ensembl/ENSMUSG00000024610"
+            "http://identifiers.org/ensembl/ENSMUSG00000024610",
+            "http://identifiers.org/ensembl/ENSMUSG00000030187"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000030187",
@@ -7864,8 +7868,8 @@
             "vascular leptomeningeal cell"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000040569",
             "http://identifiers.org/ensembl/ENSMUSG00000026989",
+            "http://identifiers.org/ensembl/ENSMUSG00000040569",
             "http://identifiers.org/ensembl/ENSMUSG00000006014"
         ],
         "markers": [
@@ -8102,8 +8106,8 @@
             "CGE/PoA primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000029819",
-            "http://identifiers.org/ensembl/ENSMUSG00000075270"
+            "http://identifiers.org/ensembl/ENSMUSG00000075270",
+            "http://identifiers.org/ensembl/ENSMUSG00000029819"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000029819",
@@ -8704,10 +8708,10 @@
             "cerebral cortex glial cell"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000036777",
-            "http://identifiers.org/ensembl/ENSMUSG00000111994",
             "http://identifiers.org/ensembl/ENSMUSG00000039316",
-            "http://identifiers.org/ensembl/ENSMUSG00000050121"
+            "http://identifiers.org/ensembl/ENSMUSG00000111994",
+            "http://identifiers.org/ensembl/ENSMUSG00000050121",
+            "http://identifiers.org/ensembl/ENSMUSG00000036777"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000039316",
@@ -8811,9 +8815,9 @@
             "Oligo_C2 primary motor cortex oligodendrocyte (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000115529",
             "http://identifiers.org/ensembl/ENSMUSG00000038173",
-            "http://identifiers.org/ensembl/ENSMUSG00000015202"
+            "http://identifiers.org/ensembl/ENSMUSG00000015202",
+            "http://identifiers.org/ensembl/ENSMUSG00000115529"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000038173",
@@ -8907,11 +8911,11 @@
             "oligodendrocyte"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000049690",
             "http://identifiers.org/ensembl/ENSMUSG00000015202",
-            "http://identifiers.org/ensembl/ENSMUSG00000026347",
+            "http://identifiers.org/ensembl/ENSMUSG00000038173",
             "http://identifiers.org/ensembl/ENSMUSG00000026566",
-            "http://identifiers.org/ensembl/ENSMUSG00000038173"
+            "http://identifiers.org/ensembl/ENSMUSG00000049690",
+            "http://identifiers.org/ensembl/ENSMUSG00000026347"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000026566",
@@ -9003,9 +9007,9 @@
             "cerebral cortex glial cell"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000038173",
+            "http://identifiers.org/ensembl/ENSMUSG00000021835",
             "http://identifiers.org/ensembl/ENSMUSG00000115529",
-            "http://identifiers.org/ensembl/ENSMUSG00000021835"
+            "http://identifiers.org/ensembl/ENSMUSG00000038173"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000115529",
@@ -9114,8 +9118,8 @@
             "oligodendrocyte precursor cell"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000029231",
-            "http://identifiers.org/ensembl/ENSMUSG00000039954"
+            "http://identifiers.org/ensembl/ENSMUSG00000039954",
+            "http://identifiers.org/ensembl/ENSMUSG00000029231"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000029231",
@@ -9324,10 +9328,10 @@
             "Meis2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000035551",
-            "http://identifiers.org/ensembl/ENSMUSG00000020914",
-            "http://identifiers.org/ensembl/ENSMUSG00000100832",
             "http://identifiers.org/ensembl/ENSMUSG00000098087",
+            "http://identifiers.org/ensembl/ENSMUSG00000100832",
+            "http://identifiers.org/ensembl/ENSMUSG00000020914",
+            "http://identifiers.org/ensembl/ENSMUSG00000035551",
             "http://identifiers.org/ensembl/ENSMUSG00000027210"
         ],
         "markers": [
@@ -9520,12 +9524,12 @@
             "Lower FS Basket cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000010066",
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
-            "http://identifiers.org/ensembl/ENSMUSG00000026452",
-            "http://identifiers.org/ensembl/ENSMUSG00000063531",
+            "http://identifiers.org/ensembl/ENSMUSG00000010066",
             "http://identifiers.org/ensembl/ENSMUSG00000035407",
-            "http://identifiers.org/ensembl/ENSMUSG00000034310"
+            "http://identifiers.org/ensembl/ENSMUSG00000063531",
+            "http://identifiers.org/ensembl/ENSMUSG00000034310",
+            "http://identifiers.org/ensembl/ENSMUSG00000026452"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000034310",
@@ -9644,10 +9648,10 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
-            "http://identifiers.org/ensembl/ENSMUSG00000026452",
-            "http://identifiers.org/ensembl/ENSMUSG00000031558",
+            "http://identifiers.org/ensembl/ENSMUSG00000043441",
             "http://identifiers.org/ensembl/ENSMUSG00000022297",
-            "http://identifiers.org/ensembl/ENSMUSG00000043441"
+            "http://identifiers.org/ensembl/ENSMUSG00000031558",
+            "http://identifiers.org/ensembl/ENSMUSG00000026452"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000031558",
@@ -9729,8 +9733,8 @@
             "Upper FS Basket cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000059203",
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
+            "http://identifiers.org/ensembl/ENSMUSG00000059203",
             "http://identifiers.org/ensembl/ENSMUSG00000010461"
         ],
         "markers": [
@@ -9837,10 +9841,10 @@
             "Upper FS Basket cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000111061",
             "http://identifiers.org/ensembl/ENSMUSG00000042453",
+            "http://identifiers.org/ensembl/ENSMUSG00000005716",
             "http://identifiers.org/ensembl/ENSMUSG00000031772",
-            "http://identifiers.org/ensembl/ENSMUSG00000005716"
+            "http://identifiers.org/ensembl/ENSMUSG00000111061"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000111061",
@@ -9950,11 +9954,11 @@
             "Pvalb-like_C1 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000061762",
-            "http://identifiers.org/ensembl/ENSMUSG00000034324",
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
             "http://identifiers.org/ensembl/ENSMUSG00000038048",
-            "http://identifiers.org/ensembl/ENSMUSG00000028222"
+            "http://identifiers.org/ensembl/ENSMUSG00000028222",
+            "http://identifiers.org/ensembl/ENSMUSG00000061762",
+            "http://identifiers.org/ensembl/ENSMUSG00000034324"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
@@ -10058,11 +10062,11 @@
             "Lower FS Basket cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000028971",
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
             "http://identifiers.org/ensembl/ENSMUSG00000100650",
-            "http://identifiers.org/ensembl/ENSMUSG00000069132",
-            "http://identifiers.org/ensembl/ENSMUSG00000028222"
+            "http://identifiers.org/ensembl/ENSMUSG00000028222",
+            "http://identifiers.org/ensembl/ENSMUSG00000028971",
+            "http://identifiers.org/ensembl/ENSMUSG00000069132"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
@@ -10283,9 +10287,9 @@
             "L2/3 IT primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000036545",
+            "http://identifiers.org/ensembl/ENSMUSG00000009376",
             "http://identifiers.org/ensembl/ENSMUSG00000098097",
-            "http://identifiers.org/ensembl/ENSMUSG00000009376"
+            "http://identifiers.org/ensembl/ENSMUSG00000036545"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000036545",
@@ -10469,9 +10473,9 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000002900",
-            "http://identifiers.org/ensembl/ENSMUSG00000001496",
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
-            "http://identifiers.org/ensembl/ENSMUSG00000011171"
+            "http://identifiers.org/ensembl/ENSMUSG00000011171",
+            "http://identifiers.org/ensembl/ENSMUSG00000001496"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
@@ -10696,9 +10700,9 @@
             "L4 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000017978",
             "http://identifiers.org/ensembl/ENSMUSG00000073565",
-            "http://identifiers.org/ensembl/ENSMUSG00000036192",
-            "http://identifiers.org/ensembl/ENSMUSG00000017978"
+            "http://identifiers.org/ensembl/ENSMUSG00000036192"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000036192",
@@ -10804,9 +10808,9 @@
             "L2/3 IT primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000042589",
             "http://identifiers.org/ensembl/ENSMUSG00000056427",
-            "http://identifiers.org/ensembl/ENSMUSG00000031216"
+            "http://identifiers.org/ensembl/ENSMUSG00000031216",
+            "http://identifiers.org/ensembl/ENSMUSG00000042589"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000056427",
@@ -11115,10 +11119,10 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000019889",
-            "http://identifiers.org/ensembl/ENSMUSG00000017978",
             "http://identifiers.org/ensembl/ENSMUSG00000022425",
-            "http://identifiers.org/ensembl/ENSMUSG00000034009",
-            "http://identifiers.org/ensembl/ENSMUSG00000055214"
+            "http://identifiers.org/ensembl/ENSMUSG00000055214",
+            "http://identifiers.org/ensembl/ENSMUSG00000017978",
+            "http://identifiers.org/ensembl/ENSMUSG00000034009"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000019889",
@@ -11234,10 +11238,10 @@
             "L5 IT_C2 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000053399",
-            "http://identifiers.org/ensembl/ENSMUSG00000022419",
             "http://identifiers.org/ensembl/ENSMUSG00000003746",
-            "http://identifiers.org/ensembl/ENSMUSG00000116610"
+            "http://identifiers.org/ensembl/ENSMUSG00000116610",
+            "http://identifiers.org/ensembl/ENSMUSG00000053399",
+            "http://identifiers.org/ensembl/ENSMUSG00000022419"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000003746",
@@ -11411,9 +11415,9 @@
             "IT projecting primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000026826",
             "http://identifiers.org/ensembl/ENSMUSG00000027559",
-            "http://identifiers.org/ensembl/ENSMUSG00000042596",
-            "http://identifiers.org/ensembl/ENSMUSG00000026826"
+            "http://identifiers.org/ensembl/ENSMUSG00000042596"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000027559",
@@ -11519,9 +11523,9 @@
             "L6 IT_C2 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000028909",
             "http://identifiers.org/ensembl/ENSMUSG00000052430",
-            "http://identifiers.org/ensembl/ENSMUSG00000049630",
-            "http://identifiers.org/ensembl/ENSMUSG00000028909"
+            "http://identifiers.org/ensembl/ENSMUSG00000049630"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000052430",
@@ -11777,8 +11781,8 @@
             "L5 ET (Non-MY-projecting) primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000043659",
-            "http://identifiers.org/ensembl/ENSMUSG00000098760"
+            "http://identifiers.org/ensembl/ENSMUSG00000098760",
+            "http://identifiers.org/ensembl/ENSMUSG00000043659"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000043659",
@@ -11878,10 +11882,10 @@
             "L5 ET_C1 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000039620",
-            "http://identifiers.org/ensembl/ENSMUSG00000021541",
             "http://identifiers.org/ensembl/ENSMUSG00000042453",
-            "http://identifiers.org/ensembl/ENSMUSG00000022112"
+            "http://identifiers.org/ensembl/ENSMUSG00000022112",
+            "http://identifiers.org/ensembl/ENSMUSG00000039620",
+            "http://identifiers.org/ensembl/ENSMUSG00000021541"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000039620",
@@ -12102,8 +12106,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000030905",
-            "http://identifiers.org/ensembl/ENSMUSG00000098760",
-            "http://identifiers.org/ensembl/ENSMUSG00000022206"
+            "http://identifiers.org/ensembl/ENSMUSG00000022206",
+            "http://identifiers.org/ensembl/ENSMUSG00000098760"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000098760",
@@ -12273,8 +12277,8 @@
             "L6 CT_C1 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000036218",
             "http://identifiers.org/ensembl/ENSMUSG00000049148",
+            "http://identifiers.org/ensembl/ENSMUSG00000036218",
             "http://identifiers.org/ensembl/ENSMUSG00000024517",
             "http://identifiers.org/ensembl/ENSMUSG00000027210"
         ],
@@ -12383,9 +12387,9 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000042501",
-            "http://identifiers.org/ensembl/ENSMUSG00000078591",
+            "http://identifiers.org/ensembl/ENSMUSG00000022306",
             "http://identifiers.org/ensembl/ENSMUSG00000029563",
-            "http://identifiers.org/ensembl/ENSMUSG00000022306"
+            "http://identifiers.org/ensembl/ENSMUSG00000078591"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000022306",
@@ -12507,9 +12511,9 @@
             "L6 CT_C1 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000010651",
             "http://identifiers.org/ensembl/ENSMUSG00000066197",
-            "http://identifiers.org/ensembl/ENSMUSG00000063564"
+            "http://identifiers.org/ensembl/ENSMUSG00000063564",
+            "http://identifiers.org/ensembl/ENSMUSG00000010651"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000010651",
@@ -12598,9 +12602,9 @@
             "L6 CT primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000034009",
+            "http://identifiers.org/ensembl/ENSMUSG00000024517",
             "http://identifiers.org/ensembl/ENSMUSG00000047907",
-            "http://identifiers.org/ensembl/ENSMUSG00000024517"
+            "http://identifiers.org/ensembl/ENSMUSG00000034009"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000034009",
@@ -12720,9 +12724,9 @@
             "L6 CT primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000005672",
             "http://identifiers.org/ensembl/ENSMUSG00000025997",
-            "http://identifiers.org/ensembl/ENSMUSG00000111765"
+            "http://identifiers.org/ensembl/ENSMUSG00000111765",
+            "http://identifiers.org/ensembl/ENSMUSG00000005672"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000005672",
@@ -12910,8 +12914,8 @@
             "L6b subplate glutamatergic neuron of the primary motor cortex"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000019997",
-            "http://identifiers.org/ensembl/ENSMUSG00000039714"
+            "http://identifiers.org/ensembl/ENSMUSG00000039714",
+            "http://identifiers.org/ensembl/ENSMUSG00000019997"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000019997",
@@ -13029,10 +13033,10 @@
             "L6b primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000019997",
             "http://identifiers.org/ensembl/ENSMUSG00000043556",
             "http://identifiers.org/ensembl/ENSMUSG00000035305",
-            "http://identifiers.org/ensembl/ENSMUSG00000039714"
+            "http://identifiers.org/ensembl/ENSMUSG00000039714",
+            "http://identifiers.org/ensembl/ENSMUSG00000019997"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000019997",
@@ -13128,9 +13132,9 @@
             "L6b primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000026826",
             "http://identifiers.org/ensembl/ENSMUSG00000020000",
-            "http://identifiers.org/ensembl/ENSMUSG00000053930",
-            "http://identifiers.org/ensembl/ENSMUSG00000026826"
+            "http://identifiers.org/ensembl/ENSMUSG00000053930"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000053930",
@@ -13222,10 +13226,10 @@
             "L6b primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000053930",
-            "http://identifiers.org/ensembl/ENSMUSG00000013766",
+            "http://identifiers.org/ensembl/ENSMUSG00000039714",
             "http://identifiers.org/ensembl/ENSMUSG00000024236",
-            "http://identifiers.org/ensembl/ENSMUSG00000039714"
+            "http://identifiers.org/ensembl/ENSMUSG00000013766",
+            "http://identifiers.org/ensembl/ENSMUSG00000053930"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000013766",
@@ -13326,10 +13330,10 @@
             "L6b primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000001119",
-            "http://identifiers.org/ensembl/ENSMUSG00000019997",
             "http://identifiers.org/ensembl/ENSMUSG00000046321",
-            "http://identifiers.org/ensembl/ENSMUSG00000052430"
+            "http://identifiers.org/ensembl/ENSMUSG00000001119",
+            "http://identifiers.org/ensembl/ENSMUSG00000052430",
+            "http://identifiers.org/ensembl/ENSMUSG00000019997"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000001119",
@@ -13414,8 +13418,8 @@
             "L5/6 near-projecting glutamatergic neuron of the primary motor cortex"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000004151",
-            "http://identifiers.org/ensembl/ENSMUSG00000047907"
+            "http://identifiers.org/ensembl/ENSMUSG00000047907",
+            "http://identifiers.org/ensembl/ENSMUSG00000004151"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000047907",
@@ -13504,8 +13508,8 @@
             "L5/6 NP primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000026344",
-            "http://identifiers.org/ensembl/ENSMUSG00000047907"
+            "http://identifiers.org/ensembl/ENSMUSG00000047907",
+            "http://identifiers.org/ensembl/ENSMUSG00000026344"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000026344",
@@ -13596,8 +13600,8 @@
             "L5/6 NP primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000019935",
-            "http://identifiers.org/ensembl/ENSMUSG00000035258"
+            "http://identifiers.org/ensembl/ENSMUSG00000035258",
+            "http://identifiers.org/ensembl/ENSMUSG00000019935"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000035258",
@@ -13699,8 +13703,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000039519",
-            "http://identifiers.org/ensembl/ENSMUSG00000045648",
-            "http://identifiers.org/ensembl/ENSMUSG00000028031"
+            "http://identifiers.org/ensembl/ENSMUSG00000028031",
+            "http://identifiers.org/ensembl/ENSMUSG00000045648"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000039519",
@@ -13814,10 +13818,10 @@
             "L6b primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000107384",
             "http://identifiers.org/ensembl/ENSMUSG00000053368",
             "http://identifiers.org/ensembl/ENSMUSG00000053519",
-            "http://identifiers.org/ensembl/ENSMUSG00000051611"
+            "http://identifiers.org/ensembl/ENSMUSG00000051611",
+            "http://identifiers.org/ensembl/ENSMUSG00000107384"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000053519",
@@ -13907,8 +13911,8 @@
             "Meis2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000023800",
-            "http://identifiers.org/ensembl/ENSMUSG00000027210"
+            "http://identifiers.org/ensembl/ENSMUSG00000027210",
+            "http://identifiers.org/ensembl/ENSMUSG00000023800"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000023800",
@@ -13987,10 +13991,10 @@
             "L6 CT_C1 primary motor cortex glutamatergic neuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000005672",
+            "http://identifiers.org/ensembl/ENSMUSG00000047907",
             "http://identifiers.org/ensembl/ENSMUSG00000026826",
             "http://identifiers.org/ensembl/ENSMUSG00000034009",
-            "http://identifiers.org/ensembl/ENSMUSG00000047907"
+            "http://identifiers.org/ensembl/ENSMUSG00000005672"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000005672",
@@ -14183,11 +14187,11 @@
             "Sncg-like_C3 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000027849",
+            "http://identifiers.org/ensembl/ENSMUSG00000028222",
             "http://identifiers.org/ensembl/ENSMUSG00000063661",
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
-            "http://identifiers.org/ensembl/ENSMUSG00000042045",
-            "http://identifiers.org/ensembl/ENSMUSG00000027849",
-            "http://identifiers.org/ensembl/ENSMUSG00000028222"
+            "http://identifiers.org/ensembl/ENSMUSG00000042045"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000028222",
@@ -14271,9 +14275,9 @@
             "sncg GABAergic cortical interneuron"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000019935",
+            "http://identifiers.org/ensembl/ENSMUSG00000023064",
             "http://identifiers.org/ensembl/ENSMUSG00000048967",
-            "http://identifiers.org/ensembl/ENSMUSG00000023064"
+            "http://identifiers.org/ensembl/ENSMUSG00000019935"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
@@ -14571,10 +14575,10 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000049796",
             "http://identifiers.org/ensembl/ENSMUSG00000020099",
-            "http://identifiers.org/ensembl/ENSMUSG00000022656",
-            "http://identifiers.org/ensembl/ENSMUSG00000019772"
+            "http://identifiers.org/ensembl/ENSMUSG00000019772",
+            "http://identifiers.org/ensembl/ENSMUSG00000049796",
+            "http://identifiers.org/ensembl/ENSMUSG00000022656"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000020099",
@@ -14676,9 +14680,9 @@
             "Sncg-like_C3 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000029101",
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
-            "http://identifiers.org/ensembl/ENSMUSG00000028004"
+            "http://identifiers.org/ensembl/ENSMUSG00000028004",
+            "http://identifiers.org/ensembl/ENSMUSG00000029101"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000029101",
@@ -14768,10 +14772,10 @@
             "Large CCK basket cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000027849",
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
-            "http://identifiers.org/ensembl/ENSMUSG00000024376",
-            "http://identifiers.org/ensembl/ENSMUSG00000028222"
+            "http://identifiers.org/ensembl/ENSMUSG00000028222",
+            "http://identifiers.org/ensembl/ENSMUSG00000027849",
+            "http://identifiers.org/ensembl/ENSMUSG00000024376"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
@@ -14873,11 +14877,11 @@
             "Vip-like_C3 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000019772",
+            "http://identifiers.org/ensembl/ENSMUSG00000032532",
             "http://identifiers.org/ensembl/ENSMUSG00000055653",
             "http://identifiers.org/ensembl/ENSMUSG00000038718",
-            "http://identifiers.org/ensembl/ENSMUSG00000019772",
-            "http://identifiers.org/ensembl/ENSMUSG00000041741",
-            "http://identifiers.org/ensembl/ENSMUSG00000032532"
+            "http://identifiers.org/ensembl/ENSMUSG00000041741"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000019772",
@@ -15037,10 +15041,10 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000019772",
-            "http://identifiers.org/ensembl/ENSMUSG00000037362",
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
             "http://identifiers.org/ensembl/ENSMUSG00000045648",
-            "http://identifiers.org/ensembl/ENSMUSG00000050783"
+            "http://identifiers.org/ensembl/ENSMUSG00000050783",
+            "http://identifiers.org/ensembl/ENSMUSG00000037362"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
@@ -15145,9 +15149,9 @@
             "Vip-like_C2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000022425",
             "http://identifiers.org/ensembl/ENSMUSG00000037362",
             "http://identifiers.org/ensembl/ENSMUSG00000025813",
-            "http://identifiers.org/ensembl/ENSMUSG00000022425",
             "http://identifiers.org/ensembl/ENSMUSG00000040624"
         ],
         "markers": [
@@ -15232,9 +15236,9 @@
             "L5/6 CCK cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000038718",
+            "http://identifiers.org/ensembl/ENSMUSG00000022371",
             "http://identifiers.org/ensembl/ENSMUSG00000037362",
-            "http://identifiers.org/ensembl/ENSMUSG00000022371"
+            "http://identifiers.org/ensembl/ENSMUSG00000038718"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000038718",
@@ -15334,11 +15338,11 @@
             "sncg GABAergic cortical interneuron"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000015766",
             "http://identifiers.org/ensembl/ENSMUSG00000058897",
+            "http://identifiers.org/ensembl/ENSMUSG00000015766",
+            "http://identifiers.org/ensembl/ENSMUSG00000039385",
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
-            "http://identifiers.org/ensembl/ENSMUSG00000022371",
-            "http://identifiers.org/ensembl/ENSMUSG00000039385"
+            "http://identifiers.org/ensembl/ENSMUSG00000022371"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000023064",
@@ -15453,10 +15457,10 @@
             "Vip-like_C3 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000003657",
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
-            "http://identifiers.org/ensembl/ENSMUSG00000110281",
             "http://identifiers.org/ensembl/ENSMUSG00000020061",
-            "http://identifiers.org/ensembl/ENSMUSG00000003657"
+            "http://identifiers.org/ensembl/ENSMUSG00000110281"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000020061",
@@ -15557,8 +15561,8 @@
             "Vip-like_C2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000032269",
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
+            "http://identifiers.org/ensembl/ENSMUSG00000032269",
             "http://identifiers.org/ensembl/ENSMUSG00000020061",
             "http://identifiers.org/ensembl/ENSMUSG00000112276"
         ],
@@ -15672,10 +15676,10 @@
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000045532",
             "http://identifiers.org/ensembl/ENSMUSG00000019772",
-            "http://identifiers.org/ensembl/ENSMUSG00000032532",
-            "http://identifiers.org/ensembl/ENSMUSG00000049796",
             "http://identifiers.org/ensembl/ENSMUSG00000031963",
-            "http://identifiers.org/ensembl/ENSMUSG00000020042"
+            "http://identifiers.org/ensembl/ENSMUSG00000032532",
+            "http://identifiers.org/ensembl/ENSMUSG00000020042",
+            "http://identifiers.org/ensembl/ENSMUSG00000049796"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000031963",
@@ -15781,9 +15785,9 @@
             "Vip-like_C4 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000023046",
             "http://identifiers.org/ensembl/ENSMUSG00000032625",
-            "http://identifiers.org/ensembl/ENSMUSG00000110468"
+            "http://identifiers.org/ensembl/ENSMUSG00000110468",
+            "http://identifiers.org/ensembl/ENSMUSG00000023046"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000032625",
@@ -15946,10 +15950,10 @@
             "Vip-like_C1 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000032532",
-            "http://identifiers.org/ensembl/ENSMUSG00000021919",
             "http://identifiers.org/ensembl/ENSMUSG00000026322",
-            "http://identifiers.org/ensembl/ENSMUSG00000032017"
+            "http://identifiers.org/ensembl/ENSMUSG00000032532",
+            "http://identifiers.org/ensembl/ENSMUSG00000032017",
+            "http://identifiers.org/ensembl/ENSMUSG00000021919"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000026322",
@@ -16131,8 +16135,8 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
-            "http://identifiers.org/ensembl/ENSMUSG00000021919",
-            "http://identifiers.org/ensembl/ENSMUSG00000028004"
+            "http://identifiers.org/ensembl/ENSMUSG00000028004",
+            "http://identifiers.org/ensembl/ENSMUSG00000021919"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000021919",
@@ -16292,10 +16296,10 @@
             "Sst-like_C2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000059203",
             "http://identifiers.org/ensembl/ENSMUSG00000097462",
-            "http://identifiers.org/ensembl/ENSMUSG00000045573",
             "http://identifiers.org/ensembl/ENSMUSG00000021647",
+            "http://identifiers.org/ensembl/ENSMUSG00000059203",
+            "http://identifiers.org/ensembl/ENSMUSG00000045573",
             "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
@@ -16504,10 +16508,10 @@
             "Vip-like_C4 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000049796",
             "http://identifiers.org/ensembl/ENSMUSG00000032532",
-            "http://identifiers.org/ensembl/ENSMUSG00000023046",
-            "http://identifiers.org/ensembl/ENSMUSG00000042581"
+            "http://identifiers.org/ensembl/ENSMUSG00000042581",
+            "http://identifiers.org/ensembl/ENSMUSG00000049796",
+            "http://identifiers.org/ensembl/ENSMUSG00000023046"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000049796",
@@ -16773,9 +16777,9 @@
             "Sst-like_C1 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000025370",
             "http://identifiers.org/ensembl/ENSMUSG00000055775",
             "http://identifiers.org/ensembl/ENSMUSG00000019828",
-            "http://identifiers.org/ensembl/ENSMUSG00000025370",
             "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
@@ -16960,10 +16964,10 @@
             "L5 T Martinotti cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000004366",
-            "http://identifiers.org/ensembl/ENSMUSG00000059203",
             "http://identifiers.org/ensembl/ENSMUSG00000042453",
-            "http://identifiers.org/ensembl/ENSMUSG00000055775"
+            "http://identifiers.org/ensembl/ENSMUSG00000055775",
+            "http://identifiers.org/ensembl/ENSMUSG00000059203",
+            "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000055775",
@@ -17062,10 +17066,10 @@
             "L5 non-Martinotti cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000003476",
             "http://identifiers.org/ensembl/ENSMUSG00000026765",
-            "http://identifiers.org/ensembl/ENSMUSG00000004366",
-            "http://identifiers.org/ensembl/ENSMUSG00000031997"
+            "http://identifiers.org/ensembl/ENSMUSG00000003476",
+            "http://identifiers.org/ensembl/ENSMUSG00000031997",
+            "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000004366",
@@ -17162,11 +17166,11 @@
             "Sst-like_C3 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000004366",
-            "http://identifiers.org/ensembl/ENSMUSG00000031997",
             "http://identifiers.org/ensembl/ENSMUSG00000026393",
+            "http://identifiers.org/ensembl/ENSMUSG00000010461",
             "http://identifiers.org/ensembl/ENSMUSG00000003476",
-            "http://identifiers.org/ensembl/ENSMUSG00000010461"
+            "http://identifiers.org/ensembl/ENSMUSG00000031997",
+            "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000004366",
@@ -17295,8 +17299,8 @@
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000095105",
             "http://identifiers.org/ensembl/ENSMUSG00000039137",
-            "http://identifiers.org/ensembl/ENSMUSG00000004151",
             "http://identifiers.org/ensembl/ENSMUSG00000038156",
+            "http://identifiers.org/ensembl/ENSMUSG00000004151",
             "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
@@ -17404,11 +17408,11 @@
             "Sst-like_C2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000031997",
             "http://identifiers.org/ensembl/ENSMUSG00000026141",
+            "http://identifiers.org/ensembl/ENSMUSG00000031997",
             "http://identifiers.org/ensembl/ENSMUSG00000004151",
-            "http://identifiers.org/ensembl/ENSMUSG00000024598",
-            "http://identifiers.org/ensembl/ENSMUSG00000004366"
+            "http://identifiers.org/ensembl/ENSMUSG00000004366",
+            "http://identifiers.org/ensembl/ENSMUSG00000024598"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000024598",
@@ -17620,10 +17624,10 @@
             "L4 Sst GABAergic cortical interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000074852",
-            "http://identifiers.org/ensembl/ENSMUSG00000030222",
             "http://identifiers.org/ensembl/ENSMUSG00000035273",
-            "http://identifiers.org/ensembl/ENSMUSG00000004366"
+            "http://identifiers.org/ensembl/ENSMUSG00000074852",
+            "http://identifiers.org/ensembl/ENSMUSG00000004366",
+            "http://identifiers.org/ensembl/ENSMUSG00000030222"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000035273",
@@ -17716,9 +17720,9 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000116610",
+            "http://identifiers.org/ensembl/ENSMUSG00000031997",
             "http://identifiers.org/ensembl/ENSMUSG00000028370",
-            "http://identifiers.org/ensembl/ENSMUSG00000004366",
-            "http://identifiers.org/ensembl/ENSMUSG00000031997"
+            "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000031997",
@@ -17861,10 +17865,10 @@
             "Sst-like_C6 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000025400",
-            "http://identifiers.org/ensembl/ENSMUSG00000031841",
             "http://identifiers.org/ensembl/ENSMUSG00000036019",
-            "http://identifiers.org/ensembl/ENSMUSG00000004366"
+            "http://identifiers.org/ensembl/ENSMUSG00000025400",
+            "http://identifiers.org/ensembl/ENSMUSG00000004366",
+            "http://identifiers.org/ensembl/ENSMUSG00000031841"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000036019",
@@ -17964,10 +17968,10 @@
             "Sst-like_C6 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000049001",
+            "http://identifiers.org/ensembl/ENSMUSG00000049630",
             "http://identifiers.org/ensembl/ENSMUSG00000030074",
             "http://identifiers.org/ensembl/ENSMUSG00000035131",
-            "http://identifiers.org/ensembl/ENSMUSG00000049630",
-            "http://identifiers.org/ensembl/ENSMUSG00000049001",
             "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
@@ -18071,9 +18075,9 @@
             "L5/6 non-Martinotti cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000049630",
             "http://identifiers.org/ensembl/ENSMUSG00000111950",
             "http://identifiers.org/ensembl/ENSMUSG00000052062",
-            "http://identifiers.org/ensembl/ENSMUSG00000049630",
             "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
@@ -18337,9 +18341,9 @@
             "Pvalb-like_C2 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000001260",
+            "http://identifiers.org/ensembl/ENSMUSG00000005716",
             "http://identifiers.org/ensembl/ENSMUSG00000000214",
-            "http://identifiers.org/ensembl/ENSMUSG00000005716"
+            "http://identifiers.org/ensembl/ENSMUSG00000001260"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000005716",
@@ -18501,9 +18505,9 @@
             "L6 Th+ SST/PV cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000045731",
+            "http://identifiers.org/ensembl/ENSMUSG00000052062",
             "http://identifiers.org/ensembl/ENSMUSG00000004366",
-            "http://identifiers.org/ensembl/ENSMUSG00000052062"
+            "http://identifiers.org/ensembl/ENSMUSG00000045731"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000045731",
@@ -18591,11 +18595,11 @@
             "Sst-like_C6 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000040710",
-            "http://identifiers.org/ensembl/ENSMUSG00000004366",
             "http://identifiers.org/ensembl/ENSMUSG00000000214",
+            "http://identifiers.org/ensembl/ENSMUSG00000039037",
             "http://identifiers.org/ensembl/ENSMUSG00000022306",
-            "http://identifiers.org/ensembl/ENSMUSG00000039037"
+            "http://identifiers.org/ensembl/ENSMUSG00000040710",
+            "http://identifiers.org/ensembl/ENSMUSG00000004366"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000039037",
@@ -18709,10 +18713,10 @@
             "Lower FS Basket cell primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
+            "http://identifiers.org/ensembl/ENSMUSG00000005716",
             "http://identifiers.org/ensembl/ENSMUSG00000036834",
             "http://identifiers.org/ensembl/ENSMUSG00000061762",
             "http://identifiers.org/ensembl/ENSMUSG00000073154",
-            "http://identifiers.org/ensembl/ENSMUSG00000005716",
             "http://identifiers.org/ensembl/ENSMUSG00000063600"
         ],
         "markers": [
@@ -18840,11 +18844,11 @@
             "Lamp5-like_C5 primary motor cortex GABAergic interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000020902",
-            "http://identifiers.org/ensembl/ENSMUSG00000027270",
+            "http://identifiers.org/ensembl/ENSMUSG00000021508",
             "http://identifiers.org/ensembl/ENSMUSG00000035105",
+            "http://identifiers.org/ensembl/ENSMUSG00000027270",
             "http://identifiers.org/ensembl/ENSMUSG00000042453",
-            "http://identifiers.org/ensembl/ENSMUSG00000021508"
+            "http://identifiers.org/ensembl/ENSMUSG00000020902"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000027270",
@@ -18964,9 +18968,9 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000024074",
-            "http://identifiers.org/ensembl/ENSMUSG00000027270",
+            "http://identifiers.org/ensembl/ENSMUSG00000035105",
             "http://identifiers.org/ensembl/ENSMUSG00000092094",
-            "http://identifiers.org/ensembl/ENSMUSG00000035105"
+            "http://identifiers.org/ensembl/ENSMUSG00000027270"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000027270",
@@ -19091,9 +19095,9 @@
         ],
         "expresses": [
             "http://identifiers.org/ensembl/ENSMUSG00000059187",
-            "http://identifiers.org/ensembl/ENSMUSG00000030525",
+            "http://identifiers.org/ensembl/ENSMUSG00000035105",
             "http://identifiers.org/ensembl/ENSMUSG00000024598",
-            "http://identifiers.org/ensembl/ENSMUSG00000035105"
+            "http://identifiers.org/ensembl/ENSMUSG00000030525"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000035105",
@@ -19327,10 +19331,10 @@
             "L5,6 Neurogliaform Lamp5 GABAergic cortical interneuron (Mus musculus)"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000110002",
-            "http://identifiers.org/ensembl/ENSMUSG00000026890",
             "http://identifiers.org/ensembl/ENSMUSG00000029361",
-            "http://identifiers.org/ensembl/ENSMUSG00000027270"
+            "http://identifiers.org/ensembl/ENSMUSG00000110002",
+            "http://identifiers.org/ensembl/ENSMUSG00000027270",
+            "http://identifiers.org/ensembl/ENSMUSG00000026890"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000029361",
@@ -19503,10 +19507,10 @@
             "Lamp5 GABAergic cortical interneuron"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000027270",
+            "http://identifiers.org/ensembl/ENSMUSG00000050473",
             "http://identifiers.org/ensembl/ENSMUSG00000055471",
             "http://identifiers.org/ensembl/ENSMUSG00000022231",
-            "http://identifiers.org/ensembl/ENSMUSG00000050473"
+            "http://identifiers.org/ensembl/ENSMUSG00000027270"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000050473",
@@ -19700,11 +19704,11 @@
             "Lamp5 GABAergic cortical interneuron"
         ],
         "expresses": [
-            "http://identifiers.org/ensembl/ENSMUSG00000044447",
-            "http://identifiers.org/ensembl/ENSMUSG00000028273",
-            "http://identifiers.org/ensembl/ENSMUSG00000027270",
             "http://identifiers.org/ensembl/ENSMUSG00000027971",
-            "http://identifiers.org/ensembl/ENSMUSG00000049001"
+            "http://identifiers.org/ensembl/ENSMUSG00000049001",
+            "http://identifiers.org/ensembl/ENSMUSG00000027270",
+            "http://identifiers.org/ensembl/ENSMUSG00000028273",
+            "http://identifiers.org/ensembl/ENSMUSG00000044447"
         ],
         "markers": [
             "http://identifiers.org/ensembl/ENSMUSG00000028273",
@@ -21127,11 +21131,11 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/9501",
+            "https://identifiers.org/ncbigene/10631",
             "https://identifiers.org/ncbigene/4645",
             "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/143872",
-            "https://identifiers.org/ncbigene/10631",
+            "https://identifiers.org/ncbigene/9501",
             "https://identifiers.org/ncbigene/11197"
         ],
         "markers": [
@@ -21243,10 +21247,10 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/23213",
-            "https://identifiers.org/ncbigene/101928964",
-            "https://identifiers.org/ncbigene/148418"
+            "https://identifiers.org/ncbigene/148418",
+            "https://identifiers.org/ncbigene/5816",
+            "https://identifiers.org/ncbigene/101928964"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/23213",
@@ -21359,10 +21363,10 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/341359",
             "https://identifiers.org/ncbigene/92293",
             "https://identifiers.org/ncbigene/81792",
             "https://identifiers.org/ncbigene/5816",
+            "https://identifiers.org/ncbigene/341359",
             "https://identifiers.org/ncbigene/23552"
         ],
         "markers": [
@@ -21481,8 +21485,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/285195",
-            "https://identifiers.org/ncbigene/140689",
             "https://identifiers.org/ncbigene/5816",
+            "https://identifiers.org/ncbigene/140689",
             "https://identifiers.org/ncbigene/8490",
             "https://identifiers.org/ncbigene/2487"
         ],
@@ -21592,8 +21596,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/65217",
-            "https://identifiers.org/ncbigene/102723356",
             "https://identifiers.org/ncbigene/5816",
+            "https://identifiers.org/ncbigene/102723356",
             "https://identifiers.org/ncbigene/80031"
         ],
         "markers": [
@@ -21710,9 +21714,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/22987",
+            "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/101926942",
             "https://identifiers.org/ncbigene/3669",
-            "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/105377862"
         ],
         "markers": [
@@ -21830,11 +21834,11 @@
             "(Mouse Pvalb)-like_C1 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/1004",
             "https://identifiers.org/ncbigene/51196",
-            "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/2262",
-            "https://identifiers.org/ncbigene/121227"
+            "https://identifiers.org/ncbigene/5816",
+            "https://identifiers.org/ncbigene/121227",
+            "https://identifiers.org/ncbigene/1004"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/1004",
@@ -21951,11 +21955,11 @@
             "(Mouse Pvalb)-like_C1 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/170691",
             "https://identifiers.org/ncbigene/29969",
             "https://identifiers.org/ncbigene/84439",
-            "https://identifiers.org/ncbigene/80070",
             "https://identifiers.org/ncbigene/5816",
-            "https://identifiers.org/ncbigene/170691"
+            "https://identifiers.org/ncbigene/80070"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/84439",
@@ -22074,9 +22078,9 @@
         "expresses": [
             "https://identifiers.org/ncbigene/4734",
             "https://identifiers.org/ncbigene/143872",
+            "https://identifiers.org/ncbigene/6863",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/54102",
-            "https://identifiers.org/ncbigene/6863"
+            "https://identifiers.org/ncbigene/54102"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/4734",
@@ -22239,11 +22243,11 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/4604",
-            "https://identifiers.org/ncbigene/10512",
-            "https://identifiers.org/ncbigene/2601",
+            "https://identifiers.org/ncbigene/2262",
             "https://identifiers.org/ncbigene/5816",
-            "https://identifiers.org/ncbigene/2262"
+            "https://identifiers.org/ncbigene/2601",
+            "https://identifiers.org/ncbigene/10512",
+            "https://identifiers.org/ncbigene/4604"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/10512",
@@ -22318,8 +22322,8 @@
             "(Mouse L2/3 IT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/23316",
-            "https://identifiers.org/ncbigene/407738"
+            "https://identifiers.org/ncbigene/407738",
+            "https://identifiers.org/ncbigene/23316"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/407738",
@@ -22437,11 +22441,11 @@
             "(Mouse IT projecting)-like(i) primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5270",
-            "https://identifiers.org/ncbigene/8001",
-            "https://identifiers.org/ncbigene/100862680",
             "https://identifiers.org/ncbigene/101928278",
-            "https://identifiers.org/ncbigene/103689918"
+            "https://identifiers.org/ncbigene/8001",
+            "https://identifiers.org/ncbigene/103689918",
+            "https://identifiers.org/ncbigene/5270",
+            "https://identifiers.org/ncbigene/100862680"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/103689918",
@@ -22577,12 +22581,12 @@
             "(Mouse IT projecting)-like(i) primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/105376987",
-            "https://identifiers.org/ncbigene/6096",
-            "https://identifiers.org/ncbigene/23007",
-            "https://identifiers.org/ncbigene/101927745",
             "https://identifiers.org/ncbigene/219790",
-            "https://identifiers.org/ncbigene/196475"
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/101927745",
+            "https://identifiers.org/ncbigene/196475",
+            "https://identifiers.org/ncbigene/105376987",
+            "https://identifiers.org/ncbigene/23007"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/23007",
@@ -22703,10 +22707,10 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/658",
-            "https://identifiers.org/ncbigene/1830",
-            "https://identifiers.org/ncbigene/627",
             "https://identifiers.org/ncbigene/105379003",
-            "https://identifiers.org/ncbigene/100862680"
+            "https://identifiers.org/ncbigene/100862680",
+            "https://identifiers.org/ncbigene/1830",
+            "https://identifiers.org/ncbigene/627"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/658",
@@ -22824,9 +22828,9 @@
         "expresses": [
             "https://identifiers.org/ncbigene/22987",
             "https://identifiers.org/ncbigene/100130873",
-            "https://identifiers.org/ncbigene/127833",
             "https://identifiers.org/ncbigene/64097",
-            "https://identifiers.org/ncbigene/24141"
+            "https://identifiers.org/ncbigene/24141",
+            "https://identifiers.org/ncbigene/127833"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/64097",
@@ -22923,10 +22927,10 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/6840",
             "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/4604",
-            "https://identifiers.org/ncbigene/56955",
-            "https://identifiers.org/ncbigene/6840"
+            "https://identifiers.org/ncbigene/56955"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/56955",
@@ -23218,11 +23222,11 @@
             "(Mouse IT projecting)-like(i) primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/170850",
             "https://identifiers.org/ncbigene/148753",
             "https://identifiers.org/ncbigene/24141",
-            "https://identifiers.org/ncbigene/154075",
-            "https://identifiers.org/ncbigene/101927668"
+            "https://identifiers.org/ncbigene/170850",
+            "https://identifiers.org/ncbigene/101927668",
+            "https://identifiers.org/ncbigene/154075"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/148753",
@@ -23328,10 +23332,10 @@
             "(Mouse IT projecting)-like(i) primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/105377209",
+            "https://identifiers.org/ncbigene/540",
             "https://identifiers.org/ncbigene/100862680",
             "https://identifiers.org/ncbigene/130399",
-            "https://identifiers.org/ncbigene/540"
+            "https://identifiers.org/ncbigene/105377209"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105377209",
@@ -23515,12 +23519,12 @@
             "brain macroglial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5168",
-            "https://identifiers.org/ncbigene/9705",
-            "https://identifiers.org/ncbigene/4155",
             "https://identifiers.org/ncbigene/79929",
+            "https://identifiers.org/ncbigene/103689918",
+            "https://identifiers.org/ncbigene/4155",
+            "https://identifiers.org/ncbigene/5168",
             "https://identifiers.org/ncbigene/93377",
-            "https://identifiers.org/ncbigene/103689918"
+            "https://identifiers.org/ncbigene/9705"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/93377",
@@ -23622,9 +23626,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/5816",
-            "https://identifiers.org/ncbigene/285016",
             "https://identifiers.org/ncbigene/4604",
-            "https://identifiers.org/ncbigene/3371"
+            "https://identifiers.org/ncbigene/3371",
+            "https://identifiers.org/ncbigene/285016"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/285016",
@@ -23853,9 +23857,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/283310",
-            "https://identifiers.org/ncbigene/169044",
             "https://identifiers.org/ncbigene/6096",
-            "https://identifiers.org/ncbigene/196475"
+            "https://identifiers.org/ncbigene/196475",
+            "https://identifiers.org/ncbigene/169044"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/169044",
@@ -23979,12 +23983,12 @@
             "(Mouse L5 IT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/105377703",
+            "https://identifiers.org/ncbigene/101927874",
+            "https://identifiers.org/ncbigene/105376081",
             "https://identifiers.org/ncbigene/6096",
             "https://identifiers.org/ncbigene/104326188",
-            "https://identifiers.org/ncbigene/105377703",
-            "https://identifiers.org/ncbigene/105376081",
-            "https://identifiers.org/ncbigene/105374971",
-            "https://identifiers.org/ncbigene/101927874"
+            "https://identifiers.org/ncbigene/105374971"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105376081",
@@ -24180,11 +24184,11 @@
             "(Mouse L5 IT)-like_C2 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/387357",
-            "https://identifiers.org/ncbigene/23657",
             "https://identifiers.org/ncbigene/5003",
             "https://identifiers.org/ncbigene/401134",
             "https://identifiers.org/ncbigene/153579",
+            "https://identifiers.org/ncbigene/23657",
+            "https://identifiers.org/ncbigene/387357",
             "https://identifiers.org/ncbigene/147372"
         ],
         "markers": [
@@ -24373,12 +24377,12 @@
             "(Mouse L6 IT)-like_C2 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/105378031",
-            "https://identifiers.org/ncbigene/387357",
             "https://identifiers.org/ncbigene/128553",
-            "https://identifiers.org/ncbigene/7130",
+            "https://identifiers.org/ncbigene/105378031",
+            "https://identifiers.org/ncbigene/4052",
             "https://identifiers.org/ncbigene/105373893",
-            "https://identifiers.org/ncbigene/4052"
+            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/7130"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/7130",
@@ -24491,11 +24495,11 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/2191",
-            "https://identifiers.org/ncbigene/387357",
-            "https://identifiers.org/ncbigene/2028",
             "https://identifiers.org/ncbigene/105376081",
+            "https://identifiers.org/ncbigene/2028",
             "https://identifiers.org/ncbigene/3908",
-            "https://identifiers.org/ncbigene/101928964"
+            "https://identifiers.org/ncbigene/101928964",
+            "https://identifiers.org/ncbigene/387357"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/2028",
@@ -24607,11 +24611,11 @@
             "(Mouse L5 IT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6096",
-            "https://identifiers.org/ncbigene/7139",
-            "https://identifiers.org/ncbigene/2492",
             "https://identifiers.org/ncbigene/100507562",
-            "https://identifiers.org/ncbigene/105376081"
+            "https://identifiers.org/ncbigene/2492",
+            "https://identifiers.org/ncbigene/105376081",
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/7139"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/2492",
@@ -24739,12 +24743,12 @@
             "(Mouse L5 IT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/7222",
-            "https://identifiers.org/ncbigene/6096",
-            "https://identifiers.org/ncbigene/105376081",
-            "https://identifiers.org/ncbigene/100128497",
             "https://identifiers.org/ncbigene/101927281",
+            "https://identifiers.org/ncbigene/100128497",
+            "https://identifiers.org/ncbigene/105376081",
             "https://identifiers.org/ncbigene/3910",
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/7222",
             "https://identifiers.org/ncbigene/131096"
         ],
         "markers": [
@@ -24861,11 +24865,11 @@
             "(Mouse L5 IT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/1602",
-            "https://identifiers.org/ncbigene/3371",
-            "https://identifiers.org/ncbigene/387357",
             "https://identifiers.org/ncbigene/50853",
-            "https://identifiers.org/ncbigene/101927389"
+            "https://identifiers.org/ncbigene/101927389",
+            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/1602",
+            "https://identifiers.org/ncbigene/3371"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/3371",
@@ -25042,11 +25046,11 @@
             "(Mouse L2/3 IT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/80323",
-            "https://identifiers.org/ncbigene/22837",
-            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/1290",
             "https://identifiers.org/ncbigene/8492",
-            "https://identifiers.org/ncbigene/1290"
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/22837",
+            "https://identifiers.org/ncbigene/80323"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/8492",
@@ -25154,11 +25158,11 @@
             "(Mouse L5 IT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6096",
-            "https://identifiers.org/ncbigene/5774",
-            "https://identifiers.org/ncbigene/105370610",
             "https://identifiers.org/ncbigene/105378334",
-            "https://identifiers.org/ncbigene/1290"
+            "https://identifiers.org/ncbigene/1290",
+            "https://identifiers.org/ncbigene/5774",
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/105370610"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105370610",
@@ -25326,10 +25330,10 @@
             "(Mouse IT projecting)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/387357",
             "https://identifiers.org/ncbigene/7224",
-            "https://identifiers.org/ncbigene/57194",
-            "https://identifiers.org/ncbigene/150572"
+            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/150572",
+            "https://identifiers.org/ncbigene/57194"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/150572",
@@ -25523,12 +25527,12 @@
             "(Mouse L6 CT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/101927439",
-            "https://identifiers.org/ncbigene/138881",
-            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/105377183",
-            "https://identifiers.org/ncbigene/105374392",
-            "https://identifiers.org/ncbigene/59352"
+            "https://identifiers.org/ncbigene/55079",
+            "https://identifiers.org/ncbigene/138881",
+            "https://identifiers.org/ncbigene/101927439",
+            "https://identifiers.org/ncbigene/59352",
+            "https://identifiers.org/ncbigene/105374392"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/138881",
@@ -25638,10 +25642,10 @@
             "(Mouse L6 CT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/387357",
-            "https://identifiers.org/ncbigene/105371663",
             "https://identifiers.org/ncbigene/105369890",
-            "https://identifiers.org/ncbigene/375295"
+            "https://identifiers.org/ncbigene/375295",
+            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/105371663"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/387357",
@@ -25800,11 +25804,11 @@
             "(Mouse L5 IT)-like_C3 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/1392",
-            "https://identifiers.org/ncbigene/387357",
             "https://identifiers.org/ncbigene/2255",
-            "https://identifiers.org/ncbigene/627",
-            "https://identifiers.org/ncbigene/10886"
+            "https://identifiers.org/ncbigene/1392",
+            "https://identifiers.org/ncbigene/10886",
+            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/627"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/387357",
@@ -25967,9 +25971,9 @@
             "(Mouse L6 IT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/339789",
+            "https://identifiers.org/ncbigene/144920",
             "https://identifiers.org/ncbigene/374860",
-            "https://identifiers.org/ncbigene/144920"
+            "https://identifiers.org/ncbigene/339789"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/339789",
@@ -26071,11 +26075,11 @@
             "(Mouse L6 IT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/148753",
+            "https://identifiers.org/ncbigene/105371832",
             "https://identifiers.org/ncbigene/6588",
             "https://identifiers.org/ncbigene/387357",
-            "https://identifiers.org/ncbigene/105374524",
-            "https://identifiers.org/ncbigene/105371832",
-            "https://identifiers.org/ncbigene/148753"
+            "https://identifiers.org/ncbigene/105374524"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105374524",
@@ -26153,9 +26157,9 @@
             "(Mouse IT projecting)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/387357",
             "https://identifiers.org/ncbigene/101928278",
-            "https://identifiers.org/ncbigene/144920"
+            "https://identifiers.org/ncbigene/144920",
+            "https://identifiers.org/ncbigene/387357"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/101928278",
@@ -26255,10 +26259,10 @@
             "(Mouse L6 IT)-like_C2 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/101927389",
             "https://identifiers.org/ncbigene/105371310",
-            "https://identifiers.org/ncbigene/54221",
-            "https://identifiers.org/ncbigene/101927389"
+            "https://identifiers.org/ncbigene/387357",
+            "https://identifiers.org/ncbigene/54221"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/387357",
@@ -26350,11 +26354,11 @@
             "(Mouse L5 IT)-like_C2 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6096",
-            "https://identifiers.org/ncbigene/129293",
-            "https://identifiers.org/ncbigene/105377703",
             "https://identifiers.org/ncbigene/222484",
-            "https://identifiers.org/ncbigene/105374971"
+            "https://identifiers.org/ncbigene/105377703",
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/105374971",
+            "https://identifiers.org/ncbigene/129293"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/222484",
@@ -26450,10 +26454,10 @@
             "(Mouse L5 IT)-like_C2 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/6096",
             "https://identifiers.org/ncbigene/105374971",
-            "https://identifiers.org/ncbigene/56475",
             "https://identifiers.org/ncbigene/105374973",
-            "https://identifiers.org/ncbigene/6096"
+            "https://identifiers.org/ncbigene/56475"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6096",
@@ -26537,10 +26541,10 @@
             "(Mouse L5 IT)-like_C3 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6096",
             "https://identifiers.org/ncbigene/401134",
-            "https://identifiers.org/ncbigene/112950",
             "https://identifiers.org/ncbigene/10886",
+            "https://identifiers.org/ncbigene/6096",
+            "https://identifiers.org/ncbigene/112950",
             "https://identifiers.org/ncbigene/169044"
         ],
         "markers": [
@@ -26702,9 +26706,9 @@
             "(Mouse Vip)-like_C1 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/9705",
-            "https://identifiers.org/ncbigene/23086",
             "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/23086",
+            "https://identifiers.org/ncbigene/9705",
             "https://identifiers.org/ncbigene/6344"
         ],
         "markers": [
@@ -26808,8 +26812,8 @@
         "expresses": [
             "https://identifiers.org/ncbigene/126393",
             "https://identifiers.org/ncbigene/3488",
-            "https://identifiers.org/ncbigene/901",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/901"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/126393",
@@ -26955,10 +26959,10 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/341359",
             "https://identifiers.org/ncbigene/5733",
             "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/117583",
+            "https://identifiers.org/ncbigene/341359",
             "https://identifiers.org/ncbigene/131096"
         ],
         "markers": [
@@ -27064,11 +27068,11 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/25890",
-            "https://identifiers.org/ncbigene/256380",
-            "https://identifiers.org/ncbigene/100506497",
             "https://identifiers.org/ncbigene/7432",
-            "https://identifiers.org/ncbigene/131096"
+            "https://identifiers.org/ncbigene/256380",
+            "https://identifiers.org/ncbigene/131096",
+            "https://identifiers.org/ncbigene/25890",
+            "https://identifiers.org/ncbigene/100506497"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100506497",
@@ -27174,9 +27178,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/50507",
-            "https://identifiers.org/ncbigene/9543",
+            "https://identifiers.org/ncbigene/2069",
             "https://identifiers.org/ncbigene/7432",
-            "https://identifiers.org/ncbigene/2069"
+            "https://identifiers.org/ncbigene/9543"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/7432",
@@ -27323,9 +27327,9 @@
             "(Mouse Vip)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/284",
             "https://identifiers.org/ncbigene/64093",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/284"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/64093",
@@ -27426,11 +27430,11 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/101928842",
-            "https://identifiers.org/ncbigene/131096",
-            "https://identifiers.org/ncbigene/84624",
             "https://identifiers.org/ncbigene/101927286",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/84624",
+            "https://identifiers.org/ncbigene/131096"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/101927286",
@@ -27545,11 +27549,11 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/1135",
-            "https://identifiers.org/ncbigene/105373642",
-            "https://identifiers.org/ncbigene/151242",
             "https://identifiers.org/ncbigene/2070",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/105373642",
+            "https://identifiers.org/ncbigene/151242"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/151242",
@@ -27655,9 +27659,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/28968",
-            "https://identifiers.org/ncbigene/105370456",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/343450",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/105370456"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105370456",
@@ -27758,9 +27762,9 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/139065",
             "https://identifiers.org/ncbigene/9358",
             "https://identifiers.org/ncbigene/200942",
-            "https://identifiers.org/ncbigene/139065",
             "https://identifiers.org/ncbigene/7432"
         ],
         "markers": [
@@ -27852,11 +27856,11 @@
             "(Mouse Vip)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/115207",
-            "https://identifiers.org/ncbigene/25890",
             "https://identifiers.org/ncbigene/1285",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/117583",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/115207",
+            "https://identifiers.org/ncbigene/25890"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/115207",
@@ -27971,11 +27975,11 @@
             "(Mouse Vip)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/10788",
-            "https://identifiers.org/ncbigene/678655",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/93556",
             "https://identifiers.org/ncbigene/162282",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/678655",
+            "https://identifiers.org/ncbigene/10788"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/10788",
@@ -28080,11 +28084,11 @@
             "(Mouse Vip)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/9705",
+            "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/101927078",
             "https://identifiers.org/ncbigene/5139",
             "https://identifiers.org/ncbigene/54836",
-            "https://identifiers.org/ncbigene/7432",
-            "https://identifiers.org/ncbigene/101927078"
+            "https://identifiers.org/ncbigene/9705"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/7432",
@@ -28254,11 +28258,11 @@
             "(Mouse Vip)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/80731",
             "https://identifiers.org/ncbigene/3358",
+            "https://identifiers.org/ncbigene/80731",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/92949",
-            "https://identifiers.org/ncbigene/6664",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/6664"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/3358",
@@ -28353,11 +28357,11 @@
             "(Mouse Vip)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/25890",
-            "https://identifiers.org/ncbigene/10788",
-            "https://identifiers.org/ncbigene/9955",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/6581",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/25890",
+            "https://identifiers.org/ncbigene/9955",
+            "https://identifiers.org/ncbigene/10788"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/25890",
@@ -28462,11 +28466,11 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6866",
-            "https://identifiers.org/ncbigene/1310",
             "https://identifiers.org/ncbigene/128553",
             "https://identifiers.org/ncbigene/347689",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/1310",
+            "https://identifiers.org/ncbigene/6866"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/347689",
@@ -28571,9 +28575,9 @@
             "(Mouse Vip)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/5179",
             "https://identifiers.org/ncbigene/101929059",
-            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/9547"
         ],
         "markers": [
@@ -28666,9 +28670,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/80731",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/653583",
-            "https://identifiers.org/ncbigene/1950",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/1950"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/653583",
@@ -28770,10 +28774,10 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/80731",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/100507254",
-            "https://identifiers.org/ncbigene/117154",
             "https://identifiers.org/ncbigene/57522",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/117154"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/57522",
@@ -28888,11 +28892,11 @@
             "(Mouse Vip)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/55568",
-            "https://identifiers.org/ncbigene/105373454",
-            "https://identifiers.org/ncbigene/643763",
             "https://identifiers.org/ncbigene/7432",
-            "https://identifiers.org/ncbigene/101928176"
+            "https://identifiers.org/ncbigene/55568",
+            "https://identifiers.org/ncbigene/101928176",
+            "https://identifiers.org/ncbigene/643763",
+            "https://identifiers.org/ncbigene/105373454"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/643763",
@@ -29062,11 +29066,11 @@
             "(Mouse Sst)-like_C1 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/29953",
             "https://identifiers.org/ncbigene/100271314",
-            "https://identifiers.org/ncbigene/1909",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/158326",
-            "https://identifiers.org/ncbigene/29953"
+            "https://identifiers.org/ncbigene/1909",
+            "https://identifiers.org/ncbigene/158326"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/29953",
@@ -29216,10 +29220,10 @@
             "(Mouse Sst)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/1310",
+            "https://identifiers.org/ncbigene/91464",
             "https://identifiers.org/ncbigene/80036",
-            "https://identifiers.org/ncbigene/91464"
+            "https://identifiers.org/ncbigene/6750"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6750",
@@ -29322,12 +29326,12 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/3248",
             "https://identifiers.org/ncbigene/5816",
             "https://identifiers.org/ncbigene/1395",
-            "https://identifiers.org/ncbigene/10418",
-            "https://identifiers.org/ncbigene/3248",
+            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/8490",
-            "https://identifiers.org/ncbigene/6750"
+            "https://identifiers.org/ncbigene/10418"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/1395",
@@ -29583,8 +29587,8 @@
             "(Mouse MGE)-like primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/4852"
+            "https://identifiers.org/ncbigene/4852",
+            "https://identifiers.org/ncbigene/6750"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6750",
@@ -29675,10 +29679,10 @@
             "(Mouse Sst)-like_C1 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/1001",
-            "https://identifiers.org/ncbigene/84109",
             "https://identifiers.org/ncbigene/255743",
             "https://identifiers.org/ncbigene/6750",
+            "https://identifiers.org/ncbigene/84109",
+            "https://identifiers.org/ncbigene/1001",
             "https://identifiers.org/ncbigene/158326"
         ],
         "markers": [
@@ -29839,10 +29843,10 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/5649",
             "https://identifiers.org/ncbigene/346007",
-            "https://identifiers.org/ncbigene/728226"
+            "https://identifiers.org/ncbigene/728226",
+            "https://identifiers.org/ncbigene/6750",
+            "https://identifiers.org/ncbigene/5649"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/728226",
@@ -29953,11 +29957,11 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/63895",
+            "https://identifiers.org/ncbigene/10874",
             "https://identifiers.org/ncbigene/60495",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/4842",
-            "https://identifiers.org/ncbigene/10874"
+            "https://identifiers.org/ncbigene/63895",
+            "https://identifiers.org/ncbigene/4842"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/10874",
@@ -30108,11 +30112,11 @@
             "(Mouse Sst)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/64097",
-            "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/64579",
             "https://identifiers.org/ncbigene/29953",
-            "https://identifiers.org/ncbigene/5074"
+            "https://identifiers.org/ncbigene/5074",
+            "https://identifiers.org/ncbigene/64097",
+            "https://identifiers.org/ncbigene/64579",
+            "https://identifiers.org/ncbigene/6750"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/64579",
@@ -30217,9 +30221,9 @@
             "(Mouse Sst)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/57565",
             "https://identifiers.org/ncbigene/100996671",
+            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/5293"
         ],
         "markers": [
@@ -30367,12 +30371,12 @@
             "(Mouse Sst)-like_C5 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/29953",
             "https://identifiers.org/ncbigene/80731",
-            "https://identifiers.org/ncbigene/9037",
-            "https://identifiers.org/ncbigene/92949",
-            "https://identifiers.org/ncbigene/146227",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/29953"
+            "https://identifiers.org/ncbigene/146227",
+            "https://identifiers.org/ncbigene/9037",
+            "https://identifiers.org/ncbigene/92949"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/29953",
@@ -30491,11 +30495,11 @@
             "(Mouse Sst)-like_C5 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/3082",
-            "https://identifiers.org/ncbigene/85406",
-            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/3672",
-            "https://identifiers.org/ncbigene/85439"
+            "https://identifiers.org/ncbigene/85439",
+            "https://identifiers.org/ncbigene/6750",
+            "https://identifiers.org/ncbigene/85406",
+            "https://identifiers.org/ncbigene/3082"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/3082",
@@ -30636,11 +30640,11 @@
             "(Mouse Sst)-like_C6 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5179",
             "https://identifiers.org/ncbigene/152816",
+            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/80070",
-            "https://identifiers.org/ncbigene/10418",
-            "https://identifiers.org/ncbigene/6750"
+            "https://identifiers.org/ncbigene/5179",
+            "https://identifiers.org/ncbigene/10418"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/5179",
@@ -30745,10 +30749,10 @@
             "(Mouse Sst)-like_C6 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/57626",
             "https://identifiers.org/ncbigene/2201",
+            "https://identifiers.org/ncbigene/3062",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/3062"
+            "https://identifiers.org/ncbigene/57626"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/2201",
@@ -30850,10 +30854,10 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/92293",
-            "https://identifiers.org/ncbigene/793",
-            "https://identifiers.org/ncbigene/79616",
             "https://identifiers.org/ncbigene/80309",
-            "https://identifiers.org/ncbigene/6750"
+            "https://identifiers.org/ncbigene/6750",
+            "https://identifiers.org/ncbigene/793",
+            "https://identifiers.org/ncbigene/79616"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6750",
@@ -30948,10 +30952,10 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/54757",
-            "https://identifiers.org/ncbigene/5125",
-            "https://identifiers.org/ncbigene/6863"
+            "https://identifiers.org/ncbigene/6863",
+            "https://identifiers.org/ncbigene/6750",
+            "https://identifiers.org/ncbigene/5125"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6863",
@@ -31052,10 +31056,10 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/101927843",
-            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/401399",
-            "https://identifiers.org/ncbigene/101929028"
+            "https://identifiers.org/ncbigene/101927843",
+            "https://identifiers.org/ncbigene/101929028",
+            "https://identifiers.org/ncbigene/6750"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/101927843",
@@ -31136,11 +31140,11 @@
             "(Mouse Sst)-like_C6 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/57626",
+            "https://identifiers.org/ncbigene/64579",
             "https://identifiers.org/ncbigene/246213",
-            "https://identifiers.org/ncbigene/57565",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/64579"
+            "https://identifiers.org/ncbigene/57626",
+            "https://identifiers.org/ncbigene/57565"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/57565",
@@ -31219,9 +31223,9 @@
             "(Mouse MGE)-like primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/30010",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/55553",
-            "https://identifiers.org/ncbigene/30010"
+            "https://identifiers.org/ncbigene/55553"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6750",
@@ -31319,9 +31323,9 @@
             "(Mouse Sst)-like primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/7054",
             "https://identifiers.org/ncbigene/100128108",
-            "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/7054"
+            "https://identifiers.org/ncbigene/6750"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/7054",
@@ -31418,11 +31422,11 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/10451",
-            "https://identifiers.org/ncbigene/5816",
-            "https://identifiers.org/ncbigene/2262",
             "https://identifiers.org/ncbigene/30819",
-            "https://identifiers.org/ncbigene/10886"
+            "https://identifiers.org/ncbigene/2262",
+            "https://identifiers.org/ncbigene/10886",
+            "https://identifiers.org/ncbigene/5816",
+            "https://identifiers.org/ncbigene/10451"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/10451",
@@ -31595,12 +31599,12 @@
             "(Mouse Lamp5)-like primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/7222",
-            "https://identifiers.org/ncbigene/5649",
-            "https://identifiers.org/ncbigene/5819",
-            "https://identifiers.org/ncbigene/140689",
+            "https://identifiers.org/ncbigene/222537",
             "https://identifiers.org/ncbigene/24141",
-            "https://identifiers.org/ncbigene/222537"
+            "https://identifiers.org/ncbigene/7222",
+            "https://identifiers.org/ncbigene/140689",
+            "https://identifiers.org/ncbigene/5649",
+            "https://identifiers.org/ncbigene/5819"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/5649",
@@ -31774,10 +31778,10 @@
             "Lamp5 GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/80310",
-            "https://identifiers.org/ncbigene/105379168",
+            "https://identifiers.org/ncbigene/1381",
             "https://identifiers.org/ncbigene/24141",
-            "https://identifiers.org/ncbigene/1381"
+            "https://identifiers.org/ncbigene/80310",
+            "https://identifiers.org/ncbigene/105379168"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/24141",
@@ -31933,10 +31937,10 @@
             "(Mouse Lamp5)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/54873",
-            "https://identifiers.org/ncbigene/5649",
+            "https://identifiers.org/ncbigene/5080",
             "https://identifiers.org/ncbigene/102723487",
-            "https://identifiers.org/ncbigene/5080"
+            "https://identifiers.org/ncbigene/54873",
+            "https://identifiers.org/ncbigene/5649"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/102723487",
@@ -32027,10 +32031,10 @@
             "(Mouse Lamp5)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5649",
+            "https://identifiers.org/ncbigene/5080",
             "https://identifiers.org/ncbigene/7048",
             "https://identifiers.org/ncbigene/406893",
-            "https://identifiers.org/ncbigene/5080"
+            "https://identifiers.org/ncbigene/5649"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/5649",
@@ -32103,8 +32107,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/1268",
-            "https://identifiers.org/ncbigene/105",
-            "https://identifiers.org/ncbigene/9547"
+            "https://identifiers.org/ncbigene/9547",
+            "https://identifiers.org/ncbigene/105"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/1268",
@@ -32279,10 +32283,10 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/89832",
-            "https://identifiers.org/ncbigene/5080",
             "https://identifiers.org/ncbigene/100505474",
-            "https://identifiers.org/ncbigene/1139",
-            "https://identifiers.org/ncbigene/1268"
+            "https://identifiers.org/ncbigene/1268",
+            "https://identifiers.org/ncbigene/5080",
+            "https://identifiers.org/ncbigene/1139"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/1139",
@@ -32435,10 +32439,10 @@
             "(Mouse Lamp5)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/158326",
-            "https://identifiers.org/ncbigene/80070",
             "https://identifiers.org/ncbigene/4629",
             "https://identifiers.org/ncbigene/24141",
+            "https://identifiers.org/ncbigene/80070",
+            "https://identifiers.org/ncbigene/158326",
             "https://identifiers.org/ncbigene/646080"
         ],
         "markers": [
@@ -32546,12 +32550,12 @@
             "(Mouse Lamp5)-like_C2 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/153768",
-            "https://identifiers.org/ncbigene/441376",
             "https://identifiers.org/ncbigene/3815",
             "https://identifiers.org/ncbigene/23194",
+            "https://identifiers.org/ncbigene/441376",
             "https://identifiers.org/ncbigene/24141",
-            "https://identifiers.org/ncbigene/158326"
+            "https://identifiers.org/ncbigene/158326",
+            "https://identifiers.org/ncbigene/153768"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/3815",
@@ -32672,13 +32676,13 @@
             "Lamp5 GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/22854",
-            "https://identifiers.org/ncbigene/4920",
-            "https://identifiers.org/ncbigene/2042",
             "https://identifiers.org/ncbigene/3815",
-            "https://identifiers.org/ncbigene/24141",
             "https://identifiers.org/ncbigene/10763",
-            "https://identifiers.org/ncbigene/2070"
+            "https://identifiers.org/ncbigene/24141",
+            "https://identifiers.org/ncbigene/4920",
+            "https://identifiers.org/ncbigene/2070",
+            "https://identifiers.org/ncbigene/2042",
+            "https://identifiers.org/ncbigene/22854"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/2042",
@@ -32783,10 +32787,10 @@
             "Lamp5 GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/24141",
             "https://identifiers.org/ncbigene/9951",
             "https://identifiers.org/ncbigene/4842",
-            "https://identifiers.org/ncbigene/759",
-            "https://identifiers.org/ncbigene/24141"
+            "https://identifiers.org/ncbigene/759"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/4842",
@@ -32881,10 +32885,10 @@
             "(Mouse Sncg)-like primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/84138",
-            "https://identifiers.org/ncbigene/1268",
             "https://identifiers.org/ncbigene/5090",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/1268",
+            "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/84138"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/7432",
@@ -33134,9 +33138,9 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/105373642",
-            "https://identifiers.org/ncbigene/3359",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/3359"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105373642",
@@ -33293,11 +33297,11 @@
             "(Mouse Sncg)-like_C4 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/338596",
-            "https://identifiers.org/ncbigene/2308",
             "https://identifiers.org/ncbigene/283208",
             "https://identifiers.org/ncbigene/143872",
-            "https://identifiers.org/ncbigene/6750"
+            "https://identifiers.org/ncbigene/6750",
+            "https://identifiers.org/ncbigene/338596",
+            "https://identifiers.org/ncbigene/2308"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/6750",
@@ -33385,9 +33389,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/341359",
-            "https://identifiers.org/ncbigene/6750",
             "https://identifiers.org/ncbigene/245911",
-            "https://identifiers.org/ncbigene/64579"
+            "https://identifiers.org/ncbigene/64579",
+            "https://identifiers.org/ncbigene/6750"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/341359",
@@ -33478,11 +33482,11 @@
             "(Mouse Vip)-like_C1 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6866",
             "https://identifiers.org/ncbigene/3358",
+            "https://identifiers.org/ncbigene/7432",
             "https://identifiers.org/ncbigene/284825",
             "https://identifiers.org/ncbigene/869",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/6866"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/3358",
@@ -33589,10 +33593,10 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/105379064",
-            "https://identifiers.org/ncbigene/54361",
             "https://identifiers.org/ncbigene/143425",
-            "https://identifiers.org/ncbigene/7432"
+            "https://identifiers.org/ncbigene/54361",
+            "https://identifiers.org/ncbigene/7432",
+            "https://identifiers.org/ncbigene/105379064"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105379064",
@@ -33729,10 +33733,10 @@
             "(Mouse Lamp5)-like_C5 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/158326",
+            "https://identifiers.org/ncbigene/1290",
             "https://identifiers.org/ncbigene/24141",
-            "https://identifiers.org/ncbigene/650",
-            "https://identifiers.org/ncbigene/1290"
+            "https://identifiers.org/ncbigene/158326",
+            "https://identifiers.org/ncbigene/650"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/1290",
@@ -33825,10 +33829,10 @@
             "(Mouse Lamp5)-like_C5 primary motor cortex GABAergic interneuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5649",
             "https://identifiers.org/ncbigene/4829",
+            "https://identifiers.org/ncbigene/24141",
             "https://identifiers.org/ncbigene/54510",
-            "https://identifiers.org/ncbigene/24141"
+            "https://identifiers.org/ncbigene/5649"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/24141",
@@ -33932,11 +33936,11 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/153768",
             "https://identifiers.org/ncbigene/55515",
             "https://identifiers.org/ncbigene/344148",
             "https://identifiers.org/ncbigene/6750",
-            "https://identifiers.org/ncbigene/80332"
+            "https://identifiers.org/ncbigene/80332",
+            "https://identifiers.org/ncbigene/153768"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/80332",
@@ -38037,8 +38041,8 @@
             "corticothalamic-projecting glutamatergic cortical neuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/93556",
             "https://identifiers.org/ncbigene/9037",
+            "https://identifiers.org/ncbigene/93556",
             "https://identifiers.org/ncbigene/9951"
         ],
         "markers": [
@@ -38141,8 +38145,8 @@
             "extratelencephalic-projecting glutamatergic cortical neuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/105376457",
-            "https://identifiers.org/ncbigene/81285"
+            "https://identifiers.org/ncbigene/81285",
+            "https://identifiers.org/ncbigene/105376457"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105376457",
@@ -38350,10 +38354,10 @@
             "(Mouse L6 CT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/729540",
             "https://identifiers.org/ncbigene/387357",
-            "https://identifiers.org/ncbigene/105371663",
             "https://identifiers.org/ncbigene/4921",
-            "https://identifiers.org/ncbigene/729540"
+            "https://identifiers.org/ncbigene/105371663"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/4921",
@@ -38428,8 +38432,8 @@
             "(Mouse Non-IT projecting)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/29969",
-            "https://identifiers.org/ncbigene/223117"
+            "https://identifiers.org/ncbigene/223117",
+            "https://identifiers.org/ncbigene/29969"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/29969",
@@ -38533,9 +38537,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/157376",
+            "https://identifiers.org/ncbigene/338557",
             "https://identifiers.org/ncbigene/105378486",
-            "https://identifiers.org/ncbigene/338557"
+            "https://identifiers.org/ncbigene/157376"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/55079",
@@ -38626,10 +38630,10 @@
             "(Mouse L6b)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/105371310",
-            "https://identifiers.org/ncbigene/84189",
-            "https://identifiers.org/ncbigene/128674"
+            "https://identifiers.org/ncbigene/55079",
+            "https://identifiers.org/ncbigene/128674",
+            "https://identifiers.org/ncbigene/84189"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/55079",
@@ -38731,10 +38735,10 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/4929",
-            "https://identifiers.org/ncbigene/223117",
             "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/105374392",
-            "https://identifiers.org/ncbigene/1080"
+            "https://identifiers.org/ncbigene/1080",
+            "https://identifiers.org/ncbigene/223117",
+            "https://identifiers.org/ncbigene/105374392"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/223117",
@@ -38819,10 +38823,10 @@
             "(Mouse L6b)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/101927439",
-            "https://identifiers.org/ncbigene/29969",
+            "https://identifiers.org/ncbigene/5650",
             "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/5650"
+            "https://identifiers.org/ncbigene/29969",
+            "https://identifiers.org/ncbigene/101927439"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/101927439",
@@ -38915,11 +38919,11 @@
             "(Mouse L6 CT)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/9037",
-            "https://identifiers.org/ncbigene/93986",
             "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/494558",
-            "https://identifiers.org/ncbigene/93556"
+            "https://identifiers.org/ncbigene/93556",
+            "https://identifiers.org/ncbigene/9037",
+            "https://identifiers.org/ncbigene/93986"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/93986",
@@ -39031,12 +39035,12 @@
             "(Mouse L6 CT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/100128497",
             "https://identifiers.org/ncbigene/11259",
+            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/55784",
-            "https://identifiers.org/ncbigene/23213",
-            "https://identifiers.org/ncbigene/89866"
+            "https://identifiers.org/ncbigene/89866",
+            "https://identifiers.org/ncbigene/23213"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/23213",
@@ -39156,12 +39160,12 @@
             "(Mouse L6 CT)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/22829",
             "https://identifiers.org/ncbigene/117157",
+            "https://identifiers.org/ncbigene/4212",
             "https://identifiers.org/ncbigene/92949",
-            "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/9060",
-            "https://identifiers.org/ncbigene/4212"
+            "https://identifiers.org/ncbigene/9060"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/55079",
@@ -39260,9 +39264,9 @@
             "(Mouse L6b)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/5173",
-            "https://identifiers.org/ncbigene/2634"
+            "https://identifiers.org/ncbigene/2634",
+            "https://identifiers.org/ncbigene/55079"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/55079",
@@ -39372,10 +39376,10 @@
             "(Mouse L5 ET)-like_C1 primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/1446",
             "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/105373592",
             "https://identifiers.org/ncbigene/57687",
+            "https://identifiers.org/ncbigene/105373592",
+            "https://identifiers.org/ncbigene/1446",
             "https://identifiers.org/ncbigene/94233"
         ],
         "markers": [
@@ -39635,10 +39639,10 @@
             "(Mouse L5/6 NP)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/404744",
             "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/105369818",
             "https://identifiers.org/ncbigene/100885789",
-            "https://identifiers.org/ncbigene/404744"
+            "https://identifiers.org/ncbigene/105369818"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/105369818",
@@ -39766,8 +39770,8 @@
         "expresses": [
             "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/105376372",
-            "https://identifiers.org/ncbigene/4025",
-            "https://identifiers.org/ncbigene/101928114"
+            "https://identifiers.org/ncbigene/101928114",
+            "https://identifiers.org/ncbigene/4025"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/101928114",
@@ -39877,10 +39881,10 @@
             "cerebral cortex glial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/57642",
-            "https://identifiers.org/ncbigene/202374",
+            "https://identifiers.org/ncbigene/1462",
             "https://identifiers.org/ncbigene/5156",
-            "https://identifiers.org/ncbigene/1462"
+            "https://identifiers.org/ncbigene/57642",
+            "https://identifiers.org/ncbigene/202374"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/5156",
@@ -40011,12 +40015,12 @@
             "brain macroglial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/6285",
-            "https://identifiers.org/ncbigene/9705",
-            "https://identifiers.org/ncbigene/133121",
             "https://identifiers.org/ncbigene/5129",
+            "https://identifiers.org/ncbigene/101927199",
             "https://identifiers.org/ncbigene/220416",
-            "https://identifiers.org/ncbigene/101927199"
+            "https://identifiers.org/ncbigene/133121",
+            "https://identifiers.org/ncbigene/6285",
+            "https://identifiers.org/ncbigene/9705"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/220416",
@@ -40125,9 +40129,9 @@
             "(Mouse L5 ET)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/153579",
-            "https://identifiers.org/ncbigene/1910",
             "https://identifiers.org/ncbigene/55079",
+            "https://identifiers.org/ncbigene/1910",
+            "https://identifiers.org/ncbigene/153579",
             "https://identifiers.org/ncbigene/151171"
         ],
         "markers": [
@@ -40226,9 +40230,9 @@
             "(Mouse L5/6 NP)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/389136",
             "https://identifiers.org/ncbigene/404744",
+            "https://identifiers.org/ncbigene/389136",
+            "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/9033"
         ],
         "markers": [
@@ -40331,11 +40335,11 @@
             "(Mouse L5/6 NP)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/81792",
-            "https://identifiers.org/ncbigene/948",
             "https://identifiers.org/ncbigene/55079",
+            "https://identifiers.org/ncbigene/81792",
+            "https://identifiers.org/ncbigene/105370315",
             "https://identifiers.org/ncbigene/100873948",
-            "https://identifiers.org/ncbigene/105370315"
+            "https://identifiers.org/ncbigene/948"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/55079",
@@ -40431,11 +40435,11 @@
             "(Mouse L5/6 NP)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/948",
-            "https://identifiers.org/ncbigene/105370019",
             "https://identifiers.org/ncbigene/55079",
             "https://identifiers.org/ncbigene/386597",
-            "https://identifiers.org/ncbigene/105369818"
+            "https://identifiers.org/ncbigene/948",
+            "https://identifiers.org/ncbigene/105369818",
+            "https://identifiers.org/ncbigene/105370019"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/386597",
@@ -40550,11 +40554,11 @@
             "(Mouse L6b)-like primary motor cortex glutamatergic neuron (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100505933",
-            "https://identifiers.org/ncbigene/26577",
-            "https://identifiers.org/ncbigene/57645",
             "https://identifiers.org/ncbigene/55079",
-            "https://identifiers.org/ncbigene/100132891"
+            "https://identifiers.org/ncbigene/100505933",
+            "https://identifiers.org/ncbigene/100132891",
+            "https://identifiers.org/ncbigene/57645",
+            "https://identifiers.org/ncbigene/26577"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/55079",
@@ -40647,10 +40651,10 @@
             "Oligo_C2 primary motor cortex oligodendrocyte (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/5168",
-            "https://identifiers.org/ncbigene/2498",
+            "https://identifiers.org/ncbigene/101927459",
             "https://identifiers.org/ncbigene/93377",
-            "https://identifiers.org/ncbigene/101927459"
+            "https://identifiers.org/ncbigene/2498",
+            "https://identifiers.org/ncbigene/5168"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/5168",
@@ -40759,11 +40763,11 @@
             "Oligo_C2 primary motor cortex oligodendrocyte (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/84915",
+            "https://identifiers.org/ncbigene/7039",
             "https://identifiers.org/ncbigene/26119",
-            "https://identifiers.org/ncbigene/3834",
+            "https://identifiers.org/ncbigene/84915",
             "https://identifiers.org/ncbigene/93377",
-            "https://identifiers.org/ncbigene/7039"
+            "https://identifiers.org/ncbigene/3834"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/3834",
@@ -40855,9 +40859,9 @@
             "Astro_C1 primary motor cortex glial cell (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/3371",
             "https://identifiers.org/ncbigene/2261",
-            "https://identifiers.org/ncbigene/358"
+            "https://identifiers.org/ncbigene/358",
+            "https://identifiers.org/ncbigene/3371"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/358",
@@ -40967,10 +40971,10 @@
             "microglial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/54518",
-            "https://identifiers.org/ncbigene/64805",
             "https://identifiers.org/ncbigene/7305",
-            "https://identifiers.org/ncbigene/972"
+            "https://identifiers.org/ncbigene/972",
+            "https://identifiers.org/ncbigene/54518",
+            "https://identifiers.org/ncbigene/64805"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/54518",
@@ -41092,8 +41096,8 @@
             "Astro_C1 primary motor cortex glial cell (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/2261",
             "https://identifiers.org/ncbigene/286464",
+            "https://identifiers.org/ncbigene/2261",
             "https://identifiers.org/ncbigene/5276",
             "https://identifiers.org/ncbigene/151790"
         ],
@@ -41194,10 +41198,10 @@
             "Astro primary motor cortex glial cell (Homo sapiens)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/50509",
-            "https://identifiers.org/ncbigene/2261",
+            "https://identifiers.org/ncbigene/5335",
             "https://identifiers.org/ncbigene/105376917",
-            "https://identifiers.org/ncbigene/5335"
+            "https://identifiers.org/ncbigene/2261",
+            "https://identifiers.org/ncbigene/50509"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/2261",
@@ -41303,9 +41307,9 @@
             "cerebral cortex endothelial cell"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/115677",
             "https://identifiers.org/ncbigene/5552",
-            "https://identifiers.org/ncbigene/7122",
-            "https://identifiers.org/ncbigene/115677"
+            "https://identifiers.org/ncbigene/7122"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/7122",
@@ -41396,8 +41400,8 @@
             "vascular leptomeningeal cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/1278",
             "https://identifiers.org/ncbigene/81035",
+            "https://identifiers.org/ncbigene/1278",
             "https://identifiers.org/ncbigene/5156"
         ],
         "markers": [
@@ -43498,8 +43502,8 @@
             "(Mouse MGE)-like primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100402683",
-            "https://identifiers.org/ncbigene/100895717"
+            "https://identifiers.org/ncbigene/100895717",
+            "https://identifiers.org/ncbigene/100402683"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100402683",
@@ -43881,9 +43885,9 @@
             "(Mouse CGE/PoA)-like primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100402719",
             "https://identifiers.org/ncbigene/100414317",
-            "https://identifiers.org/ncbigene/100393865"
+            "https://identifiers.org/ncbigene/100393865",
+            "https://identifiers.org/ncbigene/100402719"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100414317",
@@ -44258,8 +44262,8 @@
             "(Mouse MGE)-like primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100392984",
-            "https://identifiers.org/ncbigene/100408669"
+            "https://identifiers.org/ncbigene/100408669",
+            "https://identifiers.org/ncbigene/100392984"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100408669",
@@ -45889,10 +45893,10 @@
             "(Mouse IT projecting)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100405584",
-            "https://identifiers.org/ncbigene/100385404",
+            "https://identifiers.org/ncbigene/100388051",
             "https://identifiers.org/ncbigene/100402689",
-            "https://identifiers.org/ncbigene/100388051"
+            "https://identifiers.org/ncbigene/100405584",
+            "https://identifiers.org/ncbigene/100385404"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100405584",
@@ -46018,8 +46022,8 @@
             "corticothalamic-projecting glutamatergic cortical neuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100410860",
-            "https://identifiers.org/ncbigene/100411439"
+            "https://identifiers.org/ncbigene/100411439",
+            "https://identifiers.org/ncbigene/100410860"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100411439",
@@ -46168,8 +46172,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100403177",
-            "https://identifiers.org/ncbigene/100405312",
-            "https://identifiers.org/ncbigene/100408417"
+            "https://identifiers.org/ncbigene/100408417",
+            "https://identifiers.org/ncbigene/100405312"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100403177",
@@ -46483,8 +46487,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100396272",
-            "https://identifiers.org/ncbigene/100407617",
-            "https://identifiers.org/ncbigene/100412026"
+            "https://identifiers.org/ncbigene/100412026",
+            "https://identifiers.org/ncbigene/100407617"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100396272",
@@ -46581,10 +46585,10 @@
             "(Mouse L6 CT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100410860",
-            "https://identifiers.org/ncbigene/100410777",
+            "https://identifiers.org/ncbigene/100407531",
             "https://identifiers.org/ncbigene/100407617",
-            "https://identifiers.org/ncbigene/100407531"
+            "https://identifiers.org/ncbigene/100410860",
+            "https://identifiers.org/ncbigene/100410777"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100410860",
@@ -46673,9 +46677,9 @@
             "(Mouse L6 CT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100394500",
             "https://identifiers.org/ncbigene/100407617",
-            "https://identifiers.org/ncbigene/100410860"
+            "https://identifiers.org/ncbigene/100410860",
+            "https://identifiers.org/ncbigene/100394500"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100394500",
@@ -46772,9 +46776,9 @@
             "(Mouse Non-IT projecting)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100407617",
             "https://identifiers.org/ncbigene/100410860",
             "https://identifiers.org/ncbigene/100410965",
-            "https://identifiers.org/ncbigene/100407617",
             "https://identifiers.org/ncbigene/100397592"
         ],
         "markers": [
@@ -46883,8 +46887,8 @@
             "(Mouse L5 ET)-like_C1 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100413286",
             "https://identifiers.org/ncbigene/100403177",
+            "https://identifiers.org/ncbigene/100413286",
             "https://identifiers.org/ncbigene/100401702",
             "https://identifiers.org/ncbigene/100386839"
         ],
@@ -46970,10 +46974,10 @@
             "(Mouse L5 ET)-like_C1 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100407617",
             "https://identifiers.org/ncbigene/100393601",
+            "https://identifiers.org/ncbigene/103793569",
             "https://identifiers.org/ncbigene/100388255",
-            "https://identifiers.org/ncbigene/103793569"
+            "https://identifiers.org/ncbigene/100407617"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100388255",
@@ -47155,10 +47159,10 @@
             "brain pericyte"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100408994",
             "https://identifiers.org/ncbigene/100405319",
-            "https://identifiers.org/ncbigene/100398765",
             "https://identifiers.org/ncbigene/100410597",
-            "https://identifiers.org/ncbigene/100408994"
+            "https://identifiers.org/ncbigene/100398765"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100408994",
@@ -47260,8 +47264,8 @@
             "brain pericyte"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100401749",
             "https://identifiers.org/ncbigene/100388823",
+            "https://identifiers.org/ncbigene/100401749",
             "https://identifiers.org/ncbigene/100386999"
         ],
         "markers": [
@@ -47374,10 +47378,10 @@
             "oligodendrocyte"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100404930",
+            "https://identifiers.org/ncbigene/103789268",
             "https://identifiers.org/ncbigene/100400400",
-            "https://identifiers.org/ncbigene/103790018",
-            "https://identifiers.org/ncbigene/103789268"
+            "https://identifiers.org/ncbigene/100404930",
+            "https://identifiers.org/ncbigene/103790018"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100400400",
@@ -47498,8 +47502,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100404930",
-            "https://identifiers.org/ncbigene/100397952",
             "https://identifiers.org/ncbigene/100392144",
+            "https://identifiers.org/ncbigene/100397952",
             "https://identifiers.org/ncbigene/100402879",
             "https://identifiers.org/ncbigene/100387382"
         ],
@@ -47612,9 +47616,9 @@
             "cerebral cortex endothelial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100393945",
+            "https://identifiers.org/ncbigene/100404865",
             "https://identifiers.org/ncbigene/100405977",
-            "https://identifiers.org/ncbigene/100404865"
+            "https://identifiers.org/ncbigene/100393945"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100405977",
@@ -47711,10 +47715,10 @@
             "cerebral cortex endothelial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100402880",
-            "https://identifiers.org/ncbigene/100414003",
             "https://identifiers.org/ncbigene/100405977",
-            "https://identifiers.org/ncbigene/100403987"
+            "https://identifiers.org/ncbigene/100403987",
+            "https://identifiers.org/ncbigene/100402880",
+            "https://identifiers.org/ncbigene/100414003"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100402880",
@@ -47857,9 +47861,9 @@
             "cerebral cortex glial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/103788313",
+            "https://identifiers.org/ncbigene/100411367",
             "https://identifiers.org/ncbigene/100393633",
-            "https://identifiers.org/ncbigene/100411367"
+            "https://identifiers.org/ncbigene/103788313"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/103788313",
@@ -48010,8 +48014,8 @@
             "VLMC(i) primary motor cortex vascular leptomeningeal cell (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100385053",
             "https://identifiers.org/ncbigene/100412331",
+            "https://identifiers.org/ncbigene/100385053",
             "https://identifiers.org/ncbigene/100405391"
         ],
         "markers": [
@@ -48120,8 +48124,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100408230",
-            "https://identifiers.org/ncbigene/103789461",
             "https://identifiers.org/ncbigene/100406710",
+            "https://identifiers.org/ncbigene/103789461",
             "https://identifiers.org/ncbigene/100397812"
         ],
         "markers": [
@@ -48211,9 +48215,9 @@
             "VLMC(i) primary motor cortex vascular leptomeningeal cell (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100408230",
+            "https://identifiers.org/ncbigene/100387605",
             "https://identifiers.org/ncbigene/100400232",
-            "https://identifiers.org/ncbigene/100387605"
+            "https://identifiers.org/ncbigene/100408230"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100387605",
@@ -48396,11 +48400,11 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100412902",
+            "https://identifiers.org/ncbigene/103788660",
+            "https://identifiers.org/ncbigene/100402133",
             "https://identifiers.org/ncbigene/100415377",
             "https://identifiers.org/ncbigene/100894622",
-            "https://identifiers.org/ncbigene/100402133",
-            "https://identifiers.org/ncbigene/103788660"
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100415377",
@@ -48570,9 +48574,9 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100393956",
             "https://identifiers.org/ncbigene/100401328",
-            "https://identifiers.org/ncbigene/100412902"
+            "https://identifiers.org/ncbigene/100412902",
+            "https://identifiers.org/ncbigene/100393956"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100412902",
@@ -48683,11 +48687,11 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100387951",
-            "https://identifiers.org/ncbigene/100412902",
             "https://identifiers.org/ncbigene/100406837",
+            "https://identifiers.org/ncbigene/100384959",
             "https://identifiers.org/ncbigene/100415065",
-            "https://identifiers.org/ncbigene/100384959"
+            "https://identifiers.org/ncbigene/100412902",
+            "https://identifiers.org/ncbigene/100387951"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100412902",
@@ -48806,11 +48810,11 @@
             "Sst Chodl(i) primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100398752",
             "https://identifiers.org/ncbigene/100388718",
+            "https://identifiers.org/ncbigene/100391304",
             "https://identifiers.org/ncbigene/100389466",
-            "https://identifiers.org/ncbigene/100412902",
-            "https://identifiers.org/ncbigene/100391304"
+            "https://identifiers.org/ncbigene/100398752",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100389466",
@@ -48917,11 +48921,11 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100398934",
             "https://identifiers.org/ncbigene/100406302",
-            "https://identifiers.org/ncbigene/100412902",
+            "https://identifiers.org/ncbigene/100408195",
             "https://identifiers.org/ncbigene/100894622",
-            "https://identifiers.org/ncbigene/100408195"
+            "https://identifiers.org/ncbigene/100398934",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100406302",
@@ -49028,11 +49032,11 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100393956",
             "https://identifiers.org/ncbigene/100393458",
-            "https://identifiers.org/ncbigene/100412902",
+            "https://identifiers.org/ncbigene/100393956",
             "https://identifiers.org/ncbigene/103792490",
-            "https://identifiers.org/ncbigene/100403389"
+            "https://identifiers.org/ncbigene/100403389",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100412902",
@@ -49140,10 +49144,10 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100412902",
-            "https://identifiers.org/ncbigene/100404471",
             "https://identifiers.org/ncbigene/100397114",
-            "https://identifiers.org/ncbigene/100415258"
+            "https://identifiers.org/ncbigene/100415258",
+            "https://identifiers.org/ncbigene/100404471",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100404471",
@@ -49243,10 +49247,10 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100412634",
-            "https://identifiers.org/ncbigene/100412902",
             "https://identifiers.org/ncbigene/100406444",
-            "https://identifiers.org/ncbigene/100415258"
+            "https://identifiers.org/ncbigene/100415258",
+            "https://identifiers.org/ncbigene/100412634",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100406444",
@@ -49356,10 +49360,10 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100394296",
-            "https://identifiers.org/ncbigene/100412902",
             "https://identifiers.org/ncbigene/100400628",
-            "https://identifiers.org/ncbigene/103793609"
+            "https://identifiers.org/ncbigene/103793609",
+            "https://identifiers.org/ncbigene/100394296",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100394296",
@@ -49478,9 +49482,9 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100394197",
             "https://identifiers.org/ncbigene/100408669",
             "https://identifiers.org/ncbigene/100406508",
-            "https://identifiers.org/ncbigene/100394197",
             "https://identifiers.org/ncbigene/100390686",
             "https://identifiers.org/ncbigene/100389059"
         ],
@@ -49610,9 +49614,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100393107",
-            "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/103789439",
             "https://identifiers.org/ncbigene/100389991",
+            "https://identifiers.org/ncbigene/103789439",
+            "https://identifiers.org/ncbigene/100390686",
             "https://identifiers.org/ncbigene/100390091",
             "https://identifiers.org/ncbigene/100390937"
         ],
@@ -49715,11 +49719,11 @@
             "(Mouse Pvalb)-like_C1 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100406508",
-            "https://identifiers.org/ncbigene/100408527",
             "https://identifiers.org/ncbigene/100403214",
             "https://identifiers.org/ncbigene/100390686",
+            "https://identifiers.org/ncbigene/100408527",
             "https://identifiers.org/ncbigene/100400628",
+            "https://identifiers.org/ncbigene/100406508",
             "https://identifiers.org/ncbigene/100390937"
         ],
         "markers": [
@@ -49821,11 +49825,11 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100390937",
+            "https://identifiers.org/ncbigene/100410743",
             "https://identifiers.org/ncbigene/100414890",
             "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/100410743",
-            "https://identifiers.org/ncbigene/103794860",
-            "https://identifiers.org/ncbigene/100390937"
+            "https://identifiers.org/ncbigene/103794860"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100410743",
@@ -49942,11 +49946,11 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100396908",
-            "https://identifiers.org/ncbigene/100403212",
             "https://identifiers.org/ncbigene/100397539",
-            "https://identifiers.org/ncbigene/100412902",
-            "https://identifiers.org/ncbigene/100399969"
+            "https://identifiers.org/ncbigene/100403212",
+            "https://identifiers.org/ncbigene/100399969",
+            "https://identifiers.org/ncbigene/100396908",
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100399969",
@@ -50043,11 +50047,11 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100391703",
             "https://identifiers.org/ncbigene/100408527",
-            "https://identifiers.org/ncbigene/100390686",
             "https://identifiers.org/ncbigene/100411083",
-            "https://identifiers.org/ncbigene/100390046"
+            "https://identifiers.org/ncbigene/100390046",
+            "https://identifiers.org/ncbigene/100391703",
+            "https://identifiers.org/ncbigene/100390686"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100408527",
@@ -50144,11 +50148,11 @@
             "pvalb GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/100894622",
+            "https://identifiers.org/ncbigene/100388016",
             "https://identifiers.org/ncbigene/103790362",
-            "https://identifiers.org/ncbigene/100389991",
-            "https://identifiers.org/ncbigene/100388016"
+            "https://identifiers.org/ncbigene/100894622",
+            "https://identifiers.org/ncbigene/100390686",
+            "https://identifiers.org/ncbigene/100389991"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100894622",
@@ -50247,13 +50251,13 @@
             "(Mouse Sst)-like_C3 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100895717",
-            "https://identifiers.org/ncbigene/100400741",
-            "https://identifiers.org/ncbigene/100390686",
             "https://identifiers.org/ncbigene/100412902",
             "https://identifiers.org/ncbigene/100400628",
             "https://identifiers.org/ncbigene/100894622",
-            "https://identifiers.org/ncbigene/100403018"
+            "https://identifiers.org/ncbigene/100400741",
+            "https://identifiers.org/ncbigene/100895717",
+            "https://identifiers.org/ncbigene/100403018",
+            "https://identifiers.org/ncbigene/100390686"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100895717",
@@ -50376,11 +50380,11 @@
             "(Mouse Pvalb)-like_C1 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100388729",
-            "https://identifiers.org/ncbigene/100390686",
             "https://identifiers.org/ncbigene/100397165",
+            "https://identifiers.org/ncbigene/100393613",
+            "https://identifiers.org/ncbigene/100388729",
             "https://identifiers.org/ncbigene/100414899",
-            "https://identifiers.org/ncbigene/100393613"
+            "https://identifiers.org/ncbigene/100390686"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100397165",
@@ -50469,11 +50473,11 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100408527",
-            "https://identifiers.org/ncbigene/103788721",
             "https://identifiers.org/ncbigene/100412902",
-            "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/100400628"
+            "https://identifiers.org/ncbigene/100408527",
+            "https://identifiers.org/ncbigene/100400628",
+            "https://identifiers.org/ncbigene/103788721",
+            "https://identifiers.org/ncbigene/100390686"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100400628",
@@ -50589,11 +50593,11 @@
             "(Mouse L2/3 IT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100387876",
-            "https://identifiers.org/ncbigene/108588466",
             "https://identifiers.org/ncbigene/100405410",
+            "https://identifiers.org/ncbigene/100407043",
+            "https://identifiers.org/ncbigene/100387876",
             "https://identifiers.org/ncbigene/103791648",
-            "https://identifiers.org/ncbigene/100407043"
+            "https://identifiers.org/ncbigene/108588466"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100407043",
@@ -50711,11 +50715,11 @@
             "(Mouse L2/3 IT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100411540",
-            "https://identifiers.org/ncbigene/100409827",
             "https://identifiers.org/ncbigene/100402439",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100401590"
+            "https://identifiers.org/ncbigene/100411540",
+            "https://identifiers.org/ncbigene/100401590",
+            "https://identifiers.org/ncbigene/100409827"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100411540",
@@ -50821,11 +50825,11 @@
             "(Mouse L2/3 IT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100394816",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100410743",
             "https://identifiers.org/ncbigene/100397643",
-            "https://identifiers.org/ncbigene/100390807",
-            "https://identifiers.org/ncbigene/100394816"
+            "https://identifiers.org/ncbigene/100410743",
+            "https://identifiers.org/ncbigene/100390807"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100410743",
@@ -50922,8 +50926,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100390165",
-            "https://identifiers.org/ncbigene/100412512",
-            "https://identifiers.org/ncbigene/100405410"
+            "https://identifiers.org/ncbigene/100405410",
+            "https://identifiers.org/ncbigene/100412512"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100390165",
@@ -51012,11 +51016,11 @@
             "(Mouse Pvalb)-like_C1 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100398114",
             "https://identifiers.org/ncbigene/100408527",
             "https://identifiers.org/ncbigene/103788721",
+            "https://identifiers.org/ncbigene/100413817",
             "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/100413817"
+            "https://identifiers.org/ncbigene/100398114"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/103788721",
@@ -51136,9 +51140,9 @@
         "expresses": [
             "https://identifiers.org/ncbigene/100398854",
             "https://identifiers.org/ncbigene/100400367",
+            "https://identifiers.org/ncbigene/100388989",
             "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/100413159",
-            "https://identifiers.org/ncbigene/100388989"
+            "https://identifiers.org/ncbigene/100413159"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100398854",
@@ -51234,10 +51238,10 @@
             "(Mouse Pvalb)-like primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100389848",
+            "https://identifiers.org/ncbigene/100408527",
             "https://identifiers.org/ncbigene/100399505",
-            "https://identifiers.org/ncbigene/100390686",
-            "https://identifiers.org/ncbigene/100408527"
+            "https://identifiers.org/ncbigene/100389848",
+            "https://identifiers.org/ncbigene/100390686"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100408527",
@@ -51345,12 +51349,12 @@
             "(Mouse L2/3 IT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100385404",
             "https://identifiers.org/ncbigene/100392835",
             "https://identifiers.org/ncbigene/100410743",
+            "https://identifiers.org/ncbigene/100393976",
             "https://identifiers.org/ncbigene/100403177",
             "https://identifiers.org/ncbigene/100397271",
-            "https://identifiers.org/ncbigene/100393976"
+            "https://identifiers.org/ncbigene/100385404"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100392835",
@@ -51451,8 +51455,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100405927",
-            "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100408486"
+            "https://identifiers.org/ncbigene/100408486",
+            "https://identifiers.org/ncbigene/100405410"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100405927",
@@ -51561,11 +51565,11 @@
             "(Mouse L6 IT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100407007",
             "https://identifiers.org/ncbigene/100413446",
             "https://identifiers.org/ncbigene/100396249",
-            "https://identifiers.org/ncbigene/100403177",
             "https://identifiers.org/ncbigene/100394114",
-            "https://identifiers.org/ncbigene/100407007"
+            "https://identifiers.org/ncbigene/100403177"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100407007",
@@ -51671,9 +51675,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100397271",
-            "https://identifiers.org/ncbigene/100411307",
+            "https://identifiers.org/ncbigene/100401449",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100401449"
+            "https://identifiers.org/ncbigene/100411307"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100397271",
@@ -51783,10 +51787,10 @@
             "(Mouse L5 IT)-like_C2 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100392515",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100387459",
+            "https://identifiers.org/ncbigene/100392515",
             "https://identifiers.org/ncbigene/100410860",
+            "https://identifiers.org/ncbigene/100387459",
             "https://identifiers.org/ncbigene/108588895"
         ],
         "markers": [
@@ -51883,10 +51887,10 @@
             "(Mouse L5 IT)-like_C2 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100401449",
-            "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100410860",
             "https://identifiers.org/ncbigene/100411377",
+            "https://identifiers.org/ncbigene/100405410",
+            "https://identifiers.org/ncbigene/100401449",
+            "https://identifiers.org/ncbigene/100410860",
             "https://identifiers.org/ncbigene/100396583"
         ],
         "markers": [
@@ -52005,10 +52009,10 @@
             "(Mouse L5 IT)-like_C2 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100894919",
+            "https://identifiers.org/ncbigene/100405410",
             "https://identifiers.org/ncbigene/100390058",
             "https://identifiers.org/ncbigene/100409658",
-            "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100894919",
             "https://identifiers.org/ncbigene/100389848",
             "https://identifiers.org/ncbigene/100385052"
         ],
@@ -52110,9 +52114,9 @@
             "(Mouse L5 IT)-like_C1 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/108593203",
+            "https://identifiers.org/ncbigene/100404533",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100404533"
+            "https://identifiers.org/ncbigene/108593203"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100405410",
@@ -52212,11 +52216,11 @@
             "(Mouse L5 IT)-like_C1 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100397656",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100406528",
             "https://identifiers.org/ncbigene/100402573",
-            "https://identifiers.org/ncbigene/100386721"
+            "https://identifiers.org/ncbigene/100397656",
+            "https://identifiers.org/ncbigene/100386721",
+            "https://identifiers.org/ncbigene/100406528"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100406528",
@@ -52303,9 +52307,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100396597",
-            "https://identifiers.org/ncbigene/100411307",
+            "https://identifiers.org/ncbigene/100404533",
             "https://identifiers.org/ncbigene/100405410",
-            "https://identifiers.org/ncbigene/100404533"
+            "https://identifiers.org/ncbigene/100411307"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100404533",
@@ -52409,10 +52413,10 @@
             "(Mouse L5 IT)-like_C1 primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100414159",
+            "https://identifiers.org/ncbigene/100405410",
             "https://identifiers.org/ncbigene/100400564",
-            "https://identifiers.org/ncbigene/100386444",
-            "https://identifiers.org/ncbigene/100405410"
+            "https://identifiers.org/ncbigene/100414159",
+            "https://identifiers.org/ncbigene/100386444"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100386444",
@@ -52507,10 +52511,10 @@
             "brain macroglial cell"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/103793418",
-            "https://identifiers.org/ncbigene/100405831",
             "https://identifiers.org/ncbigene/100408230",
-            "https://identifiers.org/ncbigene/100406710"
+            "https://identifiers.org/ncbigene/100406710",
+            "https://identifiers.org/ncbigene/100405831",
+            "https://identifiers.org/ncbigene/103793418"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100408230",
@@ -52623,12 +52627,12 @@
             "(Mouse L6 IT)-like primary motor cortex glutamatergic neuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100413043",
-            "https://identifiers.org/ncbigene/100404295",
-            "https://identifiers.org/ncbigene/100400958",
-            "https://identifiers.org/ncbigene/100403177",
             "https://identifiers.org/ncbigene/100403440",
-            "https://identifiers.org/ncbigene/100393865"
+            "https://identifiers.org/ncbigene/100393865",
+            "https://identifiers.org/ncbigene/100403177",
+            "https://identifiers.org/ncbigene/100413043",
+            "https://identifiers.org/ncbigene/100400958",
+            "https://identifiers.org/ncbigene/100404295"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100404295",
@@ -52838,8 +52842,8 @@
         "expresses": [
             "https://identifiers.org/ncbigene/100410437",
             "https://identifiers.org/ncbigene/100409063",
-            "https://identifiers.org/ncbigene/100408865",
-            "https://identifiers.org/ncbigene/100394853"
+            "https://identifiers.org/ncbigene/100394853",
+            "https://identifiers.org/ncbigene/100408865"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100410437",
@@ -52945,10 +52949,10 @@
             "(Mouse Lamp5)-like primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100404923",
             "https://identifiers.org/ncbigene/100394786",
-            "https://identifiers.org/ncbigene/100408455",
             "https://identifiers.org/ncbigene/100403212",
-            "https://identifiers.org/ncbigene/100404923"
+            "https://identifiers.org/ncbigene/100408455"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100404923",
@@ -53058,9 +53062,9 @@
             "sncg GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100391157",
             "https://identifiers.org/ncbigene/100386462",
             "https://identifiers.org/ncbigene/100401551",
+            "https://identifiers.org/ncbigene/100391157",
             "https://identifiers.org/ncbigene/100393865"
         ],
         "markers": [
@@ -53170,8 +53174,8 @@
         "expresses": [
             "https://identifiers.org/ncbigene/100393601",
             "https://identifiers.org/ncbigene/103788711",
-            "https://identifiers.org/ncbigene/100393503",
             "https://identifiers.org/ncbigene/100404923",
+            "https://identifiers.org/ncbigene/100393503",
             "https://identifiers.org/ncbigene/100392881"
         ],
         "markers": [
@@ -53366,8 +53370,8 @@
             "Lamp5 GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100395510",
             "https://identifiers.org/ncbigene/100410437",
+            "https://identifiers.org/ncbigene/100395510",
             "https://identifiers.org/ncbigene/100396102"
         ],
         "markers": [
@@ -53467,8 +53471,8 @@
         "expresses": [
             "https://identifiers.org/ncbigene/100410437",
             "https://identifiers.org/ncbigene/100395233",
-            "https://identifiers.org/ncbigene/100411615",
-            "https://identifiers.org/ncbigene/100400473"
+            "https://identifiers.org/ncbigene/100400473",
+            "https://identifiers.org/ncbigene/100411615"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100410437",
@@ -53667,10 +53671,10 @@
             "(Mouse Sncg)-like_C3 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100411557",
-            "https://identifiers.org/ncbigene/103795617",
+            "https://identifiers.org/ncbigene/100396765",
             "https://identifiers.org/ncbigene/100386986",
-            "https://identifiers.org/ncbigene/100396765"
+            "https://identifiers.org/ncbigene/103795617",
+            "https://identifiers.org/ncbigene/100411557"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100411557",
@@ -53784,9 +53788,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100407174",
-            "https://identifiers.org/ncbigene/100401551",
-            "https://identifiers.org/ncbigene/100400927",
             "https://identifiers.org/ncbigene/100412547",
+            "https://identifiers.org/ncbigene/100400927",
+            "https://identifiers.org/ncbigene/100401551",
             "https://identifiers.org/ncbigene/100395294"
         ],
         "markers": [
@@ -53892,10 +53896,10 @@
             "(Mouse Sncg)-like_C1 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100391230",
-            "https://identifiers.org/ncbigene/100390248",
+            "https://identifiers.org/ncbigene/100404923",
             "https://identifiers.org/ncbigene/100389893",
-            "https://identifiers.org/ncbigene/100404923"
+            "https://identifiers.org/ncbigene/100391230",
+            "https://identifiers.org/ncbigene/100390248"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100389893",
@@ -53998,10 +54002,10 @@
             "(Mouse Sncg)-like_C4 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100402813",
+            "https://identifiers.org/ncbigene/100409152",
             "https://identifiers.org/ncbigene/100411537",
             "https://identifiers.org/ncbigene/100391230",
-            "https://identifiers.org/ncbigene/100409152"
+            "https://identifiers.org/ncbigene/100402813"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100391230",
@@ -54094,11 +54098,11 @@
             "sncg GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100401551",
-            "https://identifiers.org/ncbigene/100402719",
-            "https://identifiers.org/ncbigene/103793609",
             "https://identifiers.org/ncbigene/108587895",
-            "https://identifiers.org/ncbigene/100386670"
+            "https://identifiers.org/ncbigene/103793609",
+            "https://identifiers.org/ncbigene/100401551",
+            "https://identifiers.org/ncbigene/100386670",
+            "https://identifiers.org/ncbigene/100402719"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100401551",
@@ -54205,11 +54209,11 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100412882",
             "https://identifiers.org/ncbigene/100388729",
-            "https://identifiers.org/ncbigene/108589153",
             "https://identifiers.org/ncbigene/100386986",
             "https://identifiers.org/ncbigene/100400056",
-            "https://identifiers.org/ncbigene/100412882"
+            "https://identifiers.org/ncbigene/108589153"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100386986",
@@ -54294,9 +54298,9 @@
             "(Mouse Sncg)-like_C4 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/108589948",
             "https://identifiers.org/ncbigene/100391230",
-            "https://identifiers.org/ncbigene/100411537"
+            "https://identifiers.org/ncbigene/100411537",
+            "https://identifiers.org/ncbigene/108589948"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/108589948",
@@ -54377,9 +54381,9 @@
             "(Mouse Vip)-like_C4 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100391230",
+            "https://identifiers.org/ncbigene/103788553",
             "https://identifiers.org/ncbigene/100386986",
-            "https://identifiers.org/ncbigene/103788553"
+            "https://identifiers.org/ncbigene/100391230"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/103788553",
@@ -54481,9 +54485,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100410040",
-            "https://identifiers.org/ncbigene/100400454",
             "https://identifiers.org/ncbigene/100386986",
-            "https://identifiers.org/ncbigene/100397259"
+            "https://identifiers.org/ncbigene/100397259",
+            "https://identifiers.org/ncbigene/100400454"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100397259",
@@ -54584,9 +54588,9 @@
             "(Mouse Vip)-like_C2 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/100403193",
             "https://identifiers.org/ncbigene/100415735",
             "https://identifiers.org/ncbigene/100411537",
-            "https://identifiers.org/ncbigene/100403193",
             "https://identifiers.org/ncbigene/100403979"
         ],
         "markers": [
@@ -54680,10 +54684,10 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100392579",
-            "https://identifiers.org/ncbigene/100388643",
             "https://identifiers.org/ncbigene/100410040",
-            "https://identifiers.org/ncbigene/100386986"
+            "https://identifiers.org/ncbigene/100388643",
+            "https://identifiers.org/ncbigene/100386986",
+            "https://identifiers.org/ncbigene/100392579"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100386986",
@@ -54757,9 +54761,9 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/103791740",
-            "https://identifiers.org/ncbigene/100410965",
             "https://identifiers.org/ncbigene/100386986",
-            "https://identifiers.org/ncbigene/108588071"
+            "https://identifiers.org/ncbigene/108588071",
+            "https://identifiers.org/ncbigene/100410965"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100386986",
@@ -54862,10 +54866,10 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100408892",
             "https://identifiers.org/ncbigene/100414966",
+            "https://identifiers.org/ncbigene/100386986",
             "https://identifiers.org/ncbigene/103795407",
-            "https://identifiers.org/ncbigene/100386986"
+            "https://identifiers.org/ncbigene/100408892"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/103795407",
@@ -54970,10 +54974,10 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100407174",
             "https://identifiers.org/ncbigene/100386986",
             "https://identifiers.org/ncbigene/100412158",
             "https://identifiers.org/ncbigene/100403341",
+            "https://identifiers.org/ncbigene/100407174",
             "https://identifiers.org/ncbigene/100399010"
         ],
         "markers": [
@@ -55081,11 +55085,11 @@
             "Vip GABAergic cortical interneuron"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100390875",
             "https://identifiers.org/ncbigene/100397539",
-            "https://identifiers.org/ncbigene/100396139",
             "https://identifiers.org/ncbigene/100386986",
-            "https://identifiers.org/ncbigene/100405129"
+            "https://identifiers.org/ncbigene/100405129",
+            "https://identifiers.org/ncbigene/100396139",
+            "https://identifiers.org/ncbigene/100390875"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100405129",
@@ -55184,10 +55188,10 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/100415258",
-            "https://identifiers.org/ncbigene/100412902",
             "https://identifiers.org/ncbigene/100397590",
+            "https://identifiers.org/ncbigene/103788138",
             "https://identifiers.org/ncbigene/100399252",
-            "https://identifiers.org/ncbigene/103788138"
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100397590",
@@ -55290,8 +55294,8 @@
             "(Mouse Vip)-like_C4 primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/103787232",
             "https://identifiers.org/ncbigene/100386986",
+            "https://identifiers.org/ncbigene/103787232",
             "https://identifiers.org/ncbigene/108588539"
         ],
         "markers": [
@@ -55386,9 +55390,9 @@
             "(Mouse CGE/PoA)-like primary motor cortex GABAergic interneuron (Callithrix jacchus)"
         ],
         "expresses": [
-            "https://identifiers.org/ncbigene/100391273",
             "https://identifiers.org/ncbigene/100392593",
-            "https://identifiers.org/ncbigene/100404923"
+            "https://identifiers.org/ncbigene/100404923",
+            "https://identifiers.org/ncbigene/100391273"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100391273",
@@ -55473,8 +55477,8 @@
         ],
         "expresses": [
             "https://identifiers.org/ncbigene/108589054",
-            "https://identifiers.org/ncbigene/100391230",
             "https://identifiers.org/ncbigene/100412902",
+            "https://identifiers.org/ncbigene/100391230",
             "https://identifiers.org/ncbigene/100390937"
         ],
         "markers": [
@@ -55575,10 +55579,10 @@
             "sst GABAergic cortical interneuron"
         ],
         "expresses": [
+            "https://identifiers.org/ncbigene/108588801",
             "https://identifiers.org/ncbigene/100386530",
             "https://identifiers.org/ncbigene/100894622",
-            "https://identifiers.org/ncbigene/100412902",
-            "https://identifiers.org/ncbigene/108588801"
+            "https://identifiers.org/ncbigene/100412902"
         ],
         "markers": [
             "https://identifiers.org/ncbigene/100894622",

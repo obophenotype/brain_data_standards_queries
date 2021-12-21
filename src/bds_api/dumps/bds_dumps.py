@@ -338,6 +338,9 @@ def extract_dataset_metadata(all_data, all_taxonomies):
         solr_doc["label"] = taxon["label"]
         solr_doc["type"] = "taxonomy"
 
+        taxonomy_name = solr_doc["accession_id"].replace("CS", "").replace("CCN", "")
+        solr_doc["species_label"] = species_mapping[taxonomy_name]
+
         if "cell_types_count" in taxon:
             solr_doc["cell_types_count"] = next(filter(None, taxon["cell_types_count"]))
         if "cell_subclasses_count" in taxon:
