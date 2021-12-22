@@ -121,7 +121,8 @@ class ListAllTaxonomies(BDSQuery):
     def parse_response(self, response):
         taxonomies = dict()
         for record in response:
-            taxonomies[record['taxonomy']["label"]] = {'taxonomy': record['taxonomy'], 'datasets': record['datasets']}
+            taxonomy_id_simple = str(record['taxonomy']["label"]).replace("CCN", "").replace("CS", "")
+            taxonomies[taxonomy_id_simple] = {'taxonomy': record['taxonomy'], 'datasets': record['datasets']}
 
         return taxonomies
 

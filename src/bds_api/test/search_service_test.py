@@ -120,6 +120,48 @@ class SearchTest(unittest.TestCase):
         results = json.loads(response.get_data())["response"]["docs"]
         self.assertEqual(0, len(results))
 
+    def test_search_taxonomy_filter(self):
+        response = self.app.get("""/bds/api/search?query=*""")
+        self.assertEqual(200, response.status_code)
+
+        results = json.loads(response.get_data())["response"]["docs"]
+        self.assertTrue(len(results) >= 300)
+
+        response = self.app.get("""/bds/api/search?query=*&taxonomy=CCN202002013""")
+        results = json.loads(response.get_data())["response"]["docs"]
+        self.assertEqual(257, len(results))
+        curies = set()
+        for result in results:
+            curies.update(result["individual"])
+        self.assertTrue("PCL:0011401" in curies)
+        self.assertTrue("PCL:0011657" in curies)
+
+        response = self.app.get("""/bds/api/search?query=*&taxonomy=CCN202002013&rank=Class""")
+        results = json.loads(response.get_data())["response"]["docs"]
+        self.assertEqual(4, len(results))
+        curies = set()
+        for result in results:
+            curies.update(result["individual"])
+        self.assertTrue("PCL:0011523" in curies)
+        self.assertTrue("PCL:0011579" in curies)
+        self.assertTrue("PCL:0011619" in curies)
+        self.assertTrue("PCL:0011635" in curies)
+
+        response = self.app.get("""/bds/api/search?query=*&taxonomy=(CCN202002013 OR CCN201912131)&rank=Class""")
+        results = json.loads(response.get_data())["response"]["docs"]
+        self.assertEqual(8, len(results))
+        curies = set()
+        for result in results:
+            curies.update(result["individual"])
+        self.assertTrue("PCL:0011523" in curies)
+        self.assertTrue("PCL:0011579" in curies)
+        self.assertTrue("PCL:0011619" in curies)
+        self.assertTrue("PCL:0011635" in curies)
+        self.assertTrue("PCL:0012548" in curies)
+        self.assertTrue("PCL:0012549" in curies)
+        self.assertTrue("PCL:0012550" in curies)
+        self.assertTrue("PCL:0012551" in curies)
+
     def test_search_multiple_filters(self):
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6""")
         self.assertEqual(200, response.status_code)

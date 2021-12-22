@@ -12,7 +12,7 @@ today = datetime.today().strftime('%Y%m%d')
 
 DUMP_PATH = '../../../dumps/individuals_metadata_{}.json'.format(today)
 
-SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format(today)
+SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format("20211221")
 
 root_nodes = list()
 all_cells = list()
@@ -66,7 +66,7 @@ def individuals_metadata_solr_dump():
         extract_parent_data(all_data, result, solr_doc)
         extract_marker_data(all_data, result, solr_doc)
         extract_reference_data(all_data, result, solr_doc)
-        extract_taxonomy_data(all_data, result, solr_doc)
+        extract_taxonomy_data(all_data, result, solr_doc, all_datasets)
         extract_brain_region_data(all_data, result, solr_doc, all_datasets)
         extract_homologous_data(all_data, result, solr_doc)
         check_root_nodes(solr_doc)
@@ -208,7 +208,7 @@ def extract_reference_data(all_data, result, solr_doc):
     solr_doc["references"] = references
 
 
-def extract_taxonomy_data(all_data, result, solr_doc):
+def extract_taxonomy_data(all_data, result, solr_doc, all_datasets):
     base_taxonomy = ""
     parent_taxonomies = set()
     for taxon in result["taxonomy"]:
@@ -218,8 +218,8 @@ def extract_taxonomy_data(all_data, result, solr_doc):
             parent_taxonomies.add(taxon["parent_taxon"]["label"])
         else:
             # all null (individual without class)
-            taxonomy_name = solr_doc["accession_id"].replace("CS", "").replace("CCN", "").split("_")[0]
-            base_taxonomy = species_mapping[taxonomy_name]
+            taxonomy_id = [key for key in all_datasets.keys() if key in solr_doc["accession_id"]][0]
+            base_taxonomy = species_mapping[taxonomy_id]
 
     if base_taxonomy:
         solr_doc["species"] = base_taxonomy
@@ -230,6 +230,10 @@ def extract_taxonomy_data(all_data, result, solr_doc):
             if CROSS_SPECIES not in parent_taxon:
                 solr_doc["species"] = parent_taxon
                 break
+
+    taxonomy_data = [value for key, value in all_datasets.items() if key in solr_doc["accession_id"]][0]
+    solr_doc["taxonomy_iri"] = taxonomy_data["taxonomy"]["iri"]
+    solr_doc["taxonomy_id"] = taxonomy_data["taxonomy"]["label"]
 
 
 def extract_homologous_data(all_data, result, solr_doc):
@@ -244,8 +248,6 @@ def extract_homologous_data(all_data, result, solr_doc):
 
 
 def extract_brain_region_data(all_data, result, solr_doc, all_datasets):
-    taxonomy_name = solr_doc["accession_id"].replace("CS", "CCN").split("_")[0]
-
     brain_regions = dict()
     for region in result["region"]:
         if "soma_location" in region and region["soma_location"]:
@@ -253,15 +255,15 @@ def extract_brain_region_data(all_data, result, solr_doc, all_datasets):
         if "parent_soma_location" in region and region["parent_soma_location"]:
             brain_regions[region["parent_soma_location"]["curie"]] = region["parent_soma_location"]["label"]
 
-    if taxonomy_name in all_datasets:
-        taxon = all_datasets[taxonomy_name]
-        # if "prefLabel" in taxon:
-        #     solr_doc["species"] = next(filter(None, taxon["prefLabel"]))
-        if brain_regions and "has_brain_region" in taxon:
-            brain_regions_set = set()
-            for taxon_region in taxon["has_brain_region"]:
-                brain_regions_set.add(brain_regions[taxon_region])
-            solr_doc["anatomic_region"] = list(brain_regions_set)
+    taxonomy_name = [key for key in all_datasets.keys() if key in solr_doc["accession_id"]][0]
+    taxon = all_datasets[taxonomy_name]
+    # if "prefLabel" in taxon:
+    #     solr_doc["species"] = next(filter(None, taxon["prefLabel"]))
+    if brain_regions and "has_brain_region" in taxon:
+        brain_regions_set = set()
+        for taxon_region in taxon["has_brain_region"]:
+            brain_regions_set.add(brain_regions[taxon_region])
+        solr_doc["anatomic_region"] = list(brain_regions_set)
 
 
 def extract_class_metadata(node_meta_data):
@@ -338,6 +340,7 @@ def extract_dataset_metadata(all_data, all_taxonomies):
         solr_doc["label"] = taxon["label"]
         solr_doc["type"] = "taxonomy"
 
+        # check this logic for MTG id
         taxonomy_name = solr_doc["accession_id"].replace("CS", "").replace("CCN", "")
         solr_doc["species_label"] = species_mapping[taxonomy_name]
 
@@ -428,5 +431,5 @@ def update_solr():
 
 if __name__ == "__main__":
     # individuals_metadata_dump()
-    individuals_metadata_solr_dump()
-    # update_solr()
+    # individuals_metadata_solr_dump()
+    update_solr()

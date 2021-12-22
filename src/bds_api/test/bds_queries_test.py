@@ -30,23 +30,23 @@ class QueriesTest(unittest.TestCase):
         result = ListAllTaxonomies().execute_query()
 
         self.assertEqual(4, len(result))
-        self.assertTrue('CCN202002013' in result)
-        self.assertEqual(["UBERON:0001384"], result['CCN202002013']["taxonomy"]["has_brain_region"])
+        self.assertTrue('202002013' in result)
+        self.assertEqual(["UBERON:0001384"], result['202002013']["taxonomy"]["has_brain_region"])
 
-        for key in result['CCN202002013']["taxonomy"]:
-            print(key + " : " + str(result['CCN202002013']["taxonomy"][key]))
+        for key in result['202002013']["taxonomy"]:
+            print(key + " : " + str(result['202002013']["taxonomy"][key]))
 
-        self.assertTrue('cell_classes_count' in result['CCN202002013']["taxonomy"])
-        self.assertTrue(result['CCN202002013']["taxonomy"]['cell_classes_count'])
+        self.assertTrue('cell_classes_count' in result['202002013']["taxonomy"])
+        self.assertTrue(result['202002013']["taxonomy"]['cell_classes_count'])
 
-        self.assertTrue('CCN201912131' in result)
-        self.assertTrue('CCN201912132' in result)
-        self.assertTrue('CS1908210' in result)
+        self.assertTrue('201912131' in result)
+        self.assertTrue('201912132' in result)
+        self.assertTrue('1908210' in result)
 
-        datasets = result['CCN202002013']["datasets"]
+        datasets = result['202002013']["datasets"]
         self.assertEqual(8, len(datasets))
 
-        first_mouse_dataset = result['CCN202002013']["datasets"][0]["dataset_metadata"]
+        first_mouse_dataset = result['202002013']["datasets"][0]["dataset_metadata"]
         self.assertTrue('comment' in first_mouse_dataset)
         self.assertTrue(first_mouse_dataset['comment'])
 

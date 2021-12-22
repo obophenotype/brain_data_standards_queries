@@ -47,6 +47,13 @@ class SearchEndpoint(Resource):
         ?query=L5/6%20NP&species="Mus musculus","Homo sapiens"
         ```
 
+        * taxonomy (optional): Filters documents for the given taxonomy. Multiple taxonomies can be provided by merging them with 'OR'.
+
+        ```
+        ?query=L5/6%20NP&taxonomy=CCN202002013
+        ?query=L5/6%20NP&taxonomy=(CCN202002013 OR CCN201912131)
+        ```
+
         * rank (optional): Filters documents for the given Cell Type ranks. Supported ranks are: Cell Type, Subclass, Class and None
 
         ```
@@ -93,6 +100,13 @@ class AutocompleteEndpoint(Resource):
         ?query=L5/6%20NP&species=mouse,human
         ?query=L5/6%20NP&species="Callithrix jacchus"
         ?query=L5/6%20NP&species="Mus musculus","Homo sapiens"
+        ```
+
+        * taxonomy (optional): Filters documents for the given taxonomy. Multiple taxonomies can be provided by merging them with 'OR'.
+
+        ```
+        ?query=L5/6%20NP&taxonomy=CCN202002013
+        ?query=L5/6%20NP&taxonomy=(CCN202002013 OR CCN201912131)
         ```
 
         * rank (optional): Filters documents for the given Cell Type ranks. Supported ranks are: Cell Type, Subclass, Class and None
@@ -208,6 +222,8 @@ def generate_request(config):
 
     if 'species' in request.args and request.args['species']:
         request_url += "&fq=species: (" + " OR ".join(list(parse_species_filter())) + ")"
+    if 'taxonomy' in request.args and request.args['taxonomy']:
+        request_url += "&fq=taxonomy_id:" + request.args['taxonomy']
     if 'rank' in request.args and request.args['rank']:
         request_url += "&fq=rank: (" + " OR ".join(list(parse_rank_filter())) + ")"
     if 'limit' in request.args and request.args['limit']:
