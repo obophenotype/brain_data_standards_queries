@@ -12,6 +12,7 @@ RUN pip install -r /code/requirements.txt
 # copy except __init__.py file and test folder
 ADD src/bds_api/endpoints /code/bds_api/endpoints
 ADD src/bds_api/exception /code/bds_api/exception
+ADD src/bds_api/utils /code/bds_api/utils
 ADD src/bds_api/config /code/bds_api/config
 ADD src/bds_api/app.py src/bds_api/settings.py src/bds_api/restplus.py /code/bds_api/
 
