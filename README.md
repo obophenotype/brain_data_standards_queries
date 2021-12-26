@@ -28,14 +28,16 @@ Full-text search and autocomplete services are optimized query wrappers for Solr
 * Importance of the fields (_see `field_weights` parameter_)
 * Importance of the ontology domains (_see `domain_boosting` parameter_)
 
-## Build:
+## Build
 
 To build the service, please run the following commands in the project root folder. 
 
 ```
 docker build -t bds/search-service .
 
-docker run -p 8484:8080 -e SOLR_HOST=my_host -e SOLR_PORT=my_port SOLR_COLLECTION=bdsdump -it bds/search-service 
+docker run -p 8484:8080 -e SOLR_HOST=my_host -e SOLR_PORT=my_port -e SOLR_COLLECTION=bdsdump -it bds/search-service 
 ```
 
 If environment variables are not given to the run command, default values will be first read from the Dockerfile then from the [configuration](src/config/search_config.ini) file.
+
+
