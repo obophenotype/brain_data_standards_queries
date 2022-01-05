@@ -66,6 +66,9 @@ class IndividualDetailsQuery(BDSQuery):
         OPTIONAL MATCH (c)-[:has_soma_location]->(soma_location) 
         OPTIONAL MATCH (c)-[:SUBCLASSOF*]->()-[:has_soma_location]->(parent_soma_location)
         OPTIONAL MATCH (c)-[:in_historical_homology_relationship_with]->(homologous_to)
+        OPTIONAL MATCH (i)-[:subcluster_of*]->(parent_cluster)
+        WHERE NOT('None' IN parent_cluster.cell_type_rank)
+        OPTIONAL MATCH (parent_cluster)-[:exemplar_data_of]->(parent_cluster_class)
         RETURN apoc.map.mergeList([properties(i), {tags: labels(i)}]) AS indv_metadata,
         collect(distinct { tags: labels(c), class_metadata: properties(c)}) AS class_metadata,
         collect(distinct { relation: properties(scr), class_metadata: properties(parent)}) AS parents, 
@@ -74,7 +77,8 @@ class IndividualDetailsQuery(BDSQuery):
         collect(distinct { relation: properties(src), class_metadata: properties(reference)}) AS references,
         collect(distinct { taxon: properties(in_taxon), parent_taxon: properties(in_taxon_parent)}) AS taxonomy, 
         collect(distinct { soma_location: properties(soma_location), parent_soma_location: properties(parent_soma_location)}) AS region,
-        collect(distinct { class_metadata: properties(homologous_to)}) AS homologous_to
+        collect(distinct { class_metadata: properties(homologous_to)}) AS homologous_to,
+        collect(distinct { indv_metadata: properties(parent_cluster), class_metadata: properties(parent_cluster_class)}) AS parent_clusters
         """
 
     def parse_response(self, response):
@@ -83,7 +87,8 @@ class IndividualDetailsQuery(BDSQuery):
             node = {"class_metadata": record["class_metadata"], "indv_metadata": record["indv_metadata"],
                     "parents": record["parents"], "markers": record["markers"],
                     "parent_markers": record["parent_markers"], "references": record["references"],
-                    "taxonomy": record["taxonomy"], "region": record["region"], "homologous_to": record["homologous_to"]
+                    "taxonomy": record["taxonomy"], "region": record["region"],
+                    "homologous_to": record["homologous_to"], "parent_clusters": record["parent_clusters"]
                     }
 
         return node

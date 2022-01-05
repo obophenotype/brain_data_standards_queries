@@ -12,11 +12,12 @@ today = datetime.today().strftime('%Y%m%d')
 
 DUMP_PATH = '../../../dumps/individuals_metadata_{}.json'.format(today)
 
-SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format("20211221")
+SOLR_JSON_PATH = '../../../dumps/individuals_metadata_solr_{}.json'.format(today)
 
 root_nodes = list()
 all_cells = list()
 species_mapping = get_species_mapping()
+cell_type_ranks = ['None', 'Cell Type', 'Subclass', 'Class']
 
 
 def individuals_metadata_dump():
@@ -69,6 +70,7 @@ def individuals_metadata_solr_dump():
         extract_taxonomy_data(all_data, result, solr_doc, all_datasets)
         extract_brain_region_data(all_data, result, solr_doc, all_datasets)
         extract_homologous_data(all_data, result, solr_doc)
+        extract_subcluster_data(all_data, result, solr_doc)
         check_root_nodes(solr_doc)
 
         solr_doc["individual"] = individual
@@ -245,6 +247,32 @@ def extract_homologous_data(all_data, result, solr_doc):
             homologous_names.append(homologous_to["class_metadata"]["label"])
     solr_doc["homologous_to"] = homologous_ids
     solr_doc["homologous_to_names"] = homologous_names
+
+
+def extract_subcluster_data(all_data, result, solr_doc):
+    current_rank = -1
+    current_id = ""
+    current_name = ""
+    for parent_cluster in result["parent_clusters"]:
+        if parent_cluster["indv_metadata"] is not None:
+            parent_rank = cell_type_ranks.index(parent_cluster["indv_metadata"]["cell_type_rank"][0])
+            if parent_rank > current_rank:
+                if parent_cluster["class_metadata"] is not None:
+                    metadata = parent_cluster["class_metadata"]
+                else:
+                    metadata = parent_cluster["indv_metadata"]
+                current_id = metadata["iri"]
+                current_name = next(filter(None, metadata["prefLabel"]))
+
+    parent_cluster_ids = list()
+    parent_cluster_names = list()
+    if current_id:
+        parent_cluster_ids.append(current_id)
+    if current_name:
+        parent_cluster_names.append(current_name)
+
+    solr_doc["parent_clusters"] = parent_cluster_ids
+    solr_doc["parent_cluster_names"] = parent_cluster_names
 
 
 def extract_brain_region_data(all_data, result, solr_doc, all_datasets):
@@ -431,5 +459,5 @@ def update_solr():
 
 if __name__ == "__main__":
     # individuals_metadata_dump()
-    # individuals_metadata_solr_dump()
-    update_solr()
+    individuals_metadata_solr_dump()
+    # update_solr()
