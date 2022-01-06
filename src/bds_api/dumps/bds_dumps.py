@@ -1,4 +1,5 @@
 import json
+
 import requests
 from datetime import datetime
 from bds_queries import IndividualDetailsQuery, ListAllAllenIndividuals, GetOntologyMetadata, ListAllTaxonomies
@@ -94,7 +95,8 @@ def manage_root_node_parents():
             if taxon_beginning in all_cell:
                 root_node["parents"] = [all_cell]
                 root_node["parent_labels"] = [ALL_CELLS]
-
+                root_node["parent_clusters"] = [all_cell]
+                root_node["parent_cluster_names"] = [ALL_CELLS]
 
 def check_root_nodes(solr_doc):
     # identify all cells
@@ -250,13 +252,14 @@ def extract_homologous_data(all_data, result, solr_doc):
 
 
 def extract_subcluster_data(all_data, result, solr_doc):
-    current_rank = -1
+    current_rank = 10
     current_id = ""
     current_name = ""
     for parent_cluster in result["parent_clusters"]:
         if parent_cluster["indv_metadata"] is not None:
             parent_rank = cell_type_ranks.index(parent_cluster["indv_metadata"]["cell_type_rank"][0])
-            if parent_rank > current_rank:
+            if parent_rank < current_rank:
+                current_rank = parent_rank
                 if parent_cluster["class_metadata"] is not None:
                     metadata = parent_cluster["class_metadata"]
                 else:
