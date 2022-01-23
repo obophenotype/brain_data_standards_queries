@@ -20,6 +20,11 @@ all_cells = list()
 species_mapping = get_species_mapping()
 cell_type_ranks = ['None', 'Cell Type', 'Subclass', 'Class']
 
+PCL_NS = "http://purl.obolibrary.org/obo/PCL_"
+CL_NS = "http://purl.obolibrary.org/obo/CL_"
+
+OLS_TERM = "https://www.ebi.ac.uk/ols/ontologies/pcl/terms?iri="
+
 
 def individuals_metadata_dump():
     all_metadata = []
@@ -60,9 +65,14 @@ def individuals_metadata_solr_dump():
         solr_doc = extract_class_metadata(result["class_metadata"][0]["class_metadata"])
         if solr_doc:
             solr_doc["tags"] = result["class_metadata"][0]["tags"]
+            if solr_doc["iri"].startswith(PCL_NS) or solr_doc["iri"].startswith(CL_NS):
+                solr_doc["resolved_iri"] = OLS_TERM + solr_doc["iri"]
+            else:
+                solr_doc["resolved_iri"] = solr_doc["iri"]
         else:
             # some individuals don't have class, extract from individual itself
             solr_doc = extract_class_metadata(result["indv_metadata"])
+            solr_doc["resolved_iri"] = None
 
         extract_individual_data(all_data, result, solr_doc)
         extract_parent_data(all_data, result, solr_doc)
