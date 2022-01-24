@@ -85,8 +85,8 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
-        self.assertTrue("PCL:0012153" in curies)
+        self.assertTrue("PCL:0019004" in curies)
+        self.assertTrue("PCL:0015153" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -95,7 +95,7 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0019004" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -104,7 +104,7 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0019004" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Cell Type, None""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -113,8 +113,8 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
-        self.assertTrue("PCL:0012153" in curies)
+        self.assertTrue("PCL:0019004" in curies)
+        self.assertTrue("PCL:0015153" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Class""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -133,8 +133,8 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["individual"])
-        self.assertTrue("PCL:0011401" in curies)
-        self.assertTrue("PCL:0011657" in curies)
+        self.assertTrue("PCL:0011501" in curies)
+        self.assertTrue("PCL:0011757" in curies)
 
         response = self.app.get("""/bds/api/search?query=*&taxonomy=CCN202002013&rank=Class""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -142,10 +142,10 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["individual"])
-        self.assertTrue("PCL:0011523" in curies)
-        self.assertTrue("PCL:0011579" in curies)
-        self.assertTrue("PCL:0011619" in curies)
-        self.assertTrue("PCL:0011635" in curies)
+        self.assertTrue("PCL:0011623" in curies)
+        self.assertTrue("PCL:0011679" in curies)
+        self.assertTrue("PCL:0011719" in curies)
+        self.assertTrue("PCL:0011735" in curies)
 
         response = self.app.get("""/bds/api/search?query=*&taxonomy=(CCN202002013 OR CCN201912131)&rank=Class""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -153,14 +153,14 @@ class SearchTest(unittest.TestCase):
         curies = set()
         for result in results:
             curies.update(result["individual"])
-        self.assertTrue("PCL:0011523" in curies)
-        self.assertTrue("PCL:0011579" in curies)
-        self.assertTrue("PCL:0011619" in curies)
-        self.assertTrue("PCL:0011635" in curies)
-        self.assertTrue("PCL:0012548" in curies)
-        self.assertTrue("PCL:0012549" in curies)
-        self.assertTrue("PCL:0012550" in curies)
-        self.assertTrue("PCL:0012551" in curies)
+        self.assertTrue("PCL:0011623" in curies)
+        self.assertTrue("PCL:0011679" in curies)
+        self.assertTrue("PCL:0011719" in curies)
+        self.assertTrue("PCL:0011735" in curies)
+        self.assertTrue("PCL:0015648" in curies)
+        self.assertTrue("PCL:0015649" in curies)
+        self.assertTrue("PCL:0015650" in curies)
+        self.assertTrue("PCL:0015651" in curies)
 
     def test_search_multiple_filters(self):
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6""")
@@ -172,8 +172,8 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
-        self.assertTrue("PCL:0012153" in curies)
+        self.assertTrue("PCL:0019004" in curies)
+        self.assertTrue("PCL:0015153" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -182,7 +182,7 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0019004" in curies)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type&species=mouse,human""")
         results = json.loads(response.get_data())["response"]["docs"]
@@ -199,7 +199,7 @@ class SearchTest(unittest.TestCase):
         for result in results:
             curies.update(result["curie"])
         self.assertTrue("PCL:0011008" in curies)
-        self.assertTrue("PCL:0013004" in curies)
+        self.assertTrue("PCL:0019004" in curies)
 
     def test_search_rank_filter_error(self):
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=Not Exists""")

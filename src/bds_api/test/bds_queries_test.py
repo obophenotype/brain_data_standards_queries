@@ -7,7 +7,7 @@ class QueriesTest(unittest.TestCase):
 
     def test_individual_details_query(self):
         individual_details_query = IndividualDetailsQuery()
-        result = individual_details_query.execute_query({"accession": "0011528"})
+        result = individual_details_query.execute_query({"accession": "0011628"})
         print(json.dumps(result))
 
         self.assertTrue(result["class_metadata"])

@@ -476,5 +476,5 @@ def update_solr():
 
 if __name__ == "__main__":
     # individuals_metadata_dump()
-    individuals_metadata_solr_dump()
-    # update_solr()
+    # individuals_metadata_solr_dump()
+    update_solr()
