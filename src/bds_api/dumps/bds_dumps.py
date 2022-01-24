@@ -25,6 +25,8 @@ CL_NS = "http://purl.obolibrary.org/obo/CL_"
 
 OLS_TERM = "https://www.ebi.ac.uk/ols/ontologies/pcl/terms?iri="
 
+tags_blacklist = ['Entity', 'Class', 'Individual']
+
 
 def individuals_metadata_dump():
     all_metadata = []
@@ -64,11 +66,7 @@ def individuals_metadata_solr_dump():
 
         solr_doc = extract_class_metadata(result["class_metadata"][0]["class_metadata"])
         if solr_doc:
-            solr_doc["tags"] = result["class_metadata"][0]["tags"]
-            if solr_doc["iri"].startswith(PCL_NS) or solr_doc["iri"].startswith(CL_NS):
-                solr_doc["resolved_iri"] = OLS_TERM + solr_doc["iri"]
-            else:
-                solr_doc["resolved_iri"] = solr_doc["iri"]
+            solr_doc["tags"] = [tag for tag in result["class_metadata"][0]["tags"] if tag not in tags_blacklist]
         else:
             # some individuals don't have class, extract from individual itself
             solr_doc = extract_class_metadata(result["indv_metadata"])
@@ -320,7 +318,7 @@ def extract_class_metadata(node_meta_data):
         if "comment" in node_meta_data:
             solr_doc["comment"] = node_meta_data["comment"]
         if "tags" in node_meta_data:
-            solr_doc["tags"] = node_meta_data["tags"]
+            solr_doc["tags"] = [tag for tag in node_meta_data["tags"] if tag not in tags_blacklist]
         if "prefLabel" in node_meta_data:
             solr_doc["prefLabel"] = node_meta_data["prefLabel"]
         if "label_rdfs" in node_meta_data:
@@ -338,6 +336,11 @@ def extract_class_metadata(node_meta_data):
             solr_doc["versionInfo"] = node_meta_data["versionInfo"]
         if "symbol" in node_meta_data:
             solr_doc["symbol"] = next(filter(None, node_meta_data["symbol"]))
+
+        if solr_doc["iri"].startswith(PCL_NS) or solr_doc["iri"].startswith(CL_NS):
+            solr_doc["resolved_iri"] = OLS_TERM + solr_doc["iri"]
+        else:
+            solr_doc["resolved_iri"] = solr_doc["iri"]
     else:
         solr_doc = None
     return solr_doc
@@ -366,6 +369,7 @@ def extract_reference_class_metadata(node_meta_data):
         solr_doc["identifier"] = node_meta_data["identifier"]
     if "date" in node_meta_data:
         solr_doc["date"] = next(filter(None, node_meta_data["date"]))
+    solr_doc["resolved_iri"] = solr_doc["iri"]
     return solr_doc
 
 
