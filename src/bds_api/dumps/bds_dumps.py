@@ -405,6 +405,18 @@ def extract_dataset_metadata(all_data, all_taxonomies):
             solr_doc["age"] = next(filter(None, taxon["has_age"]))
         if "database_cross_reference" in taxon:
             solr_doc["primary_citation"] = next(filter(None, taxon["database_cross_reference"]))
+        if "title" in taxon:
+            solr_doc["header"] = next(filter(None, taxon["title"]))
+        if "comment" in taxon:
+            solr_doc["mainDescription"] = next(filter(None, taxon["comment"]))
+        if "provenance" in taxon:
+            solr_doc["attribution"] = next(filter(None, taxon["provenance"]))
+        if "description" in taxon:
+            solr_doc["subDescription"] = next(filter(None, taxon["description"]))
+        if "subject" in taxon:
+            solr_doc["anatomy"] = next(filter(None, taxon["subject"]))
+        if "relation" in taxon:
+            solr_doc["anatomy_image"] = next(filter(None, taxon["relation"]))
 
         datasets = all_taxonomies[taxonomy]["datasets"]
         dataset_ids = extract_taxonomy_dataset_metadata(all_data, datasets, solr_doc["label"])
@@ -434,6 +446,16 @@ def extract_taxonomy_dataset_metadata(all_data, datasets, taxonomy_name):
                 ds_solr_doc["download_link"] = next(filter(None, dataset_metadata["archivedAt"]))
             if "discussionUrl" in dataset_metadata:
                 ds_solr_doc["explore_link"] = next(filter(None, dataset_metadata["discussionUrl"]))
+            if "symbol" in dataset_metadata:
+                ds_solr_doc["symbol"] = next(filter(None, dataset_metadata["symbol"]))
+            if "prefLabel" in dataset_metadata:
+                ds_solr_doc["dataset"] = next(filter(None, dataset_metadata["prefLabel"]))
+            if "assesses" in dataset_metadata:
+                ds_solr_doc["species"] = next(filter(None, dataset_metadata["assesses"]))
+            if "position" in dataset_metadata:
+                ds_solr_doc["region"] = next(filter(None, dataset_metadata["position"]))
+            if "headline" in dataset_metadata:
+                ds_solr_doc["dataset_number"] = next(filter(None, dataset_metadata["headline"]))
 
             all_data[ds_solr_doc["iri"]] = ds_solr_doc
             dataset_ids.append(dataset_metadata["iri"])
