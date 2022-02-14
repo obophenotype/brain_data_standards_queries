@@ -44,7 +44,7 @@ class QueriesTest(unittest.TestCase):
         self.assertTrue('1908210' in result)
 
         datasets = result['202002013']["datasets"]
-        self.assertEqual(8, len(datasets))
+        self.assertEqual(11, len(datasets))
 
         first_mouse_dataset = result['202002013']["datasets"][0]["dataset_metadata"]
         self.assertTrue('comment' in first_mouse_dataset)
