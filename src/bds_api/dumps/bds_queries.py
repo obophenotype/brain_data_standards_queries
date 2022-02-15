@@ -120,14 +120,18 @@ class ListAllTaxonomies(BDSQuery):
         MATCH (i:Individual)-[]->(c:Class) 
         WHERE c.curie = 'PCL:0010002' 
         OPTIONAL MATCH (d)-[r:includedInDataCatalog]->(i)
-        RETURN i as taxonomy, collect(distinct { dataset_metadata: properties(d)}) AS datasets
+        OPTIONAL MATCH (i)-[src:source]->(reference) 
+        RETURN i as taxonomy, collect(distinct { dataset_metadata: properties(d)}) AS datasets, 
+            collect(distinct { class_metadata: properties(reference)}) AS references 
         """
 
     def parse_response(self, response):
         taxonomies = dict()
         for record in response:
             taxonomy_id_simple = str(record['taxonomy']["label"]).replace("CCN", "").replace("CS", "")
-            taxonomies[taxonomy_id_simple] = {'taxonomy': record['taxonomy'], 'datasets': record['datasets']}
+            taxonomies[taxonomy_id_simple] = {'taxonomy': record['taxonomy'],
+                                              'datasets': record['datasets'],
+                                              'references': record['references']}
 
         return taxonomies
 

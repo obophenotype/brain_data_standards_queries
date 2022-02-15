@@ -420,8 +420,10 @@ def extract_dataset_metadata(all_data, all_taxonomies):
 
         datasets = all_taxonomies[taxonomy]["datasets"]
         dataset_ids = extract_taxonomy_dataset_metadata(all_data, datasets, solr_doc["label"])
-
         solr_doc["datasets"] = dataset_ids
+
+        extract_reference_data(all_data, all_taxonomies[taxonomy], solr_doc)
+
         all_data[solr_doc["iri"]] = solr_doc
 
 
@@ -498,5 +500,5 @@ def update_solr():
 
 if __name__ == "__main__":
     # individuals_metadata_dump()
-    # individuals_metadata_solr_dump()
-    update_solr()
+    individuals_metadata_solr_dump()
+    # update_solr()
