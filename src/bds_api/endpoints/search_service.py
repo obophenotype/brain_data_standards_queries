@@ -218,6 +218,7 @@ def generate_request(config):
         request_url += "&bq=iri:" + escape_solr_arg(domain_boosting)
     request_url += "&hl=true"
     request_url += "&hl.simple.pre=<b>"
+    request_url += "&hl.simple.post=</b>"
     request_url += "&hl.fl=" + ",".join(get_list_value(config, "highlight_fields"))
 
     if 'species' in request.args and request.args['species']:
@@ -289,6 +290,8 @@ def escape_solr_arg(term):
 
 def create_intersection_string(query):
     tokens = query.split(" ")
+    if len(tokens) > 1:
+        tokens.append(" ")
     return " AND ".join(tokens)
 
 
