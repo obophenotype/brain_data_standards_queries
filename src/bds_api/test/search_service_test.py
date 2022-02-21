@@ -40,14 +40,15 @@ class SearchTest(unittest.TestCase):
         self.assertTrue(len(results) >= 3)
         species = set()
         for result in results:
-            species.update(result["species"])
+            if "species" in result:
+                species.update(result["species"])
         self.assertTrue("Mus musculus" in species)
         self.assertTrue("Homo sapiens" in species)
         self.assertTrue("Callithrix jacchus" in species)
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=Mouse""")
         results = json.loads(response.get_data())["response"]["docs"]
-        self.assertEqual(1, len(results))
+        self.assertTrue(len(results) >= 1)
         species = set()
         for result in results:
             species.update(result["species"])
@@ -55,7 +56,7 @@ class SearchTest(unittest.TestCase):
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=\"Callithrix jacchus\"""")
         results = json.loads(response.get_data())["response"]["docs"]
-        self.assertEqual(1, len(results))
+        self.assertTrue(len(results) >= 1)
         species = set()
         for result in results:
             species.update(result["species"])
@@ -63,7 +64,7 @@ class SearchTest(unittest.TestCase):
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&species=mouse,human""")
         results = json.loads(response.get_data())["response"]["docs"]
-        self.assertEqual(2, len(results))
+        self.assertTrue(len(results) >= 2)
         species = set()
         for result in results:
             species.update(result["species"])
@@ -177,7 +178,7 @@ class SearchTest(unittest.TestCase):
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type""")
         results = json.loads(response.get_data())["response"]["docs"]
-        self.assertEqual(2, len(results))
+        self.assertTrue(len(results) >= 2)
         curies = set()
         for result in results:
             curies.update(result["curie"])
@@ -186,7 +187,7 @@ class SearchTest(unittest.TestCase):
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type&species=mouse,human""")
         results = json.loads(response.get_data())["response"]["docs"]
-        self.assertEqual(1, len(results))
+        self.assertTrue(len(results) >= 1)
         curies = set()
         for result in results:
             curies.update(result["curie"])
@@ -194,7 +195,7 @@ class SearchTest(unittest.TestCase):
 
         response = self.app.get("""/bds/api/search?query=Lamp5%20Lhx6&rank=cell type&species=mouse,marmoset""")
         results = json.loads(response.get_data())["response"]["docs"]
-        self.assertEqual(2, len(results))
+        self.assertTrue(len(results) >= 2)
         curies = set()
         for result in results:
             curies.update(result["curie"])
