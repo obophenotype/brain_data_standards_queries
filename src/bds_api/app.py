@@ -2,8 +2,11 @@ from flask import Flask, Blueprint
 from bds_api import settings
 from bds_api.restplus import api
 from bds_api.endpoints.search_service import ns as api_namespace
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
+# added for https bugfix https://github.com/noirbizarre/flask-restplus/issues/565
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 blueprint = Blueprint('bds', __name__, url_prefix='/bds')
 
