@@ -9,7 +9,7 @@ Knowledge Graph is a standalone application and can be deployed independently of
 
 In this documentation all deployments will be done to the same server.
 
-`$WORKSPACE` indicates a folder in the server where we will clone projects into it. At the end of the deployment this folder can be deleted.
+`$WORKSPACE` indicates a folder in the server where we will clone projects into it.
 
 `$SERVER_IP` indicates the ip address of the server where the deployment will be made.
 
@@ -34,7 +34,7 @@ docker run -d -p:7473:7474 -p 7686:7686 -v $PWD/backup:/backup --env-file ./env.
 
 At startup, KB automatically loads the backup data, and you can start exploring the knowledge graph through your browser.
 
-Open http://SERVER_IP:7473/browser/ in your browser. You do not need to enter any `Username` or `Password`, so you can leave these fields blank.
+Open http://SERVER_IP:7473/browser/ in your browser. You do not need to enter any `Username` or `Password`, so you can leave these fields blank and directly click the `Connect` button. 
 
 Click the `Database` icon in the upper left corner . Under the `Node Labels` section, you can find the labels of the KB entities. Click on one of the labels and start browsing.
 
