@@ -38,7 +38,7 @@ docker build -t bds/search-service .
 docker run -p 8484:8080 -e SOLR_HOST=my_host -e SOLR_PORT=my_port -e SOLR_COLLECTION=bdsdump -e HTTPS=False -it bds/search-service 
 ```
 
-_(Default value of the `HTTPS` parameter is `True`, so please set it based on your environment)_ 
+_(Default value of the `HTTPS` parameter is `True`, so please set it based on your deployment environment configuration. If your deployment environment is not https, setting HTTPS=True will cause swagger interface to crash))_ 
 
 If environment variables are not given to the run command, default values will be first read from the Dockerfile then from the [configuration](src/config/search_config.ini) file.
 
