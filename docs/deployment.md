@@ -96,7 +96,8 @@ docker build -t bds/search-service .
 
 To run the built Docker image:
 ```
-docker run -p 8484:8080 -e SOLR_HOST=$SERVER_IP -e SOLR_PORT=8983 -e SOLR_COLLECTION=bdsdump -it bds/search-service 
+docker run -p 8484:8080 -e SOLR_HOST=$SERVER_IP -e SOLR_PORT=8983 -e SOLR_COLLECTION=bdsdump -e HTTPS=True -it bds/search-service 
 ```
+_(Default value of the `HTTPS` parameter is `True`, so please set it based on your environment. If your deployment environment is not https, setting HTTPS=True will cause swagger interface to crash)_ 
 
 Now you can browse the API [Swagger interface](http://SERVER_IP:8484/bds/) and run one of the example queries. Such as: http://SERVER_IP:8484/bds/api/autocomplete?query=L5%2F6%2520NP

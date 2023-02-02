@@ -1,8 +1,9 @@
-FROM python:3.6.2
+FROM python:3.8.16
 
 ENV SOLR_HOST=ec2-3-143-113-50.us-east-2.compute.amazonaws.com
 ENV SOLR_PORT=8993
 ENV SOLR_COLLECTION=bdsdump
+ENV HTTPS=True
 
 RUN mkdir /code /code/src /code/bds_api
 ADD requirements.txt run.sh setup.py logging.conf /code/

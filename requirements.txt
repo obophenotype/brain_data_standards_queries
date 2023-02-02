@@ -1,7 +1,7 @@
 neo4j==4.2.1
-requests
-Flask==1.1.1
-flask-restplus==0.13
-Werkzeug==0.16.0
+requests==2.28.2
+flask==2.1.2
+flask-restx>=0.5.1
+werkzeug==2.0.2
 pyyaml
-itsdangerous==2.0.1
+itsdangerous==2.1.2

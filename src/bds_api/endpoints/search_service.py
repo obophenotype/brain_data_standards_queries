@@ -3,7 +3,7 @@ import requests
 import ast
 import logging
 from flask import request
-from flask_restplus import Resource
+from flask_restx import Resource
 from bds_api.restplus import api
 from bds_api.endpoints.search_config import search_config, autocomplete_config
 from bds_api.exception.api_exception import BDSApiException
