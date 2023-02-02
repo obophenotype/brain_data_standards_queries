@@ -1,4 +1,4 @@
-from flask_restplus import reqparse
+from flask_restx import reqparse
 
 search_arguments = reqparse.RequestParser()
 search_arguments.add_argument('query', type=str, action="append", required=True)
