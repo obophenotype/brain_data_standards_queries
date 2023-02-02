@@ -20,7 +20,7 @@ def initialize_app(flask_app):
 def main():
     initialize_app(app)
     app.run(host="0.0.0.0", port=8080, debug=settings.FLASK_DEBUG)
-    # TODO fix me, testing https here (add pyopenssl to requirements)
+    # TODO just testing https here (add pyopenssl to requirements.txt)
     # app.run(host="0.0.0.0", port=8080, debug=settings.FLASK_DEBUG, ssl_context='adhoc')
 
 
