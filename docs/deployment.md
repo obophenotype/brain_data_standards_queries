@@ -38,6 +38,12 @@ Open http://SERVER_IP:7473/browser/ in your browser. You do not need to enter an
 
 Click the `Database` icon in the upper left corner . Under the `Node Labels` section, you can find the labels of the KB entities. Click on one of the labels and start browsing.
 
+### __Alternative:__ Deploy Knowledge Graph (DockerHub Based)
+Alternative to local build based approach, DockerHub image can be used for the deployment of the knowledge graph:
+```
+docker run -d -p:7473:7474 -p 7686:7686 hkir/kb-prod:standalone
+```
+
 ## Deploy Solr
 
 To build the Solr, clone the project to your server.
