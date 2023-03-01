@@ -29,19 +29,19 @@ docker build -t bds/kb-prod:standalone .
 
 To run the built Docker image:
 ```
-docker run -d -p:7473:7474 -p 7686:7686 -v $PWD/backup:/backup --env-file ./env.list bds/kb-prod:standalone
+docker run -d -p:7474:7474 -p 7687:7687 bds/kb-prod:standalone
 ```
 
 At startup, KB automatically loads the backup data, and you can start exploring the knowledge graph through your browser.
 
-Open http://SERVER_IP:7473/browser/ in your browser. You do not need to enter any `Username` or `Password`, so you can leave these fields blank and directly click the `Connect` button. 
+Open http://SERVER_IP:7474/browser/ in your browser. You do not need to enter any `Username` or `Password`, so you can leave these fields blank and directly click the `Connect` button. 
 
 Click the `Database` icon in the upper left corner . Under the `Node Labels` section, you can find the labels of the KB entities. Click on one of the labels and start browsing.
 
 ### __Alternative:__ Deploy Knowledge Graph (DockerHub Based)
 Alternative to local build based approach, [DockerHub image](https://hub.docker.com/r/hkir/kb-prod/tags) can be used for the deployment of the knowledge graph:
 ```
-docker run -d -p:7473:7474 -p 7686:7686 hkir/kb-prod:standalone
+docker run -d -p:7474:7474 -p 7687:7687 hkir/kb-prod:standalone
 ```
 
 ## Deploy Solr
